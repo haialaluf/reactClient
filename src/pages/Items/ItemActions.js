@@ -2,7 +2,9 @@
  * Created by hai on 25/06/2017.
  */
 import axios from 'axios';
-const prefix = 'http://127.0.0.1:1818/api/';
+import config from '../../Config';
+
+const prefix = config.serverUrl;
 let connect = axios.create({
     headers: {
         'Content-Type': 'application/json',
