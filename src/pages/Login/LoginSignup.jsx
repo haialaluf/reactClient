@@ -42,7 +42,7 @@ class LoginSignup extends Component {
                 <div>
                     <GoogleLogin
                         clientId="782172464302-up9run1lv6e2vrhlq0acrupq2kf68oru.apps.googleusercontent.com"
-                        buttonText="Login"
+                        buttonText="LOGIN WITH GOOGLE"
                         onSuccess={this.props.actions.googleLogin}
                         onFailure={ this.showErrorModal }
                     />
