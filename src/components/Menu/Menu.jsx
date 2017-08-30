@@ -23,7 +23,7 @@ class Menu extends Component {
                             <li><Link to='/components' onClick={ this.props.closeMenu }>Components</Link></li>
                             <li><Link to='/items' onClick={ this.props.closeMenu }>Items</Link></li>
                             <li><Link to='/login' onClick={ this.props.closeMenu }>Login</Link></li>
-                            { this.props.user && this.props.user.local ?
+                            { this.props.user && this.props.user.id ?
                             <li><Link to='/login' onClick={ () => this.props.actions.logout() }>Logout</Link></li>
                             :
                             null }

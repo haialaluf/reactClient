@@ -7,6 +7,8 @@
     "react": "^15.5.4",
     "react-cropper": "^0.12.0",
     "react-dom": "^15.5.4",
+    "react-facebook-login": "^3.6.2",
+    "react-google-login": "^2.9.3",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",
     "react-svg": "^2.1.21",
@@ -14,7 +16,9 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "react-scripts": "1.0.5"
+    "node-sass": "^4.5.3",
+    "react-scripts": "1.0.5",
+    "sass-loader": "^6.0.6"
   },
   "scripts": {
     "start": "react-scripts start",

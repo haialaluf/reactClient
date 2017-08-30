@@ -4,7 +4,7 @@
 import axios from 'axios';
 import config from '../../Config';
 
-const prefix = config.serverUrl;
+const prefix = config.serverUrl + 'auth/';
 let connect = axios.create({
     headers: {
         'Content-Type': 'application/json',
@@ -27,11 +27,39 @@ export function emailLogin(userData) {
     };
 }
 
+export function facebookLogin(userData) {
+    return (dispatch) => {
+        connect.get(`${ prefix }facebook?access_token=${ userData.accessToken }`)
+            .then((res) => {
+                dispatch({
+                    type: 'LOGIN',
+                    res: res,
+                });
+            }).catch((error) => {
+            console.error('Error during service worker registration:', error);
+        })
+    };
+}
+
+export function googleLogin(userData) {
+    return (dispatch) => {
+        connect.get(`${ prefix }google?access_token=${ userData.accessToken }`)
+            .then((res) => {
+                dispatch({
+                    type: 'LOGIN',
+                    res: res,
+                });
+            }).catch((error) => {
+            console.error('Error during service worker registration:', error);
+        })
+    };
+}
+
 export function emailRegister(userData) {
     return (dispatch) => {
         connect.post(`${ prefix }register`, userData).then((res) => {
                 dispatch({
-                    type: 'REGISTER',
+                    type: 'LOGIN',
                     res: res,
                 });
             }).catch((error) => {
@@ -57,7 +85,7 @@ export function whoAmI(userData) {
     return (dispatch) => {
         connect.get(`${ prefix }whoAmI`, userData).then((res) => {
                 dispatch({
-                    type: 'WHO_AM_I',
+                    type: 'LOGIN',
                     res: res,
                 });
             }).catch((error) => {

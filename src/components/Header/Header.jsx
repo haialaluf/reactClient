@@ -22,8 +22,8 @@ class Header extends Component {
                 <Hamburger open={ this.props.menu } onClick={ this.props.openMenu }/>
                 <Icon image="user" style={ style.userIcon }/>
                 <span style={ style.loginButton }>
-                    { this.props.user && this.props.user.local ?
-                        'Hello ' + this.props.user.local.name :
+                    { this.props.user && this.props.user.id ?
+                        'Hello ' + this.props.user.name :
                         <Route render={({ history}) => (
                         <span onClick={() => { history.push('/login') }}>Login/Signup</span>
                         )} />
