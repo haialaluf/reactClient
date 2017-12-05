@@ -24,6 +24,8 @@ export function userReducer(state={}, action) {
         case 'LOGOUT':
             logout(action.res);
             break;
+        default:
+            break;
     }
     return state;
 }

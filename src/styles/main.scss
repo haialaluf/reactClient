@@ -1,3 +1,48 @@
-#root {
-  background-color: blue;
+$tablet-width: 600px;
+$desktop-width: 1024px;
+
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
 }
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+body {
+  position: relative;
+}
+
+.hide-in-mobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hide-in-tablet {
+  @include tablet {
+    display: none;
+  }
+}
+
+.hide-in-desktop {
+  @include desktop {
+    display: none;
+  }
+}
+
+@import "../pages/Home/Home";
+@import "../components/Menu/Menu";
+@import "../components/Header/Header";
+@import "../components/ContactForm/ContactForm";

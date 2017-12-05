@@ -29,7 +29,8 @@ let style = {
         border: `solid 1px ${ Style.colors.border }`,
         padding: '8px',
         margin: '8px',
-        position: 'relative'
+        position: 'relative',
+        backgroundSize: '100%'
     },
     deleteIcon: {
         position: 'absolute',

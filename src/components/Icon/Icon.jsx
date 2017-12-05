@@ -17,7 +17,6 @@ class Icon extends Component {
             <ReactSVG
                 path={ img }
                 callback={svg => 1}
-                className="example"
                 style={ Object.assign({}, style.icon, this.props.style) }
             />
         )

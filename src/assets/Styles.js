@@ -6,15 +6,15 @@ let style = {
 
     colors: {
         main: '#FFFFFF',
-        menuPrimary: '#A9C5E6',
+        menuPrimary: '#FFFFFF',
         menuSecondary: '#102026',
         border: '#A0A0A0',
         errorColor: '#FF3333'
     },
 
     sizes: {
-        menuWidth: '256px',
-        headerHeight: '30px'
+        menuWidth: '192px',
+        headerHeight: '44px'
     }
 
 };

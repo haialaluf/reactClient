@@ -27,7 +27,7 @@ class Register extends Component {
             return;
         }
 
-        if (!this.refs.email.value || !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.refs.email.value))) {
+        if (!this.refs.email.value || !(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(this.refs.email.value))) {
             this.setState({ errors: {email: true} });
             return;
         }
