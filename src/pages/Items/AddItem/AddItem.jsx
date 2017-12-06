@@ -13,6 +13,7 @@ class AddItem extends Component {
         super(props);
         this.state = {
             image: '',
+            properties: []
         };
     }
 
@@ -20,8 +21,15 @@ class AddItem extends Component {
         this.props.action({
             name: this.refs.name.value,
             description: this.refs.description.value,
-            image: (this.refs.cropper && this.refs.cropper.getCroppedCanvas()) ? this.refs.cropper.getCroppedCanvas().toDataURL() : null
+            image: (this.refs.cropper && this.refs.cropper.getCroppedCanvas()) ? this.refs.cropper.getCroppedCanvas().toDataURL() : null,
+            properties: this.state.properties
         });
+    }
+
+    addProperty () {
+        this.setState({
+            properties: [...this.state.properties, '']
+        })
     }
 
     loadImage(e) {
@@ -36,13 +44,30 @@ class AddItem extends Component {
         reader.readAsDataURL(file);
     }
 
+    renderPropertyInput(property, index) {
+            return <input style={ style.input }
+                                        type="text"
+                                        key={ index }
+                                        placeholder="Property Name"
+                                        onChange={ (event) => {
+                                            let properties = this.state.properties;
+                                            properties[index] = event.currentTarget.value;
+                                            this.setState({properties}) } }/>
+    }
+
     render() {
         return (
             <div style={ Object.assign({}, style, this.props.style) }>
                 <form>
-                    <input style={ style.input } type="text" placeholder="Name" ref="name"/>
-                    <input style={ style.input } type="text" placeholder="Description" ref="description"/>
-                    <input style={ style.input } type="file" ref="image" onChange={ this.loadImage.bind(this) }/>
+                    <div>
+                        <input style={ style.input } type="text" placeholder="Name" ref="name"/>
+                        <textarea style={ style.input } type="text" placeholder="Description" ref="description"/>
+                        <input style={ style.input } type="file" ref="image" onChange={ this.loadImage.bind(this) }/>
+                        <div>
+                            { this.state.properties.map(this.renderPropertyInput.bind(this)) }
+                        </div>
+                        <button style={ style.input } type="button" onClick={ this.addProperty.bind(this) }>Add Property</button>
+                    </div>
                     <button style={ style.input } type="button" onClick={ this.addItem.bind(this) }>Add Item</button>
                 </form>
                 <Cropper

@@ -42,7 +42,8 @@ body {
   }
 }
 
-@import "../pages/Home/Home";
-@import "../components/Menu/Menu";
-@import "../components/Header/Header";
-@import "../components/ContactForm/ContactForm";
+@import "pages/Home/Home";
+@import "pages/Items/Items";
+@import "components/Menu/Menu";
+@import "components/Header/Header";
+@import "components/ContactForm/ContactForm";

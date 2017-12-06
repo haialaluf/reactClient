@@ -19,7 +19,9 @@ class Items extends Component {
         return (
             <div>
                 <h2>Items</h2>
-                { items && items.map((item, index) => <Item item={ item } key={ index } deleteItem={ this.props.actions.deleteItem }/>) }
+                <div className="items-container">
+                    { items && items.map((item, index) => <Item item={ item } key={ index } deleteItem={ this.props.actions.deleteItem }/>) }
+                </div>
                 <div>
                     <h2>Add Item</h2>
                     <AddItem action={ this.props.actions.addItem }/>

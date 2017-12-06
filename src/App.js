@@ -6,7 +6,7 @@ import Items from './pages/Items/Items';
 import Components from './pages/Components/Components';
 import LoginSignup from './pages/Login/LoginSignup';
 import { Route, Switch } from 'react-router-dom';
-import './styles/main.scss';
+import './main.scss';
 
 class App extends Component {
 

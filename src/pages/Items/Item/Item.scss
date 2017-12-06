@@ -1,0 +1,44 @@
+.item {
+  position: relative;
+  width: 288px;
+  height: 384px;
+  background: white;
+  background-position: center 40px;
+  background-size: auto 128px;
+  background-repeat: no-repeat;
+  padding: 12px;
+  margin: 8px;
+  border: 1px solid;
+  overflow: hidden;
+  transition: all 0.3;
+
+
+  &.expand {
+    position: fixed;
+    top: 64px;
+    right: 32px;
+    margin: 0;
+    width: calc(100vw - 64px);
+    height: calc(100vh - 128px);
+  }
+
+  .delete-icon {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 128px;
+  }
+
+  .description {
+
+  }
+}

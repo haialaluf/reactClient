@@ -4,7 +4,7 @@
 import axios from 'axios';
 import config from '../../Config';
 
-const prefix = config.serverUrl;
+const prefix = config.serverUrl + config.prefix;
 let connect = axios.create({
     headers: {
         'Content-Type': 'application/json',
