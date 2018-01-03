@@ -1,4 +1,5 @@
 $tablet-width: 600px;
+$header-offset: 48px;
 $desktop-width: 1024px;
 
 
@@ -24,6 +25,10 @@ body {
   position: relative;
 }
 
+#root {
+  padding-top: $header-offset;
+}
+
 .hide-in-mobile {
   @include mobile {
     display: none;
@@ -42,8 +47,38 @@ body {
   }
 }
 
+.right-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.left-icon {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.small-icon {
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.big-icon {
+  svg {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+
 @import "pages/Home/Home";
 @import "pages/Items/Items";
+@import "pages/Wizard/Wizard";
+@import "pages/Orders/Orders";
+@import "pages/Post/AddPost";
+@import "pages/VideoEditor/VideoEditor";
 @import "components/Menu/Menu";
 @import "components/Header/Header";
-@import "components/ContactForm/ContactForm";

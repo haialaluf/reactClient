@@ -8,8 +8,8 @@ import { Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Scroll from 'react-scroll'; // Imports all Mixins
-
-let Link = Scroll.Link;
+import { Link } from 'react-router-dom'
+let InnerLink = Scroll.Link;
 let headerOffset = -12 - parseInt(Style.sizes.menuWidth.substring(0,2), 10);
 
 class Header extends Component {
@@ -23,42 +23,46 @@ class Header extends Component {
 
     render() {
         return (
-            <div style={ Object.assign({}, style.header, this.props.stiky ? style.stiky : {} ) }>
+            <div style={ Object.assign({}, style.header, this.props.sticky ? style.sticky : {} ) }>
                 <Hamburger open={ this.props.menu } onClick={ this.props.openMenu }/>
 
                 {
                     this.props.location.pathname === '/' ?
                         <span className="home-page-header">
                             <span className="header-link hide-in-mobile">
-                                <Link to="contact-form"
+                                <InnerLink to="contact-form"
                                       onClick={ this.props.closeMenu }
                                       spy={ true } activeClass="active"
                                       smooth={ true } offset={ headerOffset }
                                       duration={ 400 }>
                                     Contact Us
-                                </Link>
+                                </InnerLink>
                             </span>
                             <span className="header-link hide-in-mobile">
-                                <Link to="about"
+                                <InnerLink to="about"
                                       onClick={ this.props.closeMenu }
                                       spy={ true } activeClass="active"
                                       smooth={ true } offset={ headerOffset }
                                       duration={ 400 }>
                                     About
-                                </Link>
+                                </InnerLink>
                             </span>
                             <span className="header-link hide-in-mobile">
-                                <Link to="how-it-work"
+                                <InnerLink to="how-it-work"
                                       onClick={ this.props.closeMenu }
                                       spy={ true } activeClass="active"
                                       smooth={ true }
                                       offset={ headerOffset }
                                       duration={ 400 }>
                                     How It's Work
-                                </Link>
+                                </InnerLink>
                             </span>
                             <span className="header-button swing">
-                                Get Started
+                                
+                                <Link to='/Wizard' onClick={ this.props.closeMenu }>
+                                    Get Started
+                                </Link>
+
                             </span>
                         </span>
                         :
@@ -104,7 +108,7 @@ let style = {
         top: '14px',
         cursor: 'pointer'
     },
-    stiky: {
+    sticky: {
         boxShadow: 'rgba(0,0,0,.4) 0 0 4px 2px'
     }
 };

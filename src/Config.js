@@ -4,7 +4,9 @@
 
 let Config = {
     serverUrl: 'http://127.0.0.1:8080/',
-    prefix: 'api/'
+    prefix: 'api/',
+    storage: 'http://127.0.0.1:8080/public/',
+    googleMapsApiKey: 'AIzaSyDJtSJcp9ex_r0hz4LzUDSQym77Fnt2bVg'
 };
 
 export default Config;

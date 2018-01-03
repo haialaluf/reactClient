@@ -1,0 +1,20 @@
+.contact-form form {
+  width: 288px;
+  margin: auto;
+  padding: 16px;
+  padding-top: 0; }
+  .contact-form form input {
+    display: block;
+    height: 32px;
+    width: 256px;
+    margin-bottom: 20px; }
+  .contact-form form textarea {
+    width: 256px;
+    height: 96px; }
+  .contact-form form button {
+    margin: 16px auto 10px auto;
+    font-size: 18px;
+    padding: 4px 62px;
+    display: block; }
+
+/*# sourceMappingURL=ContactForm.css.map */

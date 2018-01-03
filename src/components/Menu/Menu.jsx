@@ -72,6 +72,21 @@ class Menu extends Component {
                                     Login
                                 </Link>
                             </li>
+                            <li>
+                                <Link to='/AddPost' onClick={ this.props.closeMenu }>
+                                    Post
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='/Orders' onClick={ this.props.closeMenu }>
+                                    Orders
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='/Wizard' onClick={ this.props.closeMenu }>
+                                    Wizard
+                                </Link>
+                            </li>
                             { this.props.user && this.props.user.id ?
                             <li>
                                 <Link to='/login' onClick={ () => this.props.actions.logout() }>

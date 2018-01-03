@@ -1,0 +1,24 @@
+.checkout {
+  form {
+    width: 288px;
+    margin: auto;
+    padding: 16px;
+    padding-top: 0;
+    input {
+      display: block;
+      height: 32px;
+      width: 256px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 256px;
+      height: 96px;
+    }
+    button {
+      margin: 16px auto 10px auto;
+      font-size: 18px;
+      padding: 4px 62px;
+      display: block;
+    }
+  }
+}

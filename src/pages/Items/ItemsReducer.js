@@ -6,7 +6,7 @@ export function itemsReducer(state=[], action) {
     let addItems = (res, item) => {
         item._id = res.data.id;
         state.push(item);
-        state =  state.slice(0);
+        state = state.slice(0);
     };
 
     let fetchItems = (param) => {

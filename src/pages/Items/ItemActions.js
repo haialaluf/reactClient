@@ -25,10 +25,11 @@ export function addItem(item) {
             }).catch((error) => {
                 console.error('Error during service worker registration:', error);
             });
-        if (item.image) {
-            connect.post(`${ prefix }uploadImage`, { image: item.image })
-                .then(function (res) {
-                    addItem({ name: item.name, description: item.description, imageUrl: res.data.imageUrl })
+        if (item.fileList && item.fileList.length) {
+            connect.post(`${ prefix }uploadFiles`, { fileList: item.fileList })
+                .then((res) => {
+                    item.fileList = res.data;
+                    addItem(item)
                 }).catch((error) => {
                     console.error('Error during service worker registration:', error);
                 });
@@ -73,7 +74,8 @@ export function deleteItem(itemId) {
 
 export function getItems(params) {
     return (dispatch) => {
-        connect.get(`${ prefix }getItems`)
+        let queryPrams = params ? Object.keys(params).map(key=>key+'='+params[key]) : '';
+        connect.get(`${ prefix }getItems/?${queryPrams}`)
             .then((res) => {
                 dispatch({
                     type: 'GET_ITEMS',

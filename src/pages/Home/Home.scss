@@ -1,5 +1,6 @@
 @import './../node_modules/react-responsive-carousel/lib/styles/carousel.css';
 @import './../node_modules/react-responsive-carousel/lib/styles/main.css';
+@import "./../../components/ContactForm/ContactForm";
 
 .container {
 
@@ -16,16 +17,30 @@
       padding: 24px;
     }
   }
+  .cover {
+    height: 384px;
+
+    * {
+      z-index: -1;
+      position: fixed;
+      left: 0;
+      width: 100%;
+    }
+
+    .slide {
+      height: 384px;
+    }
+
+  }
 
   .text {
     font-size: 16px;
   }
 
-  .slide {
-    height: 384px;
-  }
 
   .how-it-work {
+
+    background-color: #ffffff;
 
     .title {
       padding-bottom: 0;
@@ -33,6 +48,7 @@
 
     .all-stages-container {
       display: flex;
+      padding-bottom: 32px;
       @include tablet {
         display: block;
       }
@@ -120,7 +136,7 @@
     }
     .text {
       padding: 0 32px;
-      line-height: 10%;
+      line-height: 133%;
 
       @include desktop {
         padding: 0 40px;

@@ -1,0 +1,66 @@
+.item {
+  position: relative;
+  display: inline-block;
+  width: 24vw;
+  height: 24vw;
+  margin: .5vw;
+  background: white;
+  background-position: center 40px;
+  background-size: auto 16vh;
+  background-repeat: no-repeat;
+  padding: 12px;
+  border: 1px solid;
+  overflow: hidden;
+  border-radius: 4px;
+
+  &.selected {
+    border-color: #11ff88;
+  }
+  @include mobile {
+    width: 48vw;
+    margin: 1vw;
+    height: 42vw;
+    border-radius: 2px;
+    background-position: center 32px;
+  }
+
+  @include tablet {
+    width: 32vw;
+    margin: .6vw;
+    height: 32vw;
+  }
+
+  &.expand {
+    transition: all 0.3s;
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    top: $header-offset;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    z-index: 2;
+
+    @include mobile {
+        bottom: 8px;
+        right: 8px;
+        left: 8px;
+    }
+
+  }
+
+
+  .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 128px;
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+
+  .description {
+
+  }
+}

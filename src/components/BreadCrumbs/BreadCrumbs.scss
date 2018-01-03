@@ -1,0 +1,56 @@
+.bread-crumbs{
+  height: $bread-crumbs-hight;
+  padding: 4px;
+  display: flex;
+
+  .pointer {
+    cursor: pointer;
+    width: 160px;
+    margin-right: 12px;
+    max-width: 30vw;
+    height: 32px;
+    position: relative;
+    background: #2B2B2B;
+
+    &.selected {
+      background: #921010;
+
+      &:before {
+        border-left: 12px solid #921010;
+      }
+    }
+    &:last-child {
+      position: absolute;
+      right: 4px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #2B2B2B;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+
+    div {
+      color: white;
+      font-size: 18px;
+      padding: 6px 18px;
+    }
+  }
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactSVG from 'react-svg'
-import Style from '../../assets/Styles'
 
 class Icon extends Component {
 
@@ -8,17 +7,18 @@ class Icon extends Component {
         const img = require(`./../../assets/icons/${this.props.image}.svg`);
         let style = {
             icon: {
-                height: '32px',
-                width: '32px',
-                fill: Style.colors.menuSecondary
+                fill: this.props.color
             }
         };
         return (
-            <ReactSVG
-                path={ img }
-                callback={svg => 1}
-                style={ Object.assign({}, style.icon, this.props.style) }
-            />
+            <span className={ this.props.className }>
+                <ReactSVG
+                    path={ img }
+                    callback={svg => 1}
+                    style={ Object.assign({}, style.icon, this.props.style) }
+                />
+            </span>
+
         )
     }
 }

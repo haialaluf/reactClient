@@ -13,11 +13,6 @@ let connect = axios.create({
     withCredentials: true
 });
 
-export function sendMessage(name, email, subject, message) {
-    return connect.post(`${ prefix }contactMessage`, {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
-    })
+export function sendMessage(message) {
+    return connect.post(`${ prefix }contactMessage`, message)
 }

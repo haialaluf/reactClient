@@ -1,5 +1,7 @@
-@import "./Item/Item";
+@import "../../components/Item/Item";
+@import "./AddItem/AddItem";
 
 .items-container {
+  position: relative;
 
 }

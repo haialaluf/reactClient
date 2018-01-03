@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { addItem, getItems, deleteItem } from './ItemActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Item from "./Item/Item";
+import Item from "../../components/Item/Item";
 import AddItem from "./AddItem/AddItem";
 
 class Items extends Component {
@@ -20,7 +20,7 @@ class Items extends Component {
             <div>
                 <h2>Items</h2>
                 <div className="items-container">
-                    { items && items.map((item, index) => <Item item={ item } key={ index } deleteItem={ this.props.actions.deleteItem }/>) }
+                    { items && items.map((item, index) => <Item item={ item } key={ index } deleteCallback={ this.props.actions.deleteItem }/>) }
                 </div>
                 <div>
                     <h2>Add Item</h2>
