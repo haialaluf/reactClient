@@ -2,6 +2,10 @@
 .orders-container {
   position: relative;
 
+  .ReactTable {
+    height: calc(100vh - #{$header-offset});
+  }
+
   .items-container {
       height: inherit;
   }

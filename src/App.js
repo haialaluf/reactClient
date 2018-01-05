@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Header from './components/Header/Header';
-import Menu from './components/Menu/Menu';
+import Header from './components/smart/Header/Header';
+import Menu from './components/smart/Menu/Menu';
+import CreateWizardTool from './components/smart/CreateWizardTool/CreateWizardTool';
 import Home from './pages/Home/Home';
 import AddPost from './pages/Post/AddPost';
 import Items from './pages/Items/Items';
@@ -41,6 +42,9 @@ class App extends Component {
                 window.addEventListener('scroll', scrollSpy(384));
                 break;
             case '/Wizard':
+                self.setState({ sticky: true });
+                break;
+            case '/Orders':
                 self.setState({ sticky: true });
                 break;
             default:

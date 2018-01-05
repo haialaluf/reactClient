@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { addItem, getItems, deleteItem } from './ItemActions';
+import { addItem, getItems, deleteItem } from './../../serverConnection/Actions/ItemActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Item from "../../components/Item/Item";
-import AddItem from "./AddItem/AddItem";
+import Item from "../../components/dumb/Item/Item";
+import AddItem from "../../components/dumb/AddItem/AddItem";
 
 class Items extends Component {
 

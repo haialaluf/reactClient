@@ -1,73 +1,503 @@
-/*
-Error: File to import not found or unreadable: ./components/AddressAutocomplete/AddressAutocomplete.scss.
-        on line 1 of pages/Post/AddPost.scss
-        from line 81 of main.scss
+@import url(./../node_modules/react-responsive-carousel/lib/styles/carousel.css);
+@import url(./../node_modules/react-responsive-carousel/lib/styles/main.css);
+body {
+  position: relative; }
 
-1: $tablet-width: 600px;
-2: $header-offset: 48px;
-3: $desktop-width: 1024px;
-4: 
-5: 
-6: @mixin tablet {
+#root {
+  padding-top: 48px; }
 
-Backtrace:
-pages/Post/AddPost.scss:1
-main.scss:81
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:45:in `import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `map'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:88:in `block in with_import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:88:in `with_import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/scss:23:in `load'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/scss:23:in `<main>'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: ./components/AddressAutocomplete/AddressAutocomplete.scss.\A         on line 1 of pages/Post/AddPost.scss\A         from line 81 of main.scss\A \A 1: $tablet-width: 600px;\A 2: $header-offset: 48px;\A 3: $desktop-width: 1024px;\A 4: \A 5: \A 6: @mixin tablet {"; }
+@media (max-width: 600px) {
+  .hide-in-mobile {
+    display: none; } }
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .hide-in-tablet {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .hide-in-desktop {
+    display: none; } }
+
+.br {
+  height: 20px;
+  width: 100%; }
+
+.right-icon {
+  position: absolute;
+  top: 2px;
+  right: 2px; }
+
+.left-icon {
+  position: absolute;
+  top: 2px;
+  left: 2px; }
+
+.small-icon svg {
+  height: 20px;
+  width: 20px; }
+
+.big-icon svg {
+  height: 32px;
+  width: 32px; }
+
+.contact-form form {
+  width: 288px;
+  margin: auto;
+  padding: 16px;
+  padding-top: 0; }
+  .contact-form form input {
+    display: block;
+    height: 32px;
+    width: 256px;
+    margin-bottom: 20px; }
+  .contact-form form textarea {
+    width: 256px;
+    height: 96px; }
+  .contact-form form button {
+    margin: 16px auto 10px auto;
+    font-size: 18px;
+    padding: 4px 62px;
+    display: block; }
+
+.container .title {
+  font-size: 32px;
+  padding: 32px;
+  text-align: center; }
+  @media (max-width: 600px) {
+    .container .title {
+      padding: 24px; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .container .title {
+      padding: 24px; } }
+.container .cover {
+  height: 384px; }
+  .container .cover * {
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    width: 100%; }
+  .container .cover .slide {
+    height: 384px; }
+.container .text {
+  font-size: 16px; }
+.container .how-it-work {
+  background-color: #ffffff; }
+  .container .how-it-work .title {
+    padding-bottom: 0; }
+  .container .how-it-work .all-stages-container {
+    display: flex;
+    padding-bottom: 32px; }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .container .how-it-work .all-stages-container {
+        display: block; } }
+    @media (max-width: 600px) {
+      .container .how-it-work .all-stages-container {
+        display: block; } }
+  .container .how-it-work .two-stages-container {
+    text-align: center;
+    display: flex;
+    width: 50%;
+    margin: 32px 0; }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .container .how-it-work .two-stages-container {
+        display: flex;
+        width: 100%; } }
+    @media (max-width: 600px) {
+      .container .how-it-work .two-stages-container {
+        display: block;
+        width: 100%;
+        margin: 0; } }
+  .container .how-it-work .stage {
+    width: 50%;
+    height: 256px;
+    margin: 16px;
+    background-size: auto 256px;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .container .how-it-work .stage.stage1 {
+      background-image: url("./assets/images/number1.png"); }
+    .container .how-it-work .stage.stage2 {
+      background-image: url("./assets/images/number2.png"); }
+    .container .how-it-work .stage.stage3 {
+      background-image: url("./assets/images/number3.png"); }
+    .container .how-it-work .stage.stage4 {
+      background-image: url("./assets/images/number4.png"); }
+    .container .how-it-work .stage .head {
+      font-size: 24px; }
+    .container .how-it-work .stage .text {
+      font-size: 16px; }
+    @media (max-width: 600px) {
+      .container .how-it-work .stage {
+        height: 128px;
+        background-size: auto 128px;
+        width: 100%;
+        margin: 32px 0; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .container .how-it-work .stage {
+        height: 192px;
+        background-size: auto 192px; } }
+.container .about {
+  display: flex;
+  background-color: honeydew; }
+  .container .about .text-container {
+    width: 50%;
+    padding-bottom: 32px; }
+  .container .about .image-container {
+    width: 50%;
+    background-image: url("./assets/images/about.jpg");
+    background-size: auto 100%; }
+  .container .about .text {
+    padding: 0 32px;
+    line-height: 133%; }
+    @media (min-width: 1024px) {
+      .container .about .text {
+        padding: 0 40px;
+        font-size: 18px; } }
+  @media (max-width: 600px) {
+    .container .about {
+      display: block; }
+      .container .about .text-container {
+        width: 100%; }
+      .container .about .image-container {
+        display: none; } }
+
+.item {
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid;
+  display: inline-block;
+  position: relative;
+  width: 24vw;
+  height: 24vw;
+  margin: .5vw;
+  background: white;
+  background-position: center 40px;
+  background-size: auto 16vh;
+  background-repeat: no-repeat;
+  padding: 12px; }
+  .item.selected {
+    border-color: #11ff88; }
+  @media (max-width: 600px) {
+    .item {
+      width: 48vw;
+      margin: 1vw;
+      height: 42vw;
+      border-radius: 2px;
+      background-position: center 32px; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .item {
+      width: 32vw;
+      margin: .6vw;
+      height: 32vw; } }
+  .item.expand {
+    transition: all 0.3s;
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    top: 48px;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    z-index: 2; }
+    @media (max-width: 600px) {
+      .item.expand {
+        bottom: 8px;
+        right: 8px;
+        left: 8px; } }
+  .item .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 128px; }
+    @media (max-width: 600px) {
+      .item .title {
+        font-size: 24px; } }
+
+.add-item {
+  padding: 24px;
+  width: 100%; }
+  .add-item .name-type {
+    display: flex; }
+    .add-item .name-type input {
+      height: 32px;
+      width: calc(100% - 44px); }
+    .add-item .name-type select {
+      height: 32px;
+      width: 32px;
+      margin-left: 12px; }
+  .add-item .files-list {
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll; }
+  .add-item .cropper-container {
+    display: flex; }
+    .add-item .cropper-container button {
+      width: 128px;
+      height: 32px;
+      padding: 0; }
+    .add-item .cropper-container .cropper-container {
+      width: 400px !important;
+      height: 200px !important; }
+  .add-item .file {
+    position: relative;
+    height: 32px;
+    width: 100%;
+    padding: 6px; }
+    .add-item .file.selected {
+      background: wheat; }
+    .add-item .file .file-name {
+      cursor: pointer; }
+    .add-item .file svg {
+      cursor: pointer;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 20px;
+      height: 20px; }
+  .add-item form {
+    width: 100%; }
+    .add-item form input {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 12px; }
+    .add-item form textarea {
+      width: 100%;
+      height: 96px;
+      font-size: 16px;
+      margin-bottom: 12px; }
+      .add-item form textarea.long {
+        height: 224px; }
+
+.file-drop-container {
+  position: relative; }
+  .file-drop-container .file-drop-view {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; }
+    .file-drop-container .file-drop-view .instructions {
+      width: 50%;
+      position: absolute;
+      left: 25%;
+      top: 25%; }
+      .file-drop-container .file-drop-view .instructions div {
+        text-align: center;
+        margin-left: 12px; }
+      .file-drop-container .file-drop-view .instructions .input-file-container {
+        width: 94px;
+        margin: auto; }
+
+.file-drop {
+  /* relatively position the container bc the contents are absolute */
+  position: relative;
+  height: 160px;
+  width: 100%; }
+  .file-drop .file-drop-target {
+    /* basic styles */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    /* --------------- */
+    /* a little transition sizzle */
+    transition: all 150ms linear;
+    -webkit-transition: all 150ms linear;
+    -moz-transition: all 150ms linear;
+    -ms-transition: all 150ms linear;
+    -o-transition: all 150ms linear;
+    opacity: 0;
+    /* horizontally and vertically center all content */
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    align-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    text-align: center;
+    /* --------------- */ }
+  .file-drop .file-drop-dragging-over-frame {
+    /* overlay a black mask when dragging over the frame */
+    border: none;
+    background-color: rgba(0, 0, 0, 0.65);
+    box-shadow: none;
+    z-index: 50;
+    opacity: 1.0;
+    /* --------------- */
+    /* typography */
+    color: white;
+    /* --------------- */ }
+  .file-drop .file-drop-dragging-over-target {
+    /* turn stuff orange when we are dragging over the target */
+    color: #ff6e40;
+    box-shadow: 0 0 13px 3px #ff6e40; }
+
+.items-container {
+  position: relative; }
+
+.bread-crumbs {
+  height: 48px;
+  padding: 4px;
+  display: flex;
+  width: calc(100% - 160px); }
+  .bread-crumbs .pointer {
+    width: 16.6%;
+    cursor: pointer;
+    margin-right: 12px;
+    max-width: 30vw;
+    height: 32px;
+    position: relative;
+    background: #444444;
+    transition-delay: 5s;
+    -webkit-transition: width .5s, height .5s, background-color 0s, -webkit-transform 2s;
+    transition: width .5s, height .5s, background-color 0s, transform 2s; }
+    .bread-crumbs .pointer.selected {
+      transition-delay: 0s;
+      width: 50%;
+      flex: 6;
+      background: #03C669; }
+      .bread-crumbs .pointer.selected:before {
+        border-left: 12px solid #03C669; }
+    .bread-crumbs .pointer:last-child {
+      width: 120px;
+      position: absolute;
+      right: 4px; }
+    .bread-crumbs .pointer:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent; }
+    .bread-crumbs .pointer:before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #444444;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent; }
+    .bread-crumbs .pointer div {
+      color: white;
+      font-size: 18px;
+      padding: 6px 18px; }
+
+.checkout form {
+  width: 288px;
+  margin: auto;
+  padding: 16px;
+  padding-top: 0; }
+  .checkout form input {
+    display: block;
+    height: 32px;
+    width: 256px;
+    margin-bottom: 20px; }
+  .checkout form textarea {
+    width: 256px;
+    height: 96px; }
+  .checkout form button {
+    margin: 16px auto 10px auto;
+    font-size: 18px;
+    padding: 4px 62px;
+    display: block; }
+
+.items-container {
+  height: calc(100vh - 96px);
+  overflow: scroll; }
+
+.orders-container {
+  position: relative; }
+  .orders-container .ReactTable {
+    height: calc(100vh - 48px); }
+  .orders-container .items-container {
+    height: inherit; }
+
+.menu {
+  padding: 4px; }
+  .menu li {
+    padding: 8px; }
+    .menu li a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer; }
+
+@-webkit-keyframes swing {
+  25% {
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg); }
+  50% {
+    -webkit-transform: rotateZ(8deg);
+    -ms-transform: rotateZ(8deg);
+    transform: rotateZ(8deg); }
+  75% {
+    -webkit-transform: rotateZ(-5deg);
+    -ms-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg); }
+  100% {
+    -webkit-transform: rotateZ(2deg);
+    -ms-transform: rotateZ(2deg);
+    transform: rotateZ(2deg); } }
+@keyframes swing {
+  25% {
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg); }
+  50% {
+    -webkit-transform: rotateZ(8deg);
+    -ms-transform: rotateZ(8deg);
+    transform: rotateZ(8deg); }
+  75% {
+    -webkit-transform: rotateZ(-5deg);
+    -ms-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg); }
+  100% {
+    -webkit-transform: rotateZ(2deg);
+    -ms-transform: rotateZ(2deg);
+    transform: rotateZ(2deg); } }
+.home-page-header {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 16px; }
+  .home-page-header .swing:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1; }
+  .home-page-header .header-button {
+    background-color: #03C669;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 16px; }
+    .home-page-header .header-button a {
+      text-decoration: none;
+      color: black; }
+  .home-page-header span {
+    cursor: pointer;
+    margin-left: 16px; }
+    .home-page-header span a.active {
+      border-bottom: solid 2px black; }
+
+/*# sourceMappingURL=main.css.map */

@@ -2,6 +2,15 @@
  * Created by haialaluf on 26/12/2017.
  */
 export default {
+    
+    parseDate(date, template) {
+        const fullYear = date.getFullYear();
+        const year = date.getYear();
+        const month = date.getMonth() ;
+        return template.replace('YYYY')
+        
+    },
+    
     dataURLtoBlob(dataurl) {
         var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
             bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);

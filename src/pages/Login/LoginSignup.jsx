@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { emailLogin, emailRegister, facebookLogin, googleLogin } from './UserActions';
+import { emailLogin, emailRegister, facebookLogin, googleLogin } from './../../serverConnection/Actions/UserActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Login  from './Login/Login';

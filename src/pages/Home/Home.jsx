@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 // import {Carousel} from 'react-responsive-carousel';
-import ContactForm from '../../components/ContactForm/ContactForm'
+import ContactForm from '../../components/smart/ContactForm/ContactForm'
 import Config from '../../Config'
 
 
@@ -72,9 +72,6 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
-                <div name="contact-form">
-                    <ContactForm></ContactForm>
-                </div>
                 <div className="about" name="about">
                     <div className="text-container">
                         <div className="title">
@@ -86,9 +83,18 @@ class Home extends Component {
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                             cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            <div className="br"/>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </div>
                     </div>
                     <div className="image-container"></div>
+                </div>
+                <div name="contact-form">
+                    <ContactForm></ContactForm>
                 </div>
             </div>
         )

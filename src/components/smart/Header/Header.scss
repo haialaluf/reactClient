@@ -1,0 +1,126 @@
+@-webkit-keyframes swing {
+  25% {
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(8deg);
+    -ms-transform: rotateZ(8deg);
+    transform: rotateZ(8deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-5deg);
+    -ms-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(2deg);
+    -ms-transform: rotateZ(2deg);
+    transform: rotateZ(2deg);
+  }
+}
+@keyframes swing  {
+  25% {
+    -webkit-transform: rotateZ(-10deg);
+    -ms-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(8deg);
+    -ms-transform: rotateZ(8deg);
+    transform: rotateZ(8deg);
+  }
+  75% {
+    -webkit-transform: rotateZ(-5deg);
+    -ms-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(2deg);
+    -ms-transform: rotateZ(2deg);
+    transform: rotateZ(2deg);
+  }
+}
+
+
+.home-page-header {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 16px;
+
+  .swing:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+
+  .header-button {
+    background-color: $green;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 16px;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  //.header-button {
+  //  background-color: #03C669;
+  //  padding: 5px 8px;
+  //  display: inline-block;
+  //  margin-left: 16px;
+  //  cursor: pointer;
+  //  width: 128px;
+  //  margin-right: 12px;
+  //  max-width: 30vw;
+  //  height: 28px;
+  //  position: relative;
+  //
+  //  &:after {
+  //    content: "";
+  //    position: absolute;
+  //    left: 0;
+  //    bottom: 0;
+  //    width: 0;
+  //    height: 0;
+  //    border-left: 10px solid white;
+  //    border-top: 14px solid transparent;
+  //    border-bottom: 14px solid transparent;
+  //  }
+  //  &:before {
+  //    content: "";
+  //    position: absolute;
+  //    right: -12px;
+  //    bottom: 0;
+  //    width: 0;
+  //    height: 0;
+  //    border-left: 14px solid #03C669;
+  //    border-top: 14px solid transparent;
+  //    border-bottom: 14px solid transparent;
+  //  }
+  //
+  //  a {
+  //    text-decoration: none;
+  //    color: black;
+  //    padding-right: 12px;
+  //  }
+  //}
+
+
+  span {
+    cursor: pointer;
+    margin-left: 16px;
+
+    a {
+      &.active {
+        border-bottom: solid 2px black;
+      }
+    }
+  }
+}

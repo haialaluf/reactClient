@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { getOrders, deleteOrder } from './OrdersActions';
+import { getOrders, deleteOrder } from './../../serverConnection/Actions/OrdersActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Item from "../../components/Item/Item";
+import Item from "../../components/dumb/Item/Item";
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 
@@ -39,7 +39,6 @@ class Orders extends Component {
 
         return (
             <div>
-                <h2>Orders</h2>
                 <div className="orders-container">
                     <ReactTable
                         data={ orders }

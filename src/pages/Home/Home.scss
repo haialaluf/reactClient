@@ -1,6 +1,6 @@
 @import './../node_modules/react-responsive-carousel/lib/styles/carousel.css';
 @import './../node_modules/react-responsive-carousel/lib/styles/main.css';
-@import "./../../components/ContactForm/ContactForm";
+@import "../../components/smart/ContactForm/ContactForm";
 
 .container {
 
@@ -135,6 +135,7 @@
       background-size: auto 100%;
     }
     .text {
+
       padding: 0 32px;
       line-height: 133%;
 

@@ -1,6 +1,6 @@
 $bread-crumbs-hight: 48px;
-@import "../../components/dumb/BreadCrumbs/BreadCrumbs";
-@import "../../components/dumb/Checkout/Checkout";
+@import "../dumb/BreadCrumbs/BreadCrumbs";
+@import "../dumb/Checkout/Checkout";
 
 
 $ofsset: $header-offset + $bread-crumbs-hight;

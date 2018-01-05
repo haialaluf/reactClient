@@ -1,0 +1,65 @@
+.bread-crumbs{
+  height: $bread-crumbs-hight;
+  padding: 4px;
+  display: flex;
+  width: calc(100% - 160px);
+
+  .pointer {
+    width: 16.6%;
+    cursor: pointer;
+    margin-right: 12px;
+    max-width: 30vw;
+    height: 32px;
+    position: relative;
+    background: #444444;
+    transition-delay: 5s;
+    -webkit-transition: width .5s, height .5s, background-color 0s, -webkit-transform 2s;
+    transition: width .5s, height .5s, background-color 0s, transform 2s;
+
+
+    &.selected {
+      transition-delay: 0s;
+      width: 50%;
+      flex: 6;
+      background: $green;
+
+      &:before {
+        border-left: 12px solid $green;
+      }
+    }
+    &:last-child {
+      width: 120px;
+      position: absolute;
+      right: 4px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #444444;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+
+    div {
+      color: white;
+      font-size: 18px;
+      padding: 6px 18px;
+    }
+  }
+}

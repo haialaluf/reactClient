@@ -3,10 +3,10 @@
  */
 // import { EventEmitter } from 'events';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { appReducer } from './AppReducer';
-import { itemsReducer } from '../pages/Items/ItemsReducer';
-import { ordersReducer } from '../pages/Orders/OrdersReducer';
-import { userReducer } from '../pages/Login/UserReducer';
+import { appReducer } from './Reducers/AppReducer';
+import { itemsReducer } from './Reducers/ItemsReducer';
+import { ordersReducer } from './Reducers/OrdersReducer';
+import { userReducer } from './Reducers/UserReducer';
 import ReduxThunk from 'redux-thunk'
 
 const middleware = applyMiddleware(ReduxThunk);

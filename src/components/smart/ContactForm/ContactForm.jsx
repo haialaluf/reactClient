@@ -1,9 +1,9 @@
-import React from 'react'
-import AddressAutocomplete from '../../components/dumb/AddressAutocomplete/AddressAutocomplete'
-import Style from '../../assets/Styles';
-// import Config from '../../Config'
+import React, { Component } from 'react';
+import Style from '../../../assets/Styles';
+import { sendMessage } from './../../../serverConnection/Actions/ContactActions';
 
-class AddPost extends React.Component {
+class ContactForm extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -26,7 +26,19 @@ class AddPost extends React.Component {
             return;
         }
 
+        if (!this.refs.email.value || !(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(this.refs.email.value))) {
+            this.setState({ errors: {email: true} });
+            return;
+        }
+
         this.setState({ errors: {} });
+
+        sendMessage(this.refs.name.value, this.refs.email.value, this.refs.subject.value, this.refs.message.value)
+            .then((res) => {
+                console.log(res)
+            }).catch((err) => {
+                console.log(err)
+            });
 
     }
 
@@ -43,8 +55,11 @@ class AddPost extends React.Component {
                            type="text"
                            placeholder="Subject"
                            ref="subject"/>
-                    <AddressAutocomplete onAddressSelected={(address) => this.address = address} />
-                    <textarea placeholder="description" ref="description"/>
+                    <input style={ Object.assign({}, this.state.errors.email ? style.error : {}) }
+                           type="text"
+                           placeholder="Email"
+                           ref="email"/>
+                    <textarea placeholder="Message" ref="message"/>
                     <button type="button" onClick={ this.register.bind(this) }>Send</button>
                 </form>
             </div>
@@ -56,7 +71,6 @@ let style = {
     error: {
         borderColor: Style.colors.errorColor
     }
-}
+};
 
-
-export default AddPost;
+export default ContactForm;
