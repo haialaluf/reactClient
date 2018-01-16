@@ -115,10 +115,11 @@ class FilesUpload extends Component {
                 </div>
                 <div className="cropper-container">
                     <Cropper
+                        aspectRatio={16 / 9}
                         ref='cropper'
                         style={ style.imageCropper }
                         src={ this.state.image }/>
-                    {this.state.image ? <button type="button" onClick={ this.crop.bind(this)}>Crop</button> : ''}
+                    {this.state.image ? <button type="button" className="button" onClick={ this.crop.bind(this)}>Crop</button> : ''}
                 </div>
             </div>
         )

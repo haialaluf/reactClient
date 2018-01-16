@@ -3,6 +3,7 @@ import { getOrders, deleteOrder } from './../../serverConnection/Actions/OrdersA
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Item from "../../components/dumb/Item/Item";
+import Helpers from "../../helpers";
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
 
@@ -33,7 +34,7 @@ class Orders extends Component {
             }, {
                 Header: 'Date',
                 accessor: 'date',
-                Cell: props => <span className='number'>{props.value}</span> // Custom cell components!
+                Cell: props => <span className='number'>{Helpers.parseDate(new Date(props.value), 'DD/MM/YYYY HH:MM')}</span> // Custom cell components!
             }]
 
 

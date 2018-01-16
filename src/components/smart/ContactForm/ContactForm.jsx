@@ -60,7 +60,7 @@ class ContactForm extends Component {
                            placeholder="Email"
                            ref="email"/>
                     <textarea placeholder="Message" ref="message"/>
-                    <button type="button" onClick={ this.register.bind(this) }>Send</button>
+                    <button type="button" className="primary" onClick={ this.register.bind(this) }>Send</button>
                 </form>
             </div>
         )

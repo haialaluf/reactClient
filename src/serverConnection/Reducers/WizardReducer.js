@@ -1,31 +1,38 @@
 /**
  * Created by hai on 20/07/2017.
  */
-export function itemsReducer(state=[], action) {
+export function wizardReducer(state=[], action) {
 
-    let addItems = (res, item) => {
-        item._id = res.data.id;
-        state.push(item);
-        state = state.slice(0);
+    const addWizard = (wizard) => {
+        state = state.concat([wizard]);
     };
 
-    let fetchItems = (param) => {
-        state = param.data;
+    const getAllWizards = (wizard) => {
+        state = wizard;
     };
 
-    let deleteItem = (itemId) => {
-        state = state.filter((item) => item._id !== itemId);
+    const setWizard = (wizard) => {
+        let existed = false;
+        let newState = state.map(oldWizard => {
+            if (oldWizard._id === wizard._id) {
+                existed = true;
+                return wizard;
+            } else {
+                return oldWizard
+            }
+        });
+        state = existed ? newState : newState.concat([wizard])
     };
 
     switch (action.type) {
-        case 'GET_ITEMS':
-            fetchItems(action.params);
+        case 'CREATE_WIZARD':
+            addWizard(action.wizard);
             break;
-        case 'ADD_ITEM':
-            addItems(action.res, action.item);
+        case 'GET_WIZARD_BY_ID':
+            setWizard(action.wizard);
             break;
-        case 'DELETE_ITEM':
-            deleteItem(action.itemId);
+        case 'GET_ALL_WIZARDS':
+            getAllWizards(action.wizards);
             break;
         default:
     }

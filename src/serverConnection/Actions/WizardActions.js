@@ -13,76 +13,78 @@ let connect = axios.create({
     withCredentials: true
 });
 
-export function addItem(item) {
+export function createWizard(wizard) {
     return (dispatch) => {
-        let addItem = (item) => connect.post(`${ prefix }addItem`, item)
+        let files = [].concat.apply([], wizard.items.map((item) => item.fileList || []));
+        let createWizard = (wizard) => connect.post(`${ prefix }createWizard`, wizard)
             .then((res) => {
                 dispatch({
-                    type: 'ADD_ITEM',
-                    res: res,
-                    item: item
+                    type: 'CREATE_WIZARD',
+                    wizard: res.data
                 });
             }).catch((error) => {
                 console.error('Error during service worker registration:', error);
             });
-        if (item.fileList && item.fileList.length) {
-            connect.post(`${ prefix }uploadFiles`, { fileList: item.fileList })
+        if (files && files.length) {
+            connect.post(`${ prefix }uploadFiles`, { fileList: files })
                 .then((res) => {
-                    item.fileList = res.data;
-                    addItem(item)
+                    let filesUrl = res.data.reverse();
+                    wizard.items.forEach(item => {
+                        item.fileList = item.fileList.map(() => filesUrl.pop())
+                    });
+                    createWizard(wizard)
                 }).catch((error) => {
-                    console.error('Error during service worker registration:', error);
+                    console.error('Error during create Wizard:', error);
                 });
         } else {
-            addItem(item)
+            createWizard(wizard)
         }
 
     };
 }
 
-export function uploadImage(img) {
+export function deleteWizard(wizardId) {
     return (dispatch) => {
-        connect.post(`${ prefix }uploadImage`, { image: img })
-            .then((res) => {
-                // dispatch({
-                //     type: 'ADD_ITEM',
-                //     res: res,
-                // });
-            }).catch((error) => {
-            console.error('Error during service worker registration:', error);
-        })
-    };
-}
-
-export function deleteItem(itemId) {
-    return (dispatch) => {
-        connect.delete(`${ prefix }deleteItem`, {
+        connect.delete(`${ prefix }deleteWizard`, {
             params: {
-                id: itemId
+                id: wizardId
             }
         }).then((res) => {
                 dispatch({
-                    type: 'DELETE_ITEM',
+                    type: 'DELETE_WIZARD',
                     res: res,
-                    itemId: itemId
+                    wizardId: wizardId
                 });
             }).catch((error) => {
-            console.error('Error during service worker registration:', error);
+            console.error('Error during delete Wizard: ', error);
         })
     };
 }
 
-export function getItems(params) {
+export function getWizardById(wizardId) {
     return (dispatch) => {
-        let queryPrams = params ? Object.keys(params).map(key=>key+'='+params[key]) : '';
-        connect.get(`${ prefix }getItems/?${queryPrams}`)
+        connect.get(`${ prefix }getWizardById/?id=${wizardId}`)
             .then((res) => {
                 dispatch({
-                    type: 'GET_ITEMS',
-                    params: res,
+                    type: 'GET_WIZARD_BY_ID',
+                    wizard: res.data
                 });
             }).catch((error) => {
-            console.error('Error during service worker registration:', error);
+            console.error('Error during get Wizard:', error);
+        })
+    };
+}
+
+export function getAllWizards(params) {
+    return (dispatch) => {
+        connect.get(`${ prefix }getWizards/`)
+            .then((res) => {
+                dispatch({
+                    type: 'GET_ALL_WIZARDS',
+                    wizards: res.data
+                });
+            }).catch((error) => {
+            console.error('Error during get Wizard:', error);
         })
     };
 }

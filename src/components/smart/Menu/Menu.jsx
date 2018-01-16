@@ -58,8 +58,8 @@ class Menu extends Component {
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/components' onClick={ this.props.closeMenu }>
-                                    Components
+                                <Link to='/settings' onClick={ this.props.closeMenu }>
+                                    Settings
                                 </Link>
                             </li>
                             <li>
@@ -83,8 +83,8 @@ class Menu extends Component {
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/Wizard' onClick={ this.props.closeMenu }>
-                                    Wizard
+                                <Link to='/CreateWizardTool' onClick={ this.props.closeMenu }>
+                                    Create Wizard Tool
                                 </Link>
                             </li>
                             { this.props.user && this.props.user.id ?

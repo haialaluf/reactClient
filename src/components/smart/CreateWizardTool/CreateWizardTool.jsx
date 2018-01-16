@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { getItems } from '../../../serverConnection/Actions/ItemActions';
-import { makeOrder } from '../../../serverConnection/Actions/OrdersActions';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React, {Component} from 'react';
+import {createWizard} from '../../../serverConnection/Actions/WizardActions';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 import Item from "../../dumb/Item/Item";
+import AddItem from "../../dumb/AddItem/AddItem";
 import Checkout from "../../dumb/Checkout/Checkout";
 import BreadCrumbs from "../../dumb/BreadCrumbs/BreadCrumbs";
 
@@ -13,11 +13,21 @@ class CreateWizardTool extends Component {
 
     constructor(props) {
         super(props);
+        this.itemId = 1;
         this.state = {
-            currentState: 1,
-            reachedState: 1,
-            items: [],
-            stages: []
+            currentState: 0,
+            reachedState: 0,
+            editMode: {
+                stageName: true,
+                item: 0
+            },
+            wizard: {
+                items: [],
+                stages: [{
+                    title: 'Enter stage title',
+                    description: ''
+                }]
+            }
         };
     }
 
@@ -27,22 +37,45 @@ class CreateWizardTool extends Component {
     componentWillUnmount() {
     }
 
-    newStage() {
-
-    }
-
     addStage() {
-        let stages = this.state.stages.concat([{
-        }])
+        let stages = this.state.wizard.stages.concat([{
+            title: 'Enter stage title',
+            description: ''
+        }]);
+        this.setState({
+            wizard: {
+                items: this.state.wizard.items,
+                stages: stages
+            },
+            currentState: stages.length - 1,
+            reachedState: stages.length - 1,
+            editMode: {}
+        });
     }
 
     newItem() {
+        let editMode = this.state.editMode;
+        let wizard = this.state.wizard;
+        wizard.items.push({
+            _id: this.itemId
+        });
+        editMode.item = this.itemId;
+        this.itemId++;
+        this.setState({
+            editMode: editMode,
+            wizard: wizard
+        });
 
     }
 
-    addItem() {
-        let stages = this.state.stages.concat([{
-        }])
+    addItem(item) {
+        item._id = this.state.editMode.item;
+        item.type = this.state.currentState;
+        let wizard = this.state.wizard;
+        wizard.items = wizard.items.map((wizardItem) => {
+            return wizardItem._id === item._id ? item : wizardItem;
+        });
+        this.setState({wizard: wizard, editMode: {}})
     }
 
     nextState() {
@@ -60,6 +93,11 @@ class CreateWizardTool extends Component {
         }
     }
 
+    createWizard() {
+        let wizard = this.state.wizard;
+        this.props.actions.createWizard(wizard);
+    }
+
 
     addCallback(item) {
         return () => {
@@ -74,47 +112,73 @@ class CreateWizardTool extends Component {
         };
     }
 
-    checkOut(details) {
-        details.items = this.state.selected;
-        this.props.actions.makeOrder(details, (res) => {
-            //order has sent successful
-            debugger
-        })
-
+    renderStages(stage, index) {
+        const isState = (state) => this.state.currentState === state;
+        return <div
+            key={ index }
+            className={ `pointer ${ isState(index) ? 'selected' : ''} ${ isState(index) ? 'hide-in-mobile' : ''}` }
+            onClick={ this.moveState.bind(this)(index) }>
+            <div onClick={ () => this.setState({editMode: {stageName: true}}) }>
+                {
+                    this.state.editMode.stageName && isState(index) ?
+                        <input onChange={ (e) => {
+                                                    let wizard = this.state.wizard;
+                                                    wizard.stages[index].title = e.target.value;
+                                                    this.setState({wizard: wizard});
+                                                 }
+                                        }
+                               value={ stage.title }
+                        />
+                        :
+                        <div>{ stage.title }</div>
+                }
+            </div>
+        </div>
     }
 
     render() {
-        const items = this.state.items.filter((item) => item.type === this.state.currentState);
-        const isState = (state) => this.state.currentState === state;
+        const items = this.state.wizard.items.filter((item) => item.type === this.state.currentState);
         return (
-            <div>
-                <BreadCrumbs show={ this.state.reachedState } >
-                    <div className={ `pointer ${ isState(1) ? 'selected' : ''} ${ isState(1) ? 'hide-in-mobile' : ''}` }
-                         onClick={ this.moveState.bind(this)(1) }>
-                        <div>Hello</div>
+            <div className="wizard create-wizard-tool">
+                <BreadCrumbs show={ this.state.reachedState }>
+                    { this.state.wizard.stages.map(this.renderStages.bind(this)) }
+                    <div className="pointer" onClick={ this.addStage.bind(this) }>
+                        <div>Add Stage</div>
                     </div>
-                    <div className={ `pointer ${this.state.currentState === 2 ? 'selected' : ''} ${this.state.currentState !== 2 ? 'hide-in-mobile' : ''}` }
-                         onClick={ this.moveState.bind(this)(2) }>
-                        <div>2</div>
-                    </div>
-                    <div className={ `pointer ${this.state.currentState === 3 ? 'selected' : ''} ${this.state.currentState !== 3 ? 'hide-in-mobile' : ''}` }
-                         onClick={ this.moveState.bind(this)(3) }>
-                        <div>3</div>
-                    </div>
-                    <div className="pointer" onClick={ this.nextState.bind(this) }>
-                        <div>{this.state.currentState === STAGES? 'Done' : 'Next' } </div>
+                    <div className="pointer" onClick={ this.createWizard.bind(this) }>
+                        <div>Done</div>
                     </div>
                 </BreadCrumbs>
                 <div className="items-container">
                     { items && items.map((item, index) => <Item item={ item }
                                                                 key={ index }
-                                                                selected={ this.state.selected.indexOf(item._id) > -1 }
-                                                                addCallback={ this.addCallback.bind(this)(item) }/>) }
+                                                                deleteCallback={ itemId => {
+                                                            let wizard = this.state.wizard;
+                                                            wizard.items = wizard.items.filter((item) => item._id !== itemId);
+                                                            this.setState({ wizard: wizard, editMode: {} });
+                                                        } }
+                                                                editCallback={ x=>x }/>) }
                     {this.state.currentState === 3 ? <Checkout sendCallback={ this.checkOut.bind(this) }/> : ''}
-                    <div onClick={ this.newItem }
-                         className="item">
-                        <div className="title">Add Item</div>
+                    <div onClick={ this.newItem.bind(this) }
+                         className="item add-item">
+                        <div>Add Item</div>
                     </div>
+                    {
+                        this.state.editMode.item ?
+                            <div className="item expand">
+                                <AddItem action={ (item)=> { this.addItem.bind(this)(item) }
+                                         }
+                                         cancelAction={ () => {
+                                                            let itemId = this.state.editMode.item;
+                                                            let wizard = this.state.wizard;
+                                                            wizard.items = wizard.items.filter((item) => item._id !== itemId);
+                                                            this.setState({ wizard: wizard, editMode: {} });
+                                                        }
+                                         }
+                                />
+                            </div>
+                            : ''
+                    }
                 </div>
 
             </div>
@@ -128,7 +192,6 @@ export default connect(
     }),
     (dispatch) => ({
         actions: {
-            getItems: bindActionCreators(getItems, dispatch),
-            makeOrder: bindActionCreators(makeOrder, dispatch)
+            createWizard: bindActionCreators(createWizard, dispatch),
         }
     }))(CreateWizardTool);

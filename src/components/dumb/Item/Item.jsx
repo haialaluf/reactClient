@@ -17,11 +17,17 @@ class Item extends Component {
         this.state = {
             expand: false
         };
-        this.image = this.props.item.filesUrl && this.props.item.filesUrl[0] ? {backgroundImage: `url(${prefix}${this.props.item.filesUrl[0]}`} : {};
+        this.setImage.bind(this)()
     }
 
     componentWillReceiveProps({item}) {
-        this.image = item.filesUrl && item.filesUrl[0] ? {backgroundImage: `url(${prefix}${item.filesUrl[0]}`} : {};
+        this.setImage.bind(this)()
+    }
+
+    setImage() {
+        let imageUrl = (this.props.item.filesUrl && this.props.item.filesUrl[0] && prefix + this.props.item.filesUrl[0]) ||
+                       (this.props.item.fileList && this.props.item.fileList.length && this.props.item.fileList[0].dataURL);
+        this.image = imageUrl ? {backgroundImage: `url(${imageUrl}`} : {};
     }
 
     deleteItem() {
@@ -34,7 +40,7 @@ class Item extends Component {
                      name={ this.props.item._id }
                      className={`item ${this.props.selected ? ' selected' : ''} ${this.state.expand ? ' expand' : ''}`}>
                     <div className="title">{ this.props.item.name }</div>
-                    <div className="description">{ this.props.item.description }</div>
+                    <div className="description">{ this.props.item.shortDescription }</div>
                     {
                         this.props.deleteCallback ?
                             <span className="left-icon small-icon" onClick={ this.deleteItem.bind(this) }>

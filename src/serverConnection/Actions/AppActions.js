@@ -14,9 +14,23 @@ let connect = axios.create({
 });
 
 
-export function getItems(params) {
+export function getAppSettings(params) {
     return (dispatch) => {
-        connect.get(`${ prefix }getData`)
+        connect.get(`${ prefix }settings`)
+            .then((res) => {
+                dispatch({
+                    type: 'GET_DATA',
+                    params: res
+                });
+            }).catch((error) => {
+            console.error('Error getting app data:', error);
+        })
+    };
+}
+
+export function changeAppSettings(settings) {
+    return (dispatch) => {
+        connect.put(`${ prefix }settings`, settings)
             .then((res) => {
                 dispatch({
                     type: 'GET_DATA',

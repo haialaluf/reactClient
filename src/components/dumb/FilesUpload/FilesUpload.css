@@ -1,137 +1,94 @@
-@import url(../node_modules/cropperjs/dist/cropper.css);
-.files-upload-container {
-  padding: 24px;
-  width: 100%; }
-  .files-upload-container .name-type {
-    display: flex; }
-    .files-upload-container .name-type input {
-      height: 32px;
-      width: calc(100% - 44px); }
-    .files-upload-container .name-type select {
-      height: 32px;
-      width: 32px;
-      margin-left: 12px; }
-  .files-upload-container .files-list {
-    height: 100%;
-    overflow: hidden;
-    overflow-y: scroll; }
-  .files-upload-container .cropper-container {
-    display: flex; }
-    .files-upload-container .cropper-container button {
-      width: 128px;
-      height: 32px;
-      padding: 0; }
-    .files-upload-container .cropper-container .cropper-container {
-      width: 400px !important;
-      height: 200px !important; }
-  .files-upload-container .file {
-    position: relative;
-    height: 32px;
-    width: 100%;
-    padding: 6px; }
-    .files-upload-container .file.selected {
-      background: wheat; }
-    .files-upload-container .file .file-name {
-      cursor: pointer; }
-    .files-upload-container .file svg {
-      cursor: pointer;
-      position: absolute;
-      top: 6px;
-      right: 6px;
-      width: 20px;
-      height: 20px; }
-  .files-upload-container form {
-    width: 100%; }
-    .files-upload-container form input {
-      width: 100%;
-      font-size: 18px;
-      margin-bottom: 12px; }
-    .files-upload-container form textarea {
-      width: 100%;
-      height: 96px;
-      font-size: 16px;
-      margin-bottom: 12px; }
-      .files-upload-container form textarea.long {
-        height: 224px; }
+/*
+Error: Undefined variable: "$green".
+        on line 33 of FilesUpload.scss
 
-.file-drop-container {
-  position: relative; }
-  .file-drop-container .file-drop-view {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0; }
-    .file-drop-container .file-drop-view .instructions {
-      width: 50%;
-      position: absolute;
-      left: 25%;
-      top: 25%; }
-      .file-drop-container .file-drop-view .instructions div {
-        text-align: center;
-        margin-left: 12px; }
-      .file-drop-container .file-drop-view .instructions .input-file-container {
-        width: 94px;
-        margin: auto; }
+28: 
+29:     .button {
+30:       width: 128px;
+31:       height: 32px;
+32:       padding: 0;
+33:       background-color: $green;
+34:     }
+35: 
+36:     .cropper-container {
+37:       width: 400px !important;
+38:       height: 200px !important;
 
-.file-drop {
-  /* relatively position the container bc the contents are absolute */
-  position: relative;
-  height: 160px;
-  width: 100%; }
-  .file-drop .file-drop-target {
-    /* basic styles */
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 2px;
-    /* --------------- */
-    /* a little transition sizzle */
-    transition: all 150ms linear;
-    -webkit-transition: all 150ms linear;
-    -moz-transition: all 150ms linear;
-    -ms-transition: all 150ms linear;
-    -o-transition: all 150ms linear;
-    opacity: 0;
-    /* horizontally and vertically center all content */
-    display: flex;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    flex-direction: column;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    align-items: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    align-content: center;
-    -webkit-align-content: center;
-    -ms-flex-line-pack: center;
-    text-align: center;
-    /* --------------- */ }
-  .file-drop .file-drop-dragging-over-frame {
-    /* overlay a black mask when dragging over the frame */
-    border: none;
-    background-color: rgba(0, 0, 0, 0.65);
-    box-shadow: none;
-    z-index: 50;
-    opacity: 1.0;
-    /* --------------- */
-    /* typography */
-    color: white;
-    /* --------------- */ }
-  .file-drop .file-drop-dragging-over-target {
-    /* turn stuff orange when we are dragging over the target */
-    color: #ff6e40;
-    box-shadow: 0 0 13px 3px #ff6e40; }
-
-/*# sourceMappingURL=FilesUpload.css.map */
+Backtrace:
+FilesUpload.scss:33
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/scss:23:in `load'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/scss:23:in `<main>'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$green\".\A         on line 33 of FilesUpload.scss\A \A 28: \A 29:     .button {\A 30:       width: 128px;\A 31:       height: 32px;\A 32:       padding: 0;\A 33:       background-color: $green;\A 34:     }\A 35: \A 36:     .cropper-container {\A 37:       width: 400px !important;\A 38:       height: 200px !important;"; }

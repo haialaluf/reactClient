@@ -4,7 +4,7 @@ $desktop-width: 1024px;
 
 
 $green: #03C669;
-
+$dark-grey: #444444;
 
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
@@ -25,6 +25,7 @@ $green: #03C669;
 }
 
 body {
+  //direction: rtl;
   position: relative;
 }
 
@@ -81,12 +82,26 @@ body {
   }
 }
 
+button {
+  text-align: center;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  margin: 4px;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+
+
 
 @import "pages/Home/Home";
 @import "pages/Items/Items";
 @import "pages/Wizard/Wizard";
 @import "pages/Orders/Orders";
+@import "pages/Settings/Settings";
 //@import "pages/Post/AddPost";
 //@import "pages/VideoEditor/VideoEditor";
+@import "components/smart/CreateWizardTool/CreateWizardTool";
 @import "components/smart/Menu/Menu";
 @import "components/smart/Header/Header";

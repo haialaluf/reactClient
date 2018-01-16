@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Header from './components/smart/Header/Header';
 import Menu from './components/smart/Menu/Menu';
 import CreateWizardTool from './components/smart/CreateWizardTool/CreateWizardTool';
 import Home from './pages/Home/Home';
 import AddPost from './pages/Post/AddPost';
 import Items from './pages/Items/Items';
-import Components from './pages/Components/Components';
+import Settings from './pages/Settings/Settings';
 import LoginSignup from './pages/Login/LoginSignup';
 import Wizard from './pages/Wizard/Wizard';
 import Orders from './pages/Orders/Orders';
-import { Route, Switch } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './main.scss';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Style from './assets/Styles'
 
 class App extends Component {
 
@@ -30,10 +33,10 @@ class App extends Component {
             return ()=> {
                 let position = window.scrollY;
                 if (position > offset && !self.state.sticky) {
-                    self.setState({ sticky: true })
+                    self.setState({sticky: true})
                 }
-                else if (position < offset && self.state.sticky){
-                    self.setState({ sticky: false })
+                else if (position < offset && self.state.sticky) {
+                    self.setState({sticky: false})
                 }
             }
         };
@@ -42,10 +45,10 @@ class App extends Component {
                 window.addEventListener('scroll', scrollSpy(384));
                 break;
             case '/Wizard':
-                self.setState({ sticky: true });
+                self.setState({sticky: true});
                 break;
             case '/Orders':
-                self.setState({ sticky: true });
+                self.setState({sticky: true});
                 break;
             default:
                 window.addEventListener('scroll', scrollSpy(48));
@@ -65,22 +68,33 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <Header sticky={ this.state.sticky }
-                        menu={ this.state.menuOpen }
-                        openMenu={ ()=>this.setState({ menuOpen: !this.state.menuOpen }) }
-                        user={ this.props.user }/>
-                <Menu menu={ this.state.menuOpen } closeMenu={ ()=>this.setState({ menuOpen: false }) }/>
-                <Switch>
-                    <Route exact path='/' component={ Home }/>
-                    <Route path='/components' component={ Components }/>
-                    <Route path='/items' component={ Items }/>
-                    <Route path='/login' component={ LoginSignup }/>
-                    <Route path='/AddPost' component={ AddPost }/>
-                    <Route path='/Wizard' component={ Wizard }/>
-                    <Route path='/Orders' component={ Orders }/>
-                </Switch>
-            </div>
+            <MuiThemeProvider
+                muiTheme={ getMuiTheme({
+                          palette: {
+                            textColor: '#000000',
+                            primary1Color: Style.colors.main,
+                            pickerHeaderColor: Style.colors.main
+                             }
+                      }) }
+            >
+                <div className={`App ${window.innerHeight > window.innerWidth? 'long-screen' : ''}`}>
+                    <Header sticky={ this.state.sticky }
+                            menu={ this.state.menuOpen }
+                            openMenu={ ()=>this.setState({ menuOpen: !this.state.menuOpen }) }
+                            user={ this.props.user }/>
+                    <Menu menu={ this.state.menuOpen } closeMenu={ ()=>this.setState({ menuOpen: false }) }/>
+                    <Switch>
+                        <Route exact path='/' component={ Home }/>
+                        <Route path='/settings' component={ Settings }/>
+                        <Route path='/items' component={ Items }/>
+                        <Route path='/login' component={ LoginSignup }/>
+                        <Route path='/AddPost' component={ AddPost }/>
+                        <Route path='/Wizard' component={ Wizard }/>
+                        <Route path='/CreateWizardTool' component={ CreateWizardTool }/>
+                        <Route path='/Orders' component={ Orders }/>
+                    </Switch>
+                </div>
+            </MuiThemeProvider>
         );
     }
 }

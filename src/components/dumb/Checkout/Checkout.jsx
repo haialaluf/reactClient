@@ -5,14 +5,18 @@ Props:
 
 
 import React, { Component } from 'react';
-import Style from '../../../assets/Styles';
+import Helpers from '../../../helpers';
 import AddressAutocomplete from '../AddressAutocomplete/AddressAutocomplete'
+import TextField from 'material-ui/TextField';
+import DatePicker from 'material-ui/DatePicker';
+import TimePicker from 'material-ui/TimePicker';
 
 
 class Checkout extends Component {
 
     constructor(props) {
         super(props);
+        this.inputs = {};
         this.state = {
             address: '',
             errors: {
@@ -24,28 +28,32 @@ class Checkout extends Component {
     }
 
     checkout () {
-        if (!this.refs.name.value) {
+        this.setState({ errors: {} });
+        let dateTime = 'YYYY-MM-DDT';
+        dateTime = Helpers.parseDate(this.inputs.date, dateTime);
+        dateTime = Helpers.parseDate(this.inputs.time, dateTime + 'HH:MM');
+
+        if (!this.inputs.name) {
             this.setState({ errors: {name: true} });
             return;
         }
 
-        if (!this.refs.date.value) {
+        if (!this.inputs.date) {
             this.setState({ errors: {subject: true} });
             return;
         }
 
-        if (!this.refs.email.value || !(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(this.refs.email.value))) {
+        if (!this.inputs.email || !(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/.test(this.inputs.email))) {
             this.setState({ errors: {email: true} });
             return;
         }
 
-        this.setState({ errors: {} });
         let details = {
-            name: this.refs.name.value,
-            email: this.refs.email.value,
-            date: this.refs.date.value,
-            phone: this.refs.phone.value,
-            address: this.state.address,
+            name: this.inputs.name,
+            email: this.inputs.email,
+            date: dateTime,
+            phone: this.inputs.phone,
+            address: this.state.address
         };
 
 
@@ -58,38 +66,47 @@ class Checkout extends Component {
             <div className="checkout">
                 <div className="title"></div>
                 <form>
-                    *
-                    <input style={ Object.assign({}, this.state.errors.name ? style.error : {}) }
-                           type="text"
-                           placeholder="Name"
-                           ref="name"/> *
-                    <input style={ Object.assign({}, this.state.errors.email ? style.error : {}) }
-                           type="text"
-                           placeholder="Email"
-                           ref="email"/> *
-                    <input style={ Object.assign({}, this.state.errors.date ? style.error : {}) }
-                           min={new Date()}
-                           type="datetime-local"
-                           ref="date"/>
-                    *
+                    <TextField
+                        id="name"
+                        style={ {color: 'black'} }
+                        floatingLabelText="Name"
+                        onChange={ (e) => this.inputs.name = e.target.value }
+                    />
+                    <TextField
+                        id="email"
+                        floatingLabelText="Email"
+                        onChange={ (e) => this.inputs.email = e.target.value }
+                    />
+                    <TextField
+                        id="phone"
+                        floatingLabelText="Phone number"
+                        onChange={ (e) => this.inputs.phone = e.target.value }
+                    />
+                    <div className="date-time-piker">
+                        <DatePicker
+                            hintText="Sellect date"
+                            minDate={ new Date() }
+                            style={ {width: '60%', overflow: 'hidden'} }
+                            onChange={ (e, date) => this.inputs.date = date  }
+                        />
+                        <TimePicker
+                            format="ampm"
+                            style={ {width: '40%', overflow: 'hidden'} }
+                            hintText="Select Time"
+                            onChange={ (e, time) => this.inputs.time = time  }
+                        />
+                    </div>
                     <AddressAutocomplete onAddressSelected={ (val)=> {
-                    this.setState({address: val.formatted_address})
-                    } }/>
-                    <input type="text"
-                           placeholder="Phone number"
-                           ref="phone"/>
-
-                    <button type="button" onClick={ this.checkout.bind(this) }>Send</button>
+                            this.setState({address: val.formatted_address})
+                        } }
+                    />
+                    <div className="button-container">
+                        <button type="button" onClick={ this.checkout.bind(this) }>Send</button>
+                    </div>
                 </form>
             </div>
         )
     }
 }
-
-let style = {
-    error: {
-        borderColor: Style.colors.errorColor
-    }
-};
 
 export default Checkout;

@@ -52,22 +52,22 @@ class Home extends Component {
                     <div className="all-stages-container">
                         <div className="two-stages-container">
                             <div className="stage stage1">
-                                <div className="head"></div>
-                                <div className="text"></div>
+                                <div className="head">Step 1</div>
+                                <div className="text">Some short explanation on step 1</div>
                             </div>
                             <div className="stage stage2">
-                                <div className="head"></div>
-                                <div className="text"></div>
+                                <div className="head">Step 1</div>
+                                <div className="text">Some short explanation on step 2</div>
                             </div>
                         </div>
                         <div className="two-stages-container">
                             <div className="stage stage3">
-                                <div className="head"></div>
-                                <div className="text"></div>
+                                <div className="head">Step 3</div>
+                                <div className="text">Some short explanation on step 3</div>
                             </div>
                             <div className="stage stage4">
-                                <div className="head"></div>
-                                <div className="text"></div>
+                                <div className="head">Step 4</div>
+                                <div className="text">Some short explanation on step 4</div>
                             </div>
                         </div>
                     </div>
@@ -95,6 +95,9 @@ class Home extends Component {
                 </div>
                 <div name="contact-form">
                     <ContactForm></ContactForm>
+                </div>
+                <div className="footer">
+                    Copyright © 2018 EasyClient
                 </div>
             </div>
         )

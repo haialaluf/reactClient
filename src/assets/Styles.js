@@ -5,7 +5,7 @@
 let style = {
 
     colors: {
-        main: '#FFFFFF',
+        main: '#03C669',
         menuPrimary: '#FFFFFF',
         menuSecondary: '#102026',
         border: '#A0A0A0',

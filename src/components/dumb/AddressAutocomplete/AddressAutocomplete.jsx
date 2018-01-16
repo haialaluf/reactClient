@@ -27,11 +27,14 @@ class AddressAutocompleteComponent extends React.Component {
 
     render() {
         return (
-            <div>
-                {this.state.googleApiReady ?
-                    <Autocomplete onPlaceSelected={ this.props.onAddressSelected }
-                                  types={['address']}
-                                  componentRestrictions={{}}/> : <input placeholder="Enter a location"/> }
+            <div className="address-autocomplete">
+                {
+                    this.state.googleApiReady ?
+                        <Autocomplete onPlaceSelected={ this.props.onAddressSelected }
+                                      types={['address']}
+                                      placeholder="Type your address"/>
+                        :
+                        <input placeholder="Enter a location"/> }
             </div>
         )
     }
@@ -40,3 +43,4 @@ class AddressAutocompleteComponent extends React.Component {
 const AddressAutocomplete = scriptLoader(`https://maps.googleapis.com/maps/api/js?key=${Config.googleMapsApiKey}&libraries=places`)(AddressAutocompleteComponent);
 
 export default AddressAutocomplete;
+

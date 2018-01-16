@@ -6,15 +6,17 @@ import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { appReducer } from './Reducers/AppReducer';
 import { itemsReducer } from './Reducers/ItemsReducer';
 import { ordersReducer } from './Reducers/OrdersReducer';
+import { wizardReducer } from './Reducers/WizardReducer';
 import { userReducer } from './Reducers/UserReducer';
 import ReduxThunk from 'redux-thunk'
 
 const middleware = applyMiddleware(ReduxThunk);
 
 const reducers = combineReducers({
-    app: appReducer,
+    settings: appReducer,
     items: itemsReducer,
     orders: ordersReducer,
+    wizard: wizardReducer,
     user: userReducer
 });
 

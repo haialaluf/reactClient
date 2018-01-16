@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
-import Cropper from 'react-cropper';
-import FileDrop from 'react-file-drop';
-import Icon from '../Icon/Icon';
 import FilesUpload from '../FilesUpload/FilesUpload';
-import helpers from '../../../helpers';
+import TextField from 'material-ui/TextField';
 
 /*
  Props:
@@ -15,90 +12,99 @@ class AddItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            image: '',
-            properties: [],
             fileList: []
         };
-        this.link = {}
+        this.inputs = {};
+        this.link = {};
     }
 
     addItem() {
-        let self = this;
         this.link.getFiles().then((files) => {
+            let tags = this.inputs.tags;
+            tags = tags && tags.replace(/ /g, '').split(',');
             this.props.action({
-                name: this.refs.name.value,
-                videoUrl: this.refs.name.videoUrl,
-                shortDescription: this.refs.shortDescription.value,
-                description: this.refs.description.value,
-                itemType: this.refs.itemType.value,
+                name: this.inputs.name,
+                videoUrl: this.inputs.videoUrl,
+                shortDescription: this.inputs.shortDescription,
+                description: this.inputs.description,
+                itemType: this.inputs.itemType,
                 fileList: files,
-                properties: this.state.properties
+                tags: tags
             });
         });
     }
 
-
-    addProperty() {
-        this.setState({
-            properties: [...this.state.properties, '']
-        })
-    }
-
-    renderPropertyInput(property, index) {
-        return <input style={ style.input }
-                      type="text"
-                      key={ index }
-                      placeholder="Property Name"
-                      onChange={ (event) => {
-                                            let properties = this.state.properties;
-                                            properties[index] = event.currentTarget.value;
-                                            this.setState({properties}) } }/>
-    }
-
-
-
     render() {
         return (
-            <div className="add-item">
+
+            <div className="add-item-container">
                 <form>
                     <div>
                         <div className="name-type">
-                            <input type="text" placeholder="Name" ref="name"/>
-                            <select placeholder="Type" ref="itemType">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                            </select>
+                            <TextField
+                                id="name"
+                                className="name-input"
+                                style={ {width: 'calc(100% - 44px)'} }
+                                floatingLabelText="Name"
+                                onChange={ (e) => this.inputs.name = e.target.value }
+                            />
+                            <TextField
+                                style={ {width: '32px', margin: '24px 0 0 8px'} }
+                                id="itemType"
+                                hintText="Type"
+                                className="type-input"
+                                type="number"
+                                onChange={ (e) => this.inputs.itemType = e.target.value }
+                            />
                         </div>
-                        <textarea type="text" placeholder="Short description" ref="shortDescription"/>
-                        <textarea className="long" type="text" placeholder="Description" ref="description"/>
-                        <input type="text" placeholder="Video URL" ref="videoUrl"/>
+                        <TextField
+                            id="shortDescription"
+                            style={ {width: '100%'} }
+                            floatingLabelText="Short description"
+                            hintText="Sort description will be presented on the item thumbnail"
+                            multiLine={ true }
+                            className="textarea"
+                            rowsMax={ 4 }
+                            onChange={ (e) => this.inputs.shortDescription = e.target.value }
+                        />
+                        <TextField
+                            id="description"
+                            style={ {width: '100%'} }
+                            floatingLabelText="Description"
+                            hintText="Description of the item"
+                            multiLine={ true }
+                            className="textarea"
+                            rowsMax={ 8 }
+                            onChange={ (e) => this.inputs.description = e.target.value }
+                        />
+                        <TextField
+                            id="tags"
+                            style={ {width: '100%'} }
+                            floatingLabelText="Tags"
+                            onChange={ (e) => this.inputs.tags = e.target.value }
+                        />
+                        <TextField
+                            id="videoUrl"
+                            style={ {width: '100%'} }
+                            floatingLabelText="Video URL"
+                            hintText="http://example.com/some_path/VideoURL"
+                            onChange={ (e) => this.inputs.videoUrl = e.target.value }
+                        />
                         <FilesUpload link={ this.link }/>
-
-                        <div>
-                            { this.state.properties.map(this.renderPropertyInput.bind(this)) }
-                        </div>
-                        <button style={ style.input } type="button" onClick={ this.addProperty.bind(this) }>Add
-                            Property
-                        </button>
                     </div>
-                    <button style={ style.input } type="button" onClick={ this.addItem.bind(this) }>Add Item</button>
+                    <div className="button-container">
+                        <button className="add-button" type="button" onClick={ this.addItem.bind(this) }>Add Item</button>
+                        {
+                            this.props.cancelAction ?
+                                <button className="cancel-button" type="button" onClick={ this.props.cancelAction }>Cancel</button>
+                                : ''
+                        }
+                    </div>
                 </form>
             </div>
+
         )
     }
 }
-
-let style = {
-    imageCropper: {
-        maxWidth: '512px',
-        maxHeight: '256px'
-    },
-    component: {},
-    input: {
-        width: '100%',
-        margin: '8px',
-        height: '32px'
-    }
-};
 
 export default AddItem;

@@ -1,22 +1,45 @@
 /*
-Error: File to import not found or unreadable: ../dumb/BreadCrumbs/BreadCrumbs.
-        on line 2 of CreateWizardTool.scss
+Error: Undefined variable: "$ofsset".
+        on line 3 of CreateWizardTool.scss
 
-1: $bread-crumbs-hight: 48px;
-2: @import "../dumb/BreadCrumbs/BreadCrumbs";
-3: @import "../dumb/Checkout/Checkout";
-4: 
-5: 
-6: $ofsset: $header-offset + $bread-crumbs-hight;
-7: .items-container {
+1: .create-wizard-tool {
+2:   .items-container {
+3:     height: calc(100vh - #{$ofsset});
+4:     overflow: scroll;
+5:   }
+6: 
+7:   .bread-crumbs {
+8:     .pointer {
 
 Backtrace:
-CreateWizardTool.scss:2
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:45:in `import'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+CreateWizardTool.scss:3
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/interpolation.rb:170:in `_perform'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -56,4 +79,4 @@ CreateWizardTool.scss:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../dumb/BreadCrumbs/BreadCrumbs.\A         on line 2 of CreateWizardTool.scss\A \A 1: $bread-crumbs-hight: 48px;\A 2: @import \"../dumb/BreadCrumbs/BreadCrumbs\";\A 3: @import \"../dumb/Checkout/Checkout\";\A 4: \A 5: \A 6: $ofsset: $header-offset + $bread-crumbs-hight;\A 7: .items-container {"; }
+  content: "Error: Undefined variable: \"$ofsset\".\A         on line 3 of CreateWizardTool.scss\A \A 1: .create-wizard-tool {\A 2:   .items-container {\A 3:     height: calc(100vh - #{$ofsset});\A 4:     overflow: scroll;\A 5:   }\A 6: \A 7:   .bread-crumbs {\A 8:     .pointer {"; }

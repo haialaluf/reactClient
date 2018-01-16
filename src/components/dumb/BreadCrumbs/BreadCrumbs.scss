@@ -10,6 +10,7 @@
     margin-right: 12px;
     max-width: 30vw;
     height: 32px;
+    font-weight: bold;
     position: relative;
     background: #444444;
     transition-delay: 5s;
@@ -59,7 +60,11 @@
     div {
       color: white;
       font-size: 18px;
-      padding: 6px 18px;
+      padding: 5px 0 0 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
     }
   }
 }

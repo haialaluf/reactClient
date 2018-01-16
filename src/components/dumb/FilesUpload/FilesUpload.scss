@@ -26,10 +26,11 @@
   .cropper-container {
     display: flex;
 
-    button {
+    .button {
       width: 128px;
       height: 32px;
       padding: 0;
+      background-color: $green;
     }
 
     .cropper-container {

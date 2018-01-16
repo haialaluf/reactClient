@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getItems } from '../../serverConnection/Actions/ItemActions';
+import { getWizardById } from '../../serverConnection/Actions/WizardActions';
 import { makeOrder } from '../../serverConnection/Actions/OrdersActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -14,21 +14,32 @@ class Wizard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentState: 1,
-            reachedState: 1,
+            currentState: 0,
+            reachedState: 0,
             selected: []
         };
     }
 
     componentDidMount() {
-        this.props.actions.getItems({type: this.state.currentState})
+        this.getActiveWizard.bind(this)()
+    }
+
+    componentDidUpdate() {
+        this.getActiveWizard.bind(this)()
+    }
+
+    componentWillUnmount() {
+    }
+
+    getActiveWizard() {
+        let newActiveWizard = this.props.wizardId || (this.props.settings && this.props.settings.activeWizard);
+        if (newActiveWizard && this.wizardId !== newActiveWizard) {
+            this.wizardId = newActiveWizard;
+            this.props.actions.getWizardById(this.props.wizardId || (this.props.settings && this.props.settings.activeWizard));
+        }
     }
 
     nextState() {
-        this.props.actions.getItems({type: this.state.currentState + 1});
-        if (this.state.currentState === this.state.reachedState) {
-            this.props.actions.getItems({type: this.state.currentState + 1});
-        }
         this.setState({
             currentState: Math.min(this.state.currentState + 1, STAGES),
             reachedState: Math.max(this.state.currentState + 1, this.state.reachedState)
@@ -37,14 +48,10 @@ class Wizard extends Component {
 
     moveState(state) {
         return () => {
-            this.props.actions.getItems({type: state});
             this.setState({
-                currentState: state,
+                currentState: state
             })
         }
-    }
-
-    componentWillUnmount() {
     }
 
     addCallback(item) {
@@ -62,55 +69,74 @@ class Wizard extends Component {
 
     checkOut(details) {
         details.items = this.state.selected;
+
+        let self = this;
         this.props.actions.makeOrder(details, (res) => {
             //order has sent successful
-            debugger
+            self.props.history.push('/');
+            console.log('yeyy');
         })
 
     }
 
-    render() {
-        const items = this.props.items.filter((item) => item.type === this.state.currentState);
+    renderStages(stage, index) {
         const isState = (state) => this.state.currentState === state;
-        return (
-            <div>
-                <BreadCrumbs show={ this.state.reachedState } >
-                    <div className={ `pointer ${ isState(1) ? 'selected' : ''} ${ !isState(1) ? 'hide-in-mobile' : ''}` }
-                         onClick={ this.moveState.bind(this)(1) }>
-                        <div>Hello</div>
-                    </div>
-                    <div className={ `pointer ${ isState(2) ? 'selected' : ''} ${ !isState(2) ? 'hide-in-mobile' : ''}` }
-                         onClick={ this.moveState.bind(this)(2) }>
-                        <div>2</div>
-                    </div>
-                    <div className={ `pointer ${ isState(3) ? 'selected' : ''} ${ !isState(3) ? 'hide-in-mobile' : ''}` }
-                         onClick={ this.moveState.bind(this)(3) }>
-                        <div>3</div>
-                    </div>
-                    <div className="pointer" onClick={ this.nextState.bind(this) }>
-                        <div>{this.state.currentState === STAGES? 'Done' : 'Next' } </div>
-                    </div>
-                </BreadCrumbs>
-                <div className="items-container">
-                    { items && items.map((item, index) => <Item item={ item }
-                                                                key={ index }
-                                                                selected={ this.state.selected.indexOf(item._id) > -1 }
-                                                                addCallback={ this.addCallback.bind(this)(item) }/>) }
-                    {this.state.currentState === 3 ? <Checkout sendCallback={ this.checkOut.bind(this) }/> : ''}
-                </div>
-
+        return <div
+            key={ index }
+            className={ `pointer ${ isState(index) ? 'selected' : ''}` }
+            onClick={ this.moveState.bind(this)(index) }>
+            <div onClick={ () => this.setState({editMode: {stageName: true}}) }>
+                  { stage.title }
             </div>
-        )
+        </div>
+    }
+
+
+    render() {
+        const wizard = this.props.wizardList.length ?
+            this.props.wizardList.find(wizard => wizard._id === this.props.wizardId || this.props.settings.activeWizard)
+            : {};
+        const items = wizard.items && wizard.items.filter((item) => item.type === this.state.currentState);
+        const stages = wizard.stages || [];
+        const isState = (state) => this.state.currentState === state;
+        if (wizard.items) {
+            return (
+                <div>
+                    <BreadCrumbs show={ this.state.reachedState } >
+                        { stages.map(this.renderStages.bind(this)) }
+                        <div className={ `pointer ${ isState(stages.length) ? 'selected' : ''}` }
+                             onClick={ this.moveState.bind(this)(stages.length) }>
+                            <div className={`${ !isState(stages.length) ? 'hide-in-mobile' : ''}`}>Checkout</div>
+                        </div>
+                        <div className="pointer" onClick={ this.nextState.bind(this) }>
+                            <div>{this.state.currentState === STAGES? 'Done' : 'Next' } </div>
+                        </div>
+                    </BreadCrumbs>
+                    <div className="items-container">
+                        { items && items.map((item, index) => <Item item={ item }
+                                                                    key={ index }
+                                                                    selected={ this.state.selected.indexOf(item._id) > -1 }
+                                                                    addCallback={ this.addCallback.bind(this)(item) }/>) }
+                        {this.state.currentState === stages.length ? <Checkout sendCallback={ this.checkOut.bind(this) }/> : ''}
+                    </div>
+
+                </div>
+            )
+        } else {
+            return <div></div>
+        }
+
     }
 }
 
 export default connect(
     (store) => ({
-        items: store.items
+        wizardList: store.wizard,
+        settings: store.settings
     }),
     (dispatch) => ({
         actions: {
-            getItems: bindActionCreators(getItems, dispatch),
+            getWizardById: bindActionCreators(getWizardById, dispatch),
             makeOrder: bindActionCreators(makeOrder, dispatch)
         }
     }))(Wizard);

@@ -1,0 +1,34 @@
+.settings {
+  padding: 32px;
+
+  .title {
+    text-align: left;
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .options {
+    margin-bottom: 20px;
+  }
+
+  .detail-line {
+    display: flex;
+
+    .text {
+      height: 58px;
+      line-height: 58px;
+      margin-right: 16px;
+    }
+
+  }
+
+  .items-container {
+      max-height: 288px;
+    .item {
+      height: 256px;
+      width: 256px;
+    }
+
+  }
+}

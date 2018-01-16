@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEE,gBAAO;EACL,SAAS,EAAE,IAAI",
+"sources": ["Settings.scss"],
+"names": [],
+"file": "Settings.css"
+}

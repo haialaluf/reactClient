@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Style from '../../../assets/Styles'
+import Style from '../../../../assets/Styles'
 class Hamburger extends Component {
 
     render() {

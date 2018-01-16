@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Hamburger from '../../dumb/Hamburger/Hamburger';
+import Hamburger from '../../dumb/Buttons/Hamburger/Hamburger';
 import Icon from '../../dumb/Icon/Icon';
 import Style from '../../../assets/Styles'
 import { bindActionCreators } from 'redux';
+import { getAppSettings } from '../../../serverConnection/Actions/AppActions';
 import { whoAmI } from '../../../serverConnection/Actions/UserActions';
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux';
@@ -15,7 +16,8 @@ let headerOffset = -12 - parseInt(Style.sizes.menuWidth.substring(0,2), 10);
 class Header extends Component {
 
     componentWillMount() {
-        this.props.actions.whoAmI()
+        this.props.actions.whoAmI();
+        this.props.actions.getAppSettings();
     }
 
     componentWillUnmount() {
@@ -119,6 +121,7 @@ let HeaderComponent = connect(
     }),
     (dispatch) => ({
         actions: {
+            getAppSettings: bindActionCreators(getAppSettings, dispatch),
             whoAmI: bindActionCreators(whoAmI, dispatch)
         }
     }))(Header);

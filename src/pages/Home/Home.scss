@@ -23,8 +23,14 @@
     * {
       z-index: -1;
       position: fixed;
-      left: 0;
+      transform: translateX(-50%);
+      left: 50%;
       width: 100%;
+
+      .long-screen & {
+        width: inherit;
+        height: 100%;
+      }
     }
 
     .slide {
@@ -41,14 +47,14 @@
   .how-it-work {
 
     background-color: #ffffff;
-
+    overflow: hidden;
+    
     .title {
       padding-bottom: 0;
     }
 
     .all-stages-container {
       display: flex;
-      padding-bottom: 32px;
       @include tablet {
         display: block;
       }
@@ -61,25 +67,28 @@
       text-align: center;
       display: flex;
       width: 50%;
-      margin: 32px 0;
+      margin: 24px 0;
 
       @include tablet {
         display: flex;
+        margin-bottom: 40px;
         width: 100%;
       }
       @include mobile {
         display: block;
         width: 100%;
-        margin: 0;
+        margin: 4px 0;
       }
     }
 
     .stage {
+      overflow: hidden;
       width: 50%;
       height: 256px;
       margin: 16px;
-      background-size: auto 256px;
-      background-position: center;
+      padding-top: 168px;
+      background-size: auto 160px;
+      background-position: top center;
       background-repeat: no-repeat;
 
       &.stage1 {
@@ -100,6 +109,7 @@
 
       .head {
         font-size: 24px;
+        margin-bottom: 4px;
       }
 
       .text {
@@ -107,15 +117,17 @@
       }
 
       @include mobile {
-        height: 128px;
-        background-size: auto 128px;
+        height: 160px;
+        padding-top: 108px;
+        background-size: auto 96px;
         width: 100%;
         margin: 32px 0;
       }
 
       @include tablet {
-        height: 192px;
-        background-size: auto 192px;
+        height: 160px;
+        padding-top: 108px;
+        background-size: auto 96px;
       }
     }
   }
@@ -158,3 +170,11 @@
     }
   }
 }
+
+.footer {
+  font-size: 18px;
+  padding: 24px 32px;
+  color: white;
+  background-color: $dark-grey;
+}
+

@@ -5,8 +5,8 @@
   display: inline-block;
 
   position: relative;
-  width: 24vw;
-  height: 24vw;
+  width: 23vw;
+  height: 23vw;
   margin: .5vw;
   background: white;
   background-position: center 40px;
@@ -18,20 +18,22 @@
     border-color: #11ff88;
   }
   @include mobile {
-    width: 48vw;
+    width: 46vw;
     margin: 1vw;
-    height: 42vw;
+    height: 46vw;
     border-radius: 2px;
     background-position: center 32px;
   }
 
   @include tablet {
-    width: 32vw;
+    width: 30vw;
     margin: .6vw;
-    height: 32vw;
+    height: 30vw;
+    padding: 0 3vw;
   }
 
   &.expand {
+    overflow-y: scroll;
     transition: all 0.3s;
     position: fixed;
     width: inherit;
