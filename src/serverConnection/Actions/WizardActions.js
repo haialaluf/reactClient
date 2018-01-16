@@ -13,11 +13,12 @@ let connect = axios.create({
     withCredentials: true
 });
 
-export function createWizard(wizard) {
+export function createWizard(wizard, cd) {
     return (dispatch) => {
         let files = [].concat.apply([], wizard.items.map((item) => item.fileList || []));
         let createWizard = (wizard) => connect.post(`${ prefix }createWizard`, wizard)
             .then((res) => {
+                cd(res.data);
                 dispatch({
                     type: 'CREATE_WIZARD',
                     wizard: res.data

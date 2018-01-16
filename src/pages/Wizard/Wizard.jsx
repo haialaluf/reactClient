@@ -74,7 +74,6 @@ class Wizard extends Component {
         this.props.actions.makeOrder(details, (res) => {
             //order has sent successful
             self.props.history.push('/');
-            console.log('yeyy');
         })
 
     }

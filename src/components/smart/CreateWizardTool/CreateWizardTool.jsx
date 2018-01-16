@@ -95,7 +95,11 @@ class CreateWizardTool extends Component {
 
     createWizard() {
         let wizard = this.state.wizard;
-        this.props.actions.createWizard(wizard);
+        let self = this;
+        this.props.actions.createWizard(wizard, () => {
+            //Wizard has been created
+            self.props.history.push('/');
+        });
     }
 
 
