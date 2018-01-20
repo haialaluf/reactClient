@@ -6,6 +6,7 @@ import Item from "../../dumb/Item/Item";
 import AddItem from "../../dumb/AddItem/AddItem";
 import Checkout from "../../dumb/Checkout/Checkout";
 import BreadCrumbs from "../../dumb/BreadCrumbs/BreadCrumbs";
+import CircularProgressbar from 'react-circular-progressbar';
 
 const STAGES = 3;
 
@@ -99,6 +100,8 @@ class CreateWizardTool extends Component {
         this.props.actions.createWizard(wizard, () => {
             //Wizard has been created
             self.props.history.push('/');
+        }, (progress) => {
+            self.setState({progress: progress});
         });
     }
 
@@ -143,7 +146,7 @@ class CreateWizardTool extends Component {
     render() {
         const items = this.state.wizard.items.filter((item) => item.type === this.state.currentState);
         return (
-            <div className="wizard create-wizard-tool">
+            <div className={`wizard create-wizard-tool ${ this.state.progress? 'progress' : '' }`}>
                 <BreadCrumbs show={ this.state.reachedState }>
                     { this.state.wizard.stages.map(this.renderStages.bind(this)) }
                     <div className="pointer" onClick={ this.addStage.bind(this) }>
@@ -185,6 +188,7 @@ class CreateWizardTool extends Component {
                     }
                 </div>
 
+                <CircularProgressbar percentage={this.state.progress}/>
             </div>
         )
     }

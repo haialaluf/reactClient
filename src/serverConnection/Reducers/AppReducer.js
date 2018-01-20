@@ -4,7 +4,9 @@
 export function appReducer(state={}, action) {
 
     let fetchData = (param) => {
-        state = param.data;
+        let settings = param.data.settings;
+        settings.storage = param.data.storage;
+        state = settings;
     };
     
     switch (action.type) {

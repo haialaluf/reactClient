@@ -6,28 +6,39 @@
 
 import React, {Component} from 'react';
 import Icon from '../Icon/Icon';
-import config from '../../../Config';
-
-const prefix = config.serverUrl;
+import helpers from '../../../helpers';
 
 class Item extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            image: null,
             expand: false
         };
         this.setImage.bind(this)()
     }
 
-    componentWillReceiveProps({item}) {
+    componentWillReceiveProps() {
         this.setImage.bind(this)()
     }
 
     setImage() {
-        let imageUrl = (this.props.item.filesUrl && this.props.item.filesUrl[0] && prefix + this.props.item.filesUrl[0]) ||
-                       (this.props.item.fileList && this.props.item.fileList.length && this.props.item.fileList[0].dataURL);
-        this.image = imageUrl ? {backgroundImage: `url(${imageUrl}`} : {};
+        let self = this;
+        let item = this.props.item ;
+        if (! item) return;
+        if (item.filesUrl && item.filesUrl.length && item.filesUrl[0]) {
+            //case Data from server
+            let coverUrl = item.filesUrl[0];
+            this.image = coverUrl ? {backgroundImage: `url(${coverUrl})`} : {};
+        } else if (item.fileList && this.props.item.fileList.length) {
+            //case file is type Blob (new item)
+            helpers.blobToDataURL(item.fileList[0]).then(
+                (coverDataUrl) => {
+                    self.setState({ image: coverDataUrl ? {backgroundImage: `url(${coverDataUrl})`} : {} });
+                }
+            );
+        }
     }
 
     deleteItem() {
@@ -36,7 +47,7 @@ class Item extends Component {
 
     render() {
         return (
-                <div style={ this.image }
+                <div style={ this.image || this.state.image }
                      name={ this.props.item._id }
                      className={`item ${this.props.selected ? ' selected' : ''} ${this.state.expand ? ' expand' : ''}`}>
                     <div className="title">{ this.props.item.name }</div>

@@ -18,6 +18,22 @@ class Header extends Component {
     componentWillMount() {
         this.props.actions.whoAmI();
         this.props.actions.getAppSettings();
+        let history = this.props.history;
+        history.listen((location) => {
+            console.log(location);
+            const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+            if (path) {
+                console.log(path);
+                history.replace(path);
+            }
+        });
+    }
+
+    componentDidUpdate() {
+        if (this.props.user.id && !this.user) {
+            this.user = this.props.user.id;
+            this.props.actions.getAppSettings();
+        }
     }
 
     componentWillUnmount() {
@@ -60,7 +76,7 @@ class Header extends Component {
                                 </InnerLink>
                             </span>
                             <span className="header-button swing">
-                                
+
                                 <Link to='/Wizard' onClick={ this.props.closeMenu }>
                                     Get Started
                                 </Link>

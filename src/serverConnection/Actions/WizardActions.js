@@ -3,6 +3,7 @@
  */
 import axios from 'axios';
 import config from '../../Config';
+import S3UploadService from '../S3UploadService';
 
 const prefix = config.serverUrl + config.prefix;
 let connect = axios.create({
@@ -13,7 +14,11 @@ let connect = axios.create({
     withCredentials: true
 });
 
-export function createWizard(wizard, cd) {
+function generateWizardHash() {
+    return 'Wizard' + String(Date.now())
+}
+
+export function createWizard(wizard, cd, progress) {
     return (dispatch) => {
         let files = [].concat.apply([], wizard.items.map((item) => item.fileList || []));
         let createWizard = (wizard) => connect.post(`${ prefix }createWizard`, wizard)
@@ -27,11 +32,11 @@ export function createWizard(wizard, cd) {
                 console.error('Error during service worker registration:', error);
             });
         if (files && files.length) {
-            connect.post(`${ prefix }uploadFiles`, { fileList: files })
-                .then((res) => {
-                    let filesUrl = res.data.reverse();
-                    wizard.items.forEach(item => {
-                        item.fileList = item.fileList.map(() => filesUrl.pop())
+            S3UploadService( generateWizardHash() ,files, progress)
+                .then((filesUrl) => {
+                    wizard.items = wizard.items.map(item => {
+                        item.fileList = item.fileList.map(() => filesUrl.pop());
+                        return item;
                     });
                     createWizard(wizard)
                 }).catch((error) => {

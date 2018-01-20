@@ -3,6 +3,7 @@
  */
 import axios from 'axios';
 import config from '../../Config';
+import S3UploadService from '../S3UploadService';
 
 const prefix = config.serverUrl + config.prefix;
 let connect = axios.create({
@@ -26,31 +27,18 @@ export function addItem(item) {
                 console.error('Error during service worker registration:', error);
             });
         if (item.fileList && item.fileList.length) {
-            connect.post(`${ prefix }uploadFiles`, { fileList: item.fileList })
-                .then((res) => {
-                    item.fileList = res.data;
+            S3UploadService( item.name ,item.fileList)
+                .then(fileUrlsList => {
+                    item.fileList = fileUrlsList;
+                    debugger;
                     addItem(item)
                 }).catch((error) => {
-                    console.error('Error during service worker registration:', error);
-                });
+                console.error('Error In file upload:', error);
+            })
         } else {
             addItem(item)
         }
 
-    };
-}
-
-export function uploadImage(img) {
-    return (dispatch) => {
-        connect.post(`${ prefix }uploadImage`, { image: img })
-            .then((res) => {
-                // dispatch({
-                //     type: 'ADD_ITEM',
-                //     res: res,
-                // });
-            }).catch((error) => {
-            console.error('Error during service worker registration:', error);
-        })
     };
 }
 

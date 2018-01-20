@@ -90,6 +90,11 @@
       background-size: auto 160px;
       background-position: top center;
       background-repeat: no-repeat;
+      transition: all .2s ease-in-out;
+
+      &.grow {
+        transform: scale(1.2);
+      }
 
       &.stage1 {
         background-image: url('./assets/images/number1.png');

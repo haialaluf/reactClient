@@ -19,18 +19,17 @@ class AddItem extends Component {
     }
 
     addItem() {
-        this.link.getFiles().then((files) => {
-            let tags = this.inputs.tags;
-            tags = tags && tags.replace(/ /g, '').split(',');
-            this.props.action({
-                name: this.inputs.name,
-                videoUrl: this.inputs.videoUrl,
-                shortDescription: this.inputs.shortDescription,
-                description: this.inputs.description,
-                itemType: this.inputs.itemType,
-                fileList: files,
-                tags: tags
-            });
+        let files = this.link.getFiles();
+        let tags = this.inputs.tags;
+        tags = tags && tags.replace(/ /g, '').split(',');
+        this.props.action({
+            name: this.inputs.name,
+            videoUrl: this.inputs.videoUrl,
+            shortDescription: this.inputs.shortDescription,
+            description: this.inputs.description,
+            itemType: this.inputs.itemType,
+            fileList: files,
+            tags: tags
         });
     }
 

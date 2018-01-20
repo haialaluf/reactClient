@@ -4,12 +4,11 @@ import Menu from './components/smart/Menu/Menu';
 import CreateWizardTool from './components/smart/CreateWizardTool/CreateWizardTool';
 import Home from './pages/Home/Home';
 import AddPost from './pages/Post/AddPost';
-import Items from './pages/Items/Items';
 import Settings from './pages/Settings/Settings';
 import LoginSignup from './pages/Login/LoginSignup';
 import Wizard from './pages/Wizard/Wizard';
 import Orders from './pages/Orders/Orders';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './main.scss';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -70,13 +69,13 @@ class App extends Component {
         return (
             <MuiThemeProvider
                 muiTheme={ getMuiTheme({
-                          palette: {
-                            textColor: '#000000',
-                            primary1Color: Style.colors.main,
-                            pickerHeaderColor: Style.colors.main
-                             }
-                      }) }
-            >
+                                palette: {
+                                    textColor: '#000000',
+                                    primary1Color: Style.colors.main,
+                                    pickerHeaderColor: Style.colors.main
+                                }
+                            })
+                          }>
                 <div className={`App ${window.innerHeight > window.innerWidth? 'long-screen' : ''}`}>
                     <Header sticky={ this.state.sticky }
                             menu={ this.state.menuOpen }
@@ -86,7 +85,6 @@ class App extends Component {
                     <Switch>
                         <Route exact path='/' component={ Home }/>
                         <Route path='/settings' component={ Settings }/>
-                        <Route path='/items' component={ Items }/>
                         <Route path='/login' component={ LoginSignup }/>
                         <Route path='/AddPost' component={ AddPost }/>
                         <Route path='/Wizard' component={ Wizard }/>

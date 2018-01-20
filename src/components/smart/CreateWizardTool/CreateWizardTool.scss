@@ -1,4 +1,44 @@
 .create-wizard-tool {
+
+  &.progress {
+    &:before {
+      content: '';
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: white;
+      opacity: .3;
+    }
+
+    .CircularProgressbar {
+      display: block;
+      position: fixed;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      stroke: $green;
+      fill: $green;
+      width: 128px;
+      height: 128px;
+      z-index: 2;
+
+
+      .CircularProgressbar-text {
+        font-size: 32px;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        top: 50% !important;
+        left: 50% !important;
+      }
+
+    }
+
+  }
+
+
   .items-container {
     height: calc(100vh - #{$ofsset});
     overflow: scroll;

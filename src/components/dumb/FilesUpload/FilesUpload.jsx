@@ -20,20 +20,22 @@ class FilesUpload extends Component {
     }
 
     getFiles() {
-        return new Promise((resolve, reject) => {
-            let fileList = this.state.fileList.map(helpers.blobToDataURL);
-            let postfix = this.state.fileList.map(file => file.name.substring(file.name.lastIndexOf('.') + 1, file.name.length));
-            Promise.all(fileList).then(values => {
-                let files = values.map((file, index) => ({
-                    dataURL: file,
-                    type: postfix[index]
-                }));
-                resolve(files);
-            }, reason => {
-                reject(reason);
-                console.log(reason)
-            });
-        })
+        return this.state.fileList;
+        // Blob to Data uri (not in use)
+        // return new Promise((resolve, reject) => {
+        //     let fileList = this.state.fileList.map(helpers.blobToDataURL);
+        //     let postfix = this.state.fileList.map(file => file.name.substring(file.name.lastIndexOf('.') + 1, file.name.length));
+        //     Promise.all(fileList).then(values => {
+        //         let files = values.map((file, index) => ({
+        //             dataURL: file,
+        //             type: postfix[index]
+        //         }));
+        //         resolve(files);
+        //     }, reason => {
+        //         reject(reason);
+        //         console.log(reason)
+        //     });
+        // })
     }
 
     crop() {

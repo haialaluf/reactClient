@@ -7,7 +7,6 @@ import Item from "../../components/dumb/Item/Item";
 import Checkout from "../../components/dumb/Checkout/Checkout";
 import BreadCrumbs from "../../components/dumb/BreadCrumbs/BreadCrumbs";
 
-const STAGES = 3;
 
 class Wizard extends Component {
 
@@ -39,9 +38,9 @@ class Wizard extends Component {
         }
     }
 
-    nextState() {
+    nextState(wizard) {
         this.setState({
-            currentState: Math.min(this.state.currentState + 1, STAGES),
+            currentState: Math.min(this.state.currentState + 1, wizard.stages.length),
             reachedState: Math.max(this.state.currentState + 1, this.state.reachedState)
         })
     }
@@ -107,8 +106,8 @@ class Wizard extends Component {
                              onClick={ this.moveState.bind(this)(stages.length) }>
                             <div className={`${ !isState(stages.length) ? 'hide-in-mobile' : ''}`}>Checkout</div>
                         </div>
-                        <div className="pointer" onClick={ this.nextState.bind(this) }>
-                            <div>{this.state.currentState === STAGES? 'Done' : 'Next' } </div>
+                        <div className="pointer" onClick={ () => this.nextState.bind(this)(wizard) }>
+                            <div>{this.state.currentState === wizard.stages.length? 'Done' : 'Next' } </div>
                         </div>
                     </BreadCrumbs>
                     <div className="items-container">
