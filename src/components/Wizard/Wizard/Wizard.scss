@@ -1,0 +1,10 @@
+$bread-crumbs-hight: 48px;
+@import "../../components/Wizard/BreadCrumbs/BreadCrumbs";
+@import "../../components/Wizard/Checkout/Checkout";
+
+
+$ofsset: $header-offset + $bread-crumbs-hight;
+.items-container {
+  height: calc(100vh - #{$ofsset});
+  overflow: scroll;
+}

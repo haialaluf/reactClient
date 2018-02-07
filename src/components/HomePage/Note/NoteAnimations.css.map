@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEE,WAAQ;EACN,SAAS,EAAE,UAAU;;AAQvB,iBAAQ;EACN,iBAAiB,EAAE,4BAA4B;EAC/C,SAAS,EAAE,4BAA4B;;AAQzC,kBAAQ;EACN,iBAAiB,EAAE,2BAA2B;EAC9C,SAAS,EAAE,2BAA2B;;AAQxC,mBAAQ;EACN,iBAAiB,EAAE,2BAA2B;EAC9C,SAAS,EAAE,2BAA2B",
+"sources": ["NoteAnimations.scss"],
+"names": [],
+"file": "NoteAnimations.css"
+}

@@ -1,28 +1,6 @@
-$tablet-width: 600px;
-$header-offset: 48px;
-$desktop-width: 1024px;
-
-
-$green: #03C669;
-$dark-grey: #444444;
-
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@mixin mobile {
-  @media (max-width: #{$tablet-width}) {
-    @content;
-  }
-}
+@import "./shared";
+@import "components/General/Menu/Menu";
+@import "components/General/Header/Header";
 
 body {
   //direction: rtl;
@@ -49,6 +27,15 @@ body {
   @include desktop {
     display: none;
   }
+}
+
+.note {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  overflow: hidden;
+  position: relative;
+  min-height: 256px;
 }
 
 .br {
@@ -82,6 +69,16 @@ body {
   }
 }
 
+.text {
+  font-size: 16px;
+
+  @include desktop {
+    font-size: 1.2vw;
+  }
+}
+
+
+
 button {
   text-align: center;
   color: white;
@@ -92,16 +89,3 @@ button {
   cursor: pointer;
 
 }
-
-
-
-@import "pages/Home/Home";
-@import "pages/Items/Items";
-@import "pages/Wizard/Wizard";
-@import "pages/Orders/Orders";
-@import "pages/Settings/Settings";
-//@import "pages/Post/AddPost";
-//@import "pages/VideoEditor/VideoEditor";
-@import "components/smart/CreateWizardTool/CreateWizardTool";
-@import "components/smart/Menu/Menu";
-@import "components/smart/Header/Header";

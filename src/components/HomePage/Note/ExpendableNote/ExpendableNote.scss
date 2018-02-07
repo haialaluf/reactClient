@@ -1,0 +1,17 @@
+.note {
+  background-color: white;
+  margin: auto;
+  transition: all 400ms;
+
+  &.expand {
+    overflow-y: scroll;
+    width: 94vw;
+    height: 94vh;
+  }
+
+  .expand-button {
+    cursor: pointer;
+  }
+
+}
+

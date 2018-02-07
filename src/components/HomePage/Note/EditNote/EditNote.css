@@ -1,0 +1,43 @@
+.note .image-container {
+  max-width: 100%;
+  padding: 0 12%;
+  min-height: 256px; }
+  .note .image-container img {
+    width: 80%; }
+  .note .image-container .content {
+    min-height: 256px; }
+.note .text textarea {
+  width: calc(100% - 8px); }
+.note.edit {
+  background-color: #ffffff;
+  text-align: center; }
+  .note.edit > .small-buttons {
+    position: relative; }
+.note > .small-buttons {
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  color: #646464;
+  z-index: 9; }
+  .note > .small-buttons div {
+    padding: 1px;
+    margin: 2px 8px 2px 2px;
+    cursor: pointer;
+    -moz-box-shadow: inset 0 0 20px #ffffff;
+    -webkit-box-shadow: inset 0 0 20px #ffffff;
+    box-shadow: inset 0 0 20px #ffffff; }
+
+.select-colors {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  cursor: pointer; }
+  .select-colors svg {
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=EditNote.css.map */

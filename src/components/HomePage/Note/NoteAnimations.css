@@ -1,0 +1,16 @@
+.grow.enter {
+  transform: scale(1.1); }
+
+.enter-left.leave {
+  -webkit-transform: matrix(1, 0, 0, 1, -1024, 0);
+  transform: matrix(1, 0, 0, 1, -1024, 0); }
+
+.enter-right.leave {
+  -webkit-transform: matrix(1, 0, 0, 1, 1024, 0);
+  transform: matrix(1, 0, 0, 1, 1024, 0); }
+
+.enter-bottom.leave {
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 1024);
+  transform: matrix(1, 0, 0, 1, 0, 1024); }
+
+/*# sourceMappingURL=NoteAnimations.css.map */

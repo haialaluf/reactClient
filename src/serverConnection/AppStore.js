@@ -4,7 +4,7 @@
 // import { EventEmitter } from 'events';
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { appReducer } from './Reducers/AppReducer';
-import { itemsReducer } from './Reducers/ItemsReducer';
+import { itemsReducer } from './../pagesNotInUse/Items/ItemsReducer';
 import { ordersReducer } from './Reducers/OrdersReducer';
 import { wizardReducer } from './Reducers/WizardReducer';
 import { userReducer } from './Reducers/UserReducer';

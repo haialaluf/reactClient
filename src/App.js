@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import Header from './components/smart/Header/Header';
-import Menu from './components/smart/Menu/Menu';
-import CreateWizardTool from './components/smart/CreateWizardTool/CreateWizardTool';
-import Home from './pages/Home/Home';
-import AddPost from './pages/Post/AddPost';
-import Settings from './pages/Settings/Settings';
-import LoginSignup from './pages/Login/LoginSignup';
-import Wizard from './pages/Wizard/Wizard';
-import Orders from './pages/Orders/Orders';
+import Header from './components/General/Header/Header';
+import Menu from './components/General/Menu/Menu';
+import CreateWizardTool from './components/Wizard/CreateWizardTool/CreateWizardTool';
+import Home from './components/HomePage/Home/Home';
+import HomePageTool from './components/HomePage/HomePageTool/HomePageTool';
+import Settings from './components/Settings/Settings';
+import LoginSignup from './components/Login/LoginSignup';
+import Wizard from './components/Wizard/Wizard/Wizard';
+import Orders from './components/Orders/Orders';
 import { Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './main.scss';
@@ -79,14 +79,14 @@ class App extends Component {
                 <div className={`App ${window.innerHeight > window.innerWidth? 'long-screen' : ''}`}>
                     <Header sticky={ this.state.sticky }
                             menu={ this.state.menuOpen }
-                            openMenu={ ()=>this.setState({ menuOpen: !this.state.menuOpen }) }
+                            openMenu={ () => this.setState((state) => ({ menuOpen: !state.menuOpen })) }
                             user={ this.props.user }/>
                     <Menu menu={ this.state.menuOpen } closeMenu={ ()=>this.setState({ menuOpen: false }) }/>
                     <Switch>
                         <Route exact path='/' component={ Home }/>
+                        <Route exact path='/HomePageTool' component={ HomePageTool }/>
                         <Route path='/settings' component={ Settings }/>
                         <Route path='/login' component={ LoginSignup }/>
-                        <Route path='/AddPost' component={ AddPost }/>
                         <Route path='/Wizard' component={ Wizard }/>
                         <Route path='/CreateWizardTool' component={ CreateWizardTool }/>
                         <Route path='/Orders' component={ Orders }/>
