@@ -14,7 +14,7 @@ let connect = axios.create({
 });
 
 
-export function getAppSettings(params) {
+export function getAppSettings(cb) {
     return (dispatch) => {
         connect.get(`${ prefix }settings`)
             .then((res) => {
@@ -22,6 +22,7 @@ export function getAppSettings(params) {
                     type: 'GET_DATA',
                     params: res
                 });
+                cb && cb();
             }).catch((error) => {
             console.error('Error getting app data:', error);
         })
@@ -33,7 +34,7 @@ export function changeAppSettings(settings) {
         connect.put(`${ prefix }settings`, settings)
             .then((res) => {
                 dispatch({
-                    type: 'GET_DATA',
+                    type: 'SAVE_DATA',
                     params: res
                 });
             }).catch((error) => {

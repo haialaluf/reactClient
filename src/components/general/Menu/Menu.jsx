@@ -68,17 +68,17 @@ class Menu extends Component {
                                 //         Items
                                 //     </Link>
                                 // </li>
-                                // < li >
-                                // < Link to='/AddPost' onClick={ this.props.closeMenu }>
-                                // Post
-                                // </Link>
-                                // </li>
-                                // <li>
-                                //     <Link to='/login' onClick={ this.props.closeMenu }>
-                                //         Login
-                                //     </Link>
-                                // </li>
                             }
+                            < li >
+                                < Link to='/AddPost' onClick={ this.props.closeMenu }>
+                                    Post
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to='/login' onClick={ this.props.closeMenu }>
+                                    Login
+                                </Link>
+                            </li>
                             <li>
                                 <Link to='/Orders' onClick={ this.props.closeMenu }>
                                     Orders

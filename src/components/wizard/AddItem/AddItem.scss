@@ -1,4 +1,4 @@
-@import "../FilesUpload/FilesUpload";
+@import "../../../shared";
 
 .add-item-container {
   padding: 24px;
@@ -24,25 +24,11 @@
     min-height: 64px;
   }
 
-
   .button-container {
     width: 100%;
     max-width: 512px;
     display: flex;
-    margin: auto;
-
-
-    button {
-      width: 50%;
-    }
-
-    .cancel-button {
-      background-color: $dark-grey;
-    }
-
-    .add-button {
-      background-color: $green;
-    }
+    text-align: center;
   }
 
   form {

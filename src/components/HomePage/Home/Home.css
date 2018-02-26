@@ -55,6 +55,13 @@
   .container .large-note {
     padding-top: 24px;
     min-height: 70vh; }
+    @media (min-width: 1024px) {
+      .container .large-note .note {
+        margin: 10vh 10vw;
+        width: 80vw;
+        height: 60vh; } }
+    .container .large-note .note.edit {
+      height: initial; }
 
 .footer {
   font-size: 18px;

@@ -1,5 +1,5 @@
 .bread-crumbs{
-  height: $bread-crumbs-hight;
+  height: $bread-crumbs-height;
   padding: 4px;
   display: flex;
   width: calc(100% - 160px);
@@ -16,7 +16,6 @@
     transition-delay: 5s;
     -webkit-transition: width .5s, height .5s, background-color 0s, -webkit-transform 2s;
     transition: width .5s, height .5s, background-color 0s, transform 2s;
-
 
     &.selected {
       transition-delay: 0s;
@@ -57,10 +56,13 @@
       border-bottom: 16px solid transparent;
     }
 
-    div {
+    >div {
+      padding: 5px 0 0 16px;
+    }
+
+    >div {
       color: white;
       font-size: 18px;
-      padding: 5px 0 0 16px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

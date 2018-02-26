@@ -3,7 +3,7 @@
  */
 import axios from 'axios';
 import config from '../../Config';
-import S3UploadService from '../S3UploadService';
+import S3Service from '../S3UploadService';
 
 const prefix = config.serverUrl + config.prefix;
 let connect = axios.create({
@@ -32,7 +32,7 @@ export function createWizard(wizard, cd, progress) {
                 console.error('Error during service worker registration:', error);
             });
         if (files && files.length) {
-            S3UploadService( generateWizardHash() ,files, progress)
+            S3Service.upload( generateWizardHash() ,files, progress)
                 .then((filesUrl) => {
                     wizard.items = wizard.items.map(item => {
                         item.fileList = item.fileList.map(() => filesUrl.pop());

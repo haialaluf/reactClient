@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import ContactForm from '../../General/ContactForm/ContactForm';
-import Note from '../Note/NoteFactory';
 import Config from '../../../Config';
 import './Home.scss';
 
@@ -16,7 +15,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll.bind(this)(30));
+        window.addEventListener('scroll', this.handleScroll.call(this, 30));
     }
 
     componentWillUnmount() {
@@ -49,114 +48,63 @@ class Home extends Component {
 
 
     render() {
+        const Note = this.props.note;
+        const data = this.props.data;
         return (
             <div className="container">
                 <div className="cover">
-                    <video src={Config.storage + 'SampleVideo.mp4'} type="video/mp4" autoPlay loop muted/>
+                    <video src={ Config.storage + 'SampleVideo.mp4'} type="video/mp4" autoPlay loop muted/>
                 </div>
-                <div className="four-notes" name="four-notes">
-                    <div className="title">
-                        How It's Work
-                    </div>
-                    <div className="all-notes-container">
-                        <div className="two-notes-container">
-                            <Note animation="grow"
-                                  focus={ this.state.focus >= 1  && this.state.focus < 3 }
-                                  title="Step 1"
-                                  imageUrl={ Config.storage + 'first-dot.png' }
-                                  text="Some short explanation on step 1"/>
-                            <Note animation="grow"
-                                  focus={ this.state.focus >= 3  && this.state.focus < 5 }
-                                  title="Step 2"
-                                  imageUrl={ Config.storage + 'second-dot.png' }
-                                  text="Some short explanation on step 2"/>
-                        </div>
-                        <div className="two-notes-container">
-                            <Note animation="grow"
-                                  focus={ this.state.focus >= 5  && this.state.focus < 7  }
-                                  title="Step 3"
-                                  imageUrl={ Config.storage + 'third-dot.png' }
-                                  text="Some short explanation on step 3"/>
-                            <Note animation="grow"
-                                  focus={ this.state.focus >= 7  && this.state.focus < 9  }
-                                  title="Step 4"
-                                  imageUrl={ Config.storage + 'fourth-dot.png' }
-                                  text="Some short explanation on step 4"/>
+                {
+                    data && data[0] &&
+                    <div className="four-notes" name="four-notes">
+                        <div className="all-notes-container">
+                            <div className="two-notes-container">
+                                <Note focus={ this.state.focus >= 1  && this.state.focus < 3 }
+                                    { ...data[0].data[0] }/>
+                                <Note focus={ this.state.focus >= 3  && this.state.focus < 5 }
+                                    { ...data[0].data[1] }/>
+                            </div>
+                            <div className="two-notes-container">
+                                <Note focus={ this.state.focus >= 5  && this.state.focus < 7  }
+                                    { ...data[0].data[2] }/>
+                                <Note focus={ this.state.focus >= 7  && this.state.focus < 9  }
+                                    { ...data[0].data[3] }/>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="two-notes" name="two-notes">
-                    <Note
-                        focus={ this.state.focus > 9 }
-                        animation="enter-left"
-                        title="About"
-                        text={`
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                }
+                {
+                    data && data[1] &&
+                    <div className="two-notes" name="two-notes">
+                        <Note focus={ this.state.focus > 9 }
+                              animation="enter-left"
+                            { ...data[1].data[0] } />
+                        <Note { ...data[1].data[1] }
+                            className="hide-in-mobile hide-in-tablet"
+                            focus={ this.state.focus > 9 }
+                            position={ this.state.focus - 10 }/>
 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                    `}/>
-                    <Note imageUrl={ Config.storage + 'about.png' }
-                          animation="enter-right"
-                          className="hide-in-mobile hide-in-tablet"
-                          focus={ this.state.focus > 9 }
-                          position={ this.state.focus - 10 }/>
-
-                </div>
-                <div className="large-note" name="large-note">
-                    <Note
-                        focus={ this.state.focus > 18 }
-                        animation="enter-bottom"
-                        title="About"
-                        text={`
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        `}
-                        longText={`
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    `}/>
-                </div>
-                <div name="contact-form">
-                    <ContactForm></ContactForm>
-                </div>
-                <div className="footer">
-                    Copyright © 2018 EasyClient
-                </div>
+                    </div>
+                }
+                {
+                    data && data[2] &&
+                    <div className="large-note" name="large-note">
+                        <Note focus={ this.state.focus > 18 } { ...data[2].data[0] }/>
+                    </div>
+                }
+                {
+                    data &&
+                    <div name="contact-form">
+                        <ContactForm></ContactForm>
+                    </div>
+                }
+                {
+                    data &&
+                    <div className="footer">
+                        Copyright © 2018 EasyClient
+                    </div>
+                }
             </div>
         )
     }

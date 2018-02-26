@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import Header from './components/General/Header/Header';
 import Menu from './components/General/Menu/Menu';
 import CreateWizardTool from './components/Wizard/CreateWizardTool/CreateWizardTool';
-import Home from './components/HomePage/Home/Home';
-import HomePageTool from './components/HomePage/HomePageTool/HomePageTool';
+import Home from './components/HomePage/HomePageFactory';
 import Settings from './components/Settings/Settings';
 import LoginSignup from './components/Login/LoginSignup';
 import Wizard from './components/Wizard/Wizard/Wizard';
@@ -13,6 +12,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import './main.scss';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import Style from './assets/Styles'
+const HomePageTool = function (props) {
+    return <Home edit="true" />
+};
 
 class App extends Component {
 
@@ -26,10 +28,19 @@ class App extends Component {
         this.stickyHeader.bind(this)(location);
     }
 
+    componentWillReceiveProps() {
+        let location = window.location.href;
+        location = location.substring(location.lastIndexOf('/'), location.length);
+        if (this.location !== location) {
+            this.location = location;
+            this.stickyHeader.bind(this)(this.location);
+        }
+    }
+
     stickyHeader(location) {
         let self = this;
         const scrollSpy = (offset) => {
-            return ()=> {
+            return () => {
                 let position = window.scrollY;
                 if (position > offset && !self.state.sticky) {
                     self.setState({sticky: true})
@@ -53,16 +64,6 @@ class App extends Component {
                 window.addEventListener('scroll', scrollSpy(48));
 
         }
-
-    }
-
-    componentWillReceiveProps() {
-        let location = window.location.href;
-        location = location.substring(location.lastIndexOf('/'), location.length);
-        if (this.location !== location) {
-            this.location = location;
-            this.stickyHeader.bind(this)(this.location);
-        }
     }
 
     render() {
@@ -84,7 +85,7 @@ class App extends Component {
                     <Menu menu={ this.state.menuOpen } closeMenu={ ()=>this.setState({ menuOpen: false }) }/>
                     <Switch>
                         <Route exact path='/' component={ Home }/>
-                        <Route exact path='/HomePageTool' component={ HomePageTool }/>
+                        <Route exact path='/HomePageTool' component={ HomePageTool } />
                         <Route path='/settings' component={ Settings }/>
                         <Route path='/login' component={ LoginSignup }/>
                         <Route path='/Wizard' component={ Wizard }/>

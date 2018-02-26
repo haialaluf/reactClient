@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import './TextNote.css'
+import Helpers from '../../../../helpers'
 
 class TextNote extends Component {
 
     componentWillMount () {
         let colors = this.props.colors || {};
-        colors = this.setDefaultColors(colors);
+        colors = Helpers.setDefaultColors(colors, ['title','text']);
         this.colors = colors;
-    }
-
-    setDefaultColors(colors) {
-        colors.title = colors.title || '#000000';
-        colors.text = colors.text || '#000000';
-        colors.background = colors.background || '#ffffff';
-        return colors
     }
 
     render() {

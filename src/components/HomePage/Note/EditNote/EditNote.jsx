@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EditableText from '../../../General/EditableText/EditableText';
 import EditableImage from '../../../General/EditableImage/EditableImage';
+import Helpers from '../../../../helpers'
 import ColorTool from '../../../General/ColorTool/ColorTool';
 import NoteFactory from '../NoteFactory'
 import './EditNote.css'
@@ -15,24 +16,17 @@ class EditNote extends Component {
             colors: {}
         };
         this.inputs = {};
-        this.data = {};
+        this.data = { ...this.props };
     }
 
     componentWillMount () {
         this.setState((state, props) => {
             let colors = props.colors || {};
-            colors = this.setDefaultColors(colors);
+            colors = Helpers.setDefaultColors(colors, ['title','text']);
             return {colors}
         })
     }
-
-    setDefaultColors(colors) {
-        colors.title = colors.title || '#000000';
-        colors.text = colors.text || '#000000';
-        colors.background = colors.background || '#ffffff';
-        return colors
-    }
-
+    
     save() {
         if ( this.state.colors ) {
             this.data.colors = this.state.colors
@@ -40,12 +34,16 @@ class EditNote extends Component {
         if ( this.inputs.text ) {
             this.data.text = this.inputs.text.value
         }
+        if ( this.inputs.longText ) {
+            this.data.longText = this.inputs.longText.value
+        }
         if ( this.inputs.title ) {
             this.data.title = this.inputs.title.value
         }
         if ( this.inputs.imageUrl ) {
             this.data.imageUrl = this.inputs.imageUrl.value
         }
+        this.props.saveCallback(this.data);
         this.setState({edit: false})
     }
 
@@ -73,21 +71,31 @@ class EditNote extends Component {
                             <span style={{color: '#D9e3f0'}}>S</span>
                         </div>
                     </div>
+                    <div className="image-container">
+                        <EditableImage multiple={ !!this.props.longText }
+                            inputRef={ (el) => this.inputs.imageUrl = el } imageUrl={ this.data.imageUrl || this.props.imageUrl }/>
+                    </div>
                     <div className="text-container">
                         <EditableText className="title"
-                                      text={ this.data.title || this.props.title || '' }
+                                      text={ this.data.title || '' }
                                       color={ this.state.colors.title }
                                       inputRef={ (el) => this.inputs.title = el }>
                         </EditableText>
                         <EditableText textarea={ true }
                                       className="text"
-                                      text={ this.data.text || this.props.text || '' }
+                                      text={ this.data.text || '' }
                                       color={ this.state.colors.text }
                                       inputRef={ (el) => this.inputs.text = el }>
                         </EditableText>
-                    </div>
-                    <div className="image-container">
-                        <EditableImage inputRef={ (el) => this.inputs.imageUrl = el } imageUrl={ this.data.imageUrl || this.props.imageUrl }/>
+                        {
+                            this.props.longText &&
+                            <EditableText textarea={ true }
+                                          className="text"
+                                          text={ this.data.longText || '' }
+                                          color={ this.state.colors.text }
+                                          inputRef={ (el) => this.inputs.longText = el }>
+                            </EditableText>
+                        }
                     </div>
                     {
                         this.state.editColors && <ColorTool schema={ this.state.colors }
@@ -100,6 +108,7 @@ class EditNote extends Component {
             );
         else {
             let props = Object.assign({}, this.props, this.data);
+            props.animation = 'none'
             return (
                 <NoteFactory { ...props }>
                     <div className="small-buttons">

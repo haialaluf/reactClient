@@ -22,6 +22,7 @@ class FilesUpload extends Component {
         if (this.props.link) {
             this.props.link.getFiles = this.getFiles.bind(this)
         }
+        this.selectFile = this.selectFile.bind(this)
     }
 
     getFiles() {
@@ -58,7 +59,7 @@ class FilesUpload extends Component {
         Object.keys(fileList).forEach((key)=> allFiles.push(fileList[key]));
         this.setState({fileList: allFiles}, () => {
             if (!self.props.multiple) {
-                self.selectFile.bind(self)(0);
+                self.selectFile(0);
             }
         });
     }
@@ -66,7 +67,7 @@ class FilesUpload extends Component {
     deleteFile(index) {
         let files = this.state.fileList;
         files.splice(index, 1);
-        this.setState({fileList: files})
+        this.setState({fileList: files}, () => this.selectFile(0));
     }
 
     selectFile(index) {
@@ -100,7 +101,7 @@ class FilesUpload extends Component {
                                     this.state.fileList.map((file, index) =>
                                         <div key={ index } className={`file ${file.selected ? 'selected' : ''}`}>
                                             <div className="file-name"
-                                                 onClick={ () => this.selectFile.bind(this)(index)}>{ file.name }</div>
+                                                 onClick={ () => this.selectFile(index)}>{ file.name }</div>
                                                 <span onClick={ () => this.deleteFile.bind(this)(index)}>
                                                     <Icon image="delete"/>
                                                 </span>

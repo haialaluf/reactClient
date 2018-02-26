@@ -13,6 +13,8 @@
   text-align: center; }
   .note.edit > .small-buttons {
     position: relative; }
+  .note.edit .editable-text {
+    padding: 8px; }
 .note > .small-buttons {
   font-size: 14px;
   position: absolute;

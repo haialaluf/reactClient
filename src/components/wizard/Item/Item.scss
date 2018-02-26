@@ -1,22 +1,22 @@
 .item {
   overflow: hidden;
-  border-radius: 4px;
-  border: 1px solid;
   display: inline-block;
-
+  background-color: #ffff90;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
   position: relative;
   width: 23vw;
   height: 23vw;
   margin: .5vw;
-  background: white;
   background-position: center 40px;
   background-size: auto 16vh;
   background-repeat: no-repeat;
-  padding: 12px;
 
   &.selected {
     border-color: #11ff88;
   }
+
   @include mobile {
     width: 46vw;
     margin: 1vw;
@@ -29,7 +29,6 @@
     width: 30vw;
     margin: .6vw;
     height: 30vw;
-    padding: 0 3vw;
   }
 
   &.expand {
@@ -44,19 +43,65 @@
     left: 16px;
     z-index: 2;
 
+    .image-container {
+      max-height: 256px;
+    }
+
     @include mobile {
         bottom: 8px;
         right: 8px;
         left: 8px;
     }
-
   }
 
+  .image-container {
+    img {
+      height: 100%;
+    }
+  }
+
+  &.collapse {
+    .image-container {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      min-width: 100%;
+
+      img {
+        height: 100%;
+      }
+      .gradient {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        box-shadow: inset -96px 64px 256px #ffffff;
+
+      }
+    }
+
+    .title {
+      position: absolute;
+      left: 0;
+      top: 24px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .description {
+      position: absolute;
+      left: 0;
+      top: 64px;
+    }
+
+  }
 
   .title {
     text-align: center;
     font-size: 32px;
-    margin-bottom: 128px;
+    margin-bottom: 16px;
 
     @include mobile {
       font-size: 24px;
@@ -64,6 +109,7 @@
   }
 
   .description {
-
+    padding: 8px;
   }
+
 }

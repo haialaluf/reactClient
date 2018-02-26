@@ -8,6 +8,7 @@ import { itemsReducer } from './../pagesNotInUse/Items/ItemsReducer';
 import { ordersReducer } from './Reducers/OrdersReducer';
 import { wizardReducer } from './Reducers/WizardReducer';
 import { userReducer } from './Reducers/UserReducer';
+import { HomeViewReducer } from './Reducers/HomeViewReducer';
 import ReduxThunk from 'redux-thunk'
 
 const middleware = applyMiddleware(ReduxThunk);
@@ -17,7 +18,8 @@ const reducers = combineReducers({
     items: itemsReducer,
     orders: ordersReducer,
     wizard: wizardReducer,
-    user: userReducer
+    user: userReducer,
+    HomeView: HomeViewReducer
 });
 
 const store = createStore(reducers, {}, middleware);

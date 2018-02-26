@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import RaisedButton from 'material-ui/RaisedButton';
 import PlayPause from "../General/Buttons/PlayPause/PlayPause";
 import Wizard from "../Wizard/Wizard/Wizard";
+import "./Settings.css";
 
 class Settings extends Component {
 
@@ -30,6 +31,112 @@ class Settings extends Component {
     }
     
     componentWillUnmount() {
+    }
+
+
+    saveSettings() {
+        /*
+        let settings = {
+            homeView: {
+                components: [
+                    {
+                        type: 0,
+                        data: [
+                            {
+                                title: 'step 1',
+                                text: 'Some short explanation on step 1',
+                                imageUrl: 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/first-dot.png',
+                                animation: 'grow'
+                            },
+                            {
+                                title: 'step 2',
+                                text: 'Some short explanation on step 2',
+                                imageUrl: 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/second-dot.png',
+                                animation: 'grow'
+                            },
+                            {
+                                title: 'step 3',
+                                text: 'Some short explanation on step 3',
+                                imageUrl: 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/third-dot.png',
+                                animation: 'grow'
+                            },
+                            {
+                                title: 'step 4',
+                                text: 'Some short explanation on step 4',
+                                imageUrl: 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/fourth-dot.png',
+                                animation: 'grow'
+                            }
+                        ]
+                    },
+                    {
+                        type: 1,
+                        data: [
+                            {
+                                title: 'About',
+                                animation: 'enter-left',
+                                text: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+                                imageUrl: ''
+                            },
+                            {
+                                title: '',
+                                animation: 'enter-right',
+                                text: '',
+                                imageUrl: 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/about.png'
+                            }
+                        ]
+                    },
+                    {
+                        type: 2,
+                        data: [{
+                            title: 'About',
+                            animation: 'enter-bottom',
+                            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.`,
+                            longText: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+                
+                
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+                            imageUrl: [ 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/first-dot.png', 'https://s3.eu-central-1.amazonaws.com/easy-client-assets/second-dot.png' ]
+                        }]
+                    }
+                ]
+            }
+        }
+        */
+        this.props.actions.changeAppSettings(this.state.settings);
     }
 
     renderWizard(wizard, index) {
@@ -64,13 +171,9 @@ class Settings extends Component {
 
     }
 
-    saveSettings() {
-        this.props.actions.changeAppSettings(this.state.settings);
-    }
-
     render() {
         return (
-            <div className="container">
+            <div className="container" ref={(el)=>this.e = el}>
                 <div className="title">
                     Settings
                 </div>

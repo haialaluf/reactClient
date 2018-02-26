@@ -12,13 +12,14 @@ let percentage = {
 };
 
 function init() {
+    console.log('Init S3');
     const storage = store.getState().settings.storage;
     if (!storage) return;
     storageUrl = `https://s3.${ storage.region }.amazonaws.com/${ storage.bucketName }/`;
     AWS.config.update({
         region: storage.region,
         accessKeyId: storage.accessKeyId,
-        secretAccessKey: storage.secretAccessKey
+        secretAccessKey: window.prompt('Please enter your secret access key')
     });
     s3 = new AWS.S3({
         apiVersion: storage.apiVersions,
@@ -27,7 +28,9 @@ function init() {
 }
 
 function getFileType(file) {
-    return file.name.substring(file.name.lastIndexOf('.') + 1, file.name.length)
+    return file.name ? file.name.substring(file.name.lastIndexOf('.') + 1, file.name.length) 
+                        : 
+                       file.type.substring(file.type.lastIndexOf('/') + 1, file.type.length);
 }
 
 function uploadFile(file, fileName, progress) {
@@ -40,7 +43,7 @@ function uploadFile(file, fileName, progress) {
                 reject({msg: "Error uploading data: ", error: err});
             } else {
                 percentage.add();
-                progress(percentage.current);
+                progress && progress(percentage.current);
                 resolve(storageUrl + fileName);
             }
         });
@@ -48,7 +51,7 @@ function uploadFile(file, fileName, progress) {
 }
 
 function upload (key, fileList, progress) {
-    if (!isInit) init();
+    init();
     return new Promise((resolve, reject) => {
         if (!s3) reject({msg: 'Please log in first!'});
         percentage.add = () => {
@@ -62,5 +65,17 @@ function upload (key, fileList, progress) {
     })
 }
 
-export default upload
+function fetch (key) {
+    if (!isInit) init();
+    return new Promise((resolve, reject) => {
+        s3.listObjects({}, (err, res) => {
+            debugger
+        })
+    })
+}
+
+export default {
+    upload: upload,
+    fetch: fetch
+}
 

@@ -30,12 +30,39 @@ export default {
     },
 
     blobToDataURL(blob) {
+        const isDataUrl = (url) => url.substring && url.substring(0,5) === 'data:';
         return new Promise((resolve, reject) => {
-            let reader = new FileReader();
-            reader.onload = (e) => {
-                resolve(e.target.result);
-            };
-            reader.readAsDataURL(blob);
+            if (isDataUrl(blob)) {
+                resolve(blob);
+            } else {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    resolve(e.target.result);
+                };
+                reader.readAsDataURL(blob);    
+            }
         });
-    }    
+    },
+
+    setDefaultColors(colors, keys) {
+        keys.forEach((key) => {
+            colors[key] = colors[key] || '#000000';
+        });
+        colors.background = colors.background || '#ffffff';
+        return colors
+    },
+
+    isDataUrl(url) {
+        return url.substring && url.substring(0,5) === 'data:'
+    },
+
+    removeFunctionsFromObject(obj) {
+        Object.keys(obj).forEach(key => {
+            if (typeof obj[key] === 'function'){
+                delete obj[key]; 
+            }
+        })
+        return obj;
+    }
+
 }

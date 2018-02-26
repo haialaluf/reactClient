@@ -1,9 +1,11 @@
-$bread-crumbs-hight: 48px;
-@import "../../components/Wizard/BreadCrumbs/BreadCrumbs";
-@import "../../components/Wizard/Checkout/Checkout";
+$bread-crumbs-height: 48px;
 
+@import "../../../shared";
+@import "../BreadCrumbs/BreadCrumbs";
+@import "../Checkout/Checkout";
+@import "../Item/Item";
 
-$ofsset: $header-offset + $bread-crumbs-hight;
+$ofsset: $header-offset + $bread-crumbs-height + 12px;
 .items-container {
   height: calc(100vh - #{$ofsset});
   overflow: scroll;

@@ -22,10 +22,19 @@ class EditableText extends Component {
     }
 
     save() {
-        helpers.blobToDataURL(this.imageLink.getFiles()).then((image) => {
-            this.setState({edit: false, image: image});
-            this.props.inputRef({value: image})
-        });
+        let files = this.imageLink.getFiles();
+        if (this.props.multiple) {
+            files = files.map((file) => helpers.blobToDataURL(file));
+            Promise.all(files).then((files) => {
+                this.setState({edit: false, image: files[0]});
+                this.props.inputRef({value: files})
+            });
+        } else {
+            helpers.blobToDataURL(files).then((image) => {
+                this.setState({edit: false, image: image});
+                this.props.inputRef({value: image})
+            });
+        }
     }
 
     render() {
@@ -48,7 +57,7 @@ class EditableText extends Component {
                     </div>
                     {
                         this.state.edit &&
-                        <FilesUpload link={ this.imageLink }/>
+                        <FilesUpload link={ this.imageLink } multiple={ this.props.multiple }/>
                     }
                     <img src={ this.state.image || this.props.imageUrl }
                          alt="editable-cover"/>

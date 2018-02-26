@@ -7,6 +7,7 @@ import AddItem from "../AddItem/AddItem";
 import Checkout from "../Checkout/Checkout";
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 import CircularProgressbar from 'react-circular-progressbar';
+import './CreateWizardTool.css'
 
 const STAGES = 3;
 
@@ -133,9 +134,10 @@ class CreateWizardTool extends Component {
                 {
                     this.state.editMode.stageName && isState(index) ?
                         <input onChange={ (e) => {
+                                                    const value = e.target.value;
                                                     this.setState((state) => {
                                                         let wizard = state.wizard;
-                                                        wizard.stages[index].title = e.target.value;
+                                                        wizard.stages[index].title = value;
                                                         return {wizard}
                                                     });
                                                  }
@@ -164,23 +166,24 @@ class CreateWizardTool extends Component {
                 </BreadCrumbs>
                 <div className="items-container">
                     { items && items.map(
-                        (item, index) => <Item item={ item }
-                                               key={ index }
-                                               deleteCallback={ itemId => {
-                                                    this.setState((state) => {
-                                                        let wizard = state.wizard;
-                                                        wizard.items = wizard.items.filter((item) => item._id !== itemId);
-                                                        return { wizard: wizard, editMode: {} }
-                                                    });
-                                                } }
-                                               editCallback={ x=>x }/>) }
+                        (item, index) =>
+                            <Item item={ item }
+                                  key={ index }
+                                  deleteCallback={ itemId => {
+                                      this.setState((state) => {
+                                            let wizard = state.wizard;
+                                            wizard.items = wizard.items.filter((item) => item._id !== itemId);
+                                            return { wizard: wizard, editMode: {} }
+                                        });
+                                    } }
+                                   editCallback={ x=>x }/>) }
                     { this.state.currentState === 3 && <Checkout sendCallback={ this.checkOut.bind(this) }/> }
                     <div onClick={ this.newItem.bind(this) }
                          className="item add-item">
                         <div>Add Item</div>
                     </div>
                     {
-                        this.state.editMode.item &&
+                        this.state.editMode.item ?
                         <div className="item expand">
                             <AddItem action={ (item)=> { this.addItem.bind(this)(item) } }
                                      cancelAction={ () => {
@@ -194,11 +197,13 @@ class CreateWizardTool extends Component {
                                                     }
                                      }
                             />
-                        </div>
+                        </div> : ''
                     }
                 </div>
-
-                <CircularProgressbar percentage={this.state.progress}/>
+                {
+                    this.state.progress &&
+                    <CircularProgressbar percentage={this.state.progress}/>
+                }
             </div>
         )
     }

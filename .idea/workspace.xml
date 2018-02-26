@@ -2,111 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50fcd6da-0448-4f9f-8a68-3922835332f9" name="Default" comment="288">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableImage/AnimatedTextNote.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableText/EditableText.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableText/EditableText.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/General/EditableText/EditableText.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/NoteAnimations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/NoteFactory.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/shared.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/Today.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/images/about.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/images/number1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/images/number2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/images/number3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/images/number4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/dumb/FilesUpload/FilesUpload.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/dumb/Item/Item.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/homePage/HomePageTool/HomePageTool.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/smart/CreateWizardTool/CreateWizardTool.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddItem/AddItem.css" afterPath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddItem/AddItem.css.map" afterPath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddItem/AddItem.jsx" afterPath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddItem/AddItem.scss" afterPath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddressAutocomplete/AddressAutocomplete.css" afterPath="$PROJECT_DIR$/src/components/general/AddressAutocomplete/AddressAutocomplete.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddressAutocomplete/AddressAutocomplete.css.map" afterPath="$PROJECT_DIR$/src/components/general/AddressAutocomplete/AddressAutocomplete.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddressAutocomplete/AddressAutocomplete.jsx" afterPath="$PROJECT_DIR$/src/components/general/AddressAutocomplete/AddressAutocomplete.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/AddressAutocomplete/AddressAutocomplete.scss" afterPath="$PROJECT_DIR$/src/components/general/AddressAutocomplete/AddressAutocomplete.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/BreadCrumbs/BreadCrumbs.css" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/BreadCrumbs/BreadCrumbs.css.map" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/BreadCrumbs/BreadCrumbs.jsx" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/BreadCrumbs/BreadCrumbs.scss" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Buttons/Hamburger/Hamburger.jsx" afterPath="$PROJECT_DIR$/src/components/general/Buttons/Hamburger/Hamburger.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Buttons/PlayPause/PlayPause.css" afterPath="$PROJECT_DIR$/src/components/general/Buttons/PlayPause/PlayPause.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Buttons/PlayPause/PlayPause.css.map" afterPath="$PROJECT_DIR$/src/components/general/Buttons/PlayPause/PlayPause.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Buttons/PlayPause/PlayPause.jsx" afterPath="$PROJECT_DIR$/src/components/general/Buttons/PlayPause/PlayPause.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Buttons/PlayPause/PlayPause.scss" afterPath="$PROJECT_DIR$/src/components/general/Buttons/PlayPause/PlayPause.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Checkout/Checkout.css" afterPath="$PROJECT_DIR$/src/components/wizard/Checkout/Checkout.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Checkout/Checkout.css.map" afterPath="$PROJECT_DIR$/src/components/wizard/Checkout/Checkout.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Checkout/Checkout.jsx" afterPath="$PROJECT_DIR$/src/components/wizard/Checkout/Checkout.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Checkout/Checkout.scss" afterPath="$PROJECT_DIR$/src/components/wizard/Checkout/Checkout.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/CloseExpand/CloseExpand.jsx" afterPath="$PROJECT_DIR$/src/components/general/Buttons/CloseExpand/CloseExpand.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/FilesUpload/FilesUpload.css" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/FilesUpload/FilesUpload.css.map" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/FilesUpload/FilesUpload.scss" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Icon/Icon.jsx" afterPath="$PROJECT_DIR$/src/components/general/Icon/Icon.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/dumb/Item/Item.scss" afterPath="$PROJECT_DIR$/src/components/wizard/Item/Item.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/ContactForm/ContactForm.css" afterPath="$PROJECT_DIR$/src/components/General/ContactForm/ContactForm.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/ContactForm/ContactForm.css.map" afterPath="$PROJECT_DIR$/src/components/General/ContactForm/ContactForm.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/ContactForm/ContactForm.jsx" afterPath="$PROJECT_DIR$/src/components/General/ContactForm/ContactForm.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/ContactForm/ContactForm.scss" afterPath="$PROJECT_DIR$/src/components/General/ContactForm/ContactForm.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/CreateWizardTool/CreateWizardTool.css" afterPath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/CreateWizardTool/CreateWizardTool.scss" afterPath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/Header/Header.jsx" afterPath="$PROJECT_DIR$/src/components/general/Header/Header.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/Header/Header.scss" afterPath="$PROJECT_DIR$/src/components/general/Header/Header.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/Menu/Menu.jsx" afterPath="$PROJECT_DIR$/src/components/general/Menu/Menu.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/smart/Menu/Menu.scss" afterPath="$PROJECT_DIR$/src/components/general/Menu/Menu.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Items/Items.jsx" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Items/Items.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Items/Items.scss" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Items/Items.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Login/Login/Login.jsx" afterPath="$PROJECT_DIR$/src/components/Login/Login/Login.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Login/LoginSignup.jsx" afterPath="$PROJECT_DIR$/src/components/Login/LoginSignup.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Login/Register/Register.jsx" afterPath="$PROJECT_DIR$/src/components/Login/Register/Register.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Orders/Orders.css" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Orders/Orders.css.map" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Orders/Orders.jsx" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Orders/Orders.scss" afterPath="$PROJECT_DIR$/src/components/Orders/Orders.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Post/AddPost.css" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Post/AddPost.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Post/AddPost.css.map" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Post/AddPost.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Post/AddPost.jsx" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Post/AddPost.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Post/AddPost.scss" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Post/AddPost.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Settings/Settings.css" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Settings/Settings.css.map" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Settings/Settings.jsx" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Settings/Settings.scss" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/VideoEditor/VideoEditor.jsx" afterPath="$PROJECT_DIR$/src/pagesNotInUse/VideoEditor/VideoEditor.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/VideoEditor/VideoEditor.scss" afterPath="$PROJECT_DIR$/src/pagesNotInUse/VideoEditor/VideoEditor.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/VideoEditor/VideoEditorService.js" afterPath="$PROJECT_DIR$/src/pagesNotInUse/VideoEditor/VideoEditorService.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Wizard/Wizard.css" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Wizard/Wizard.css.map" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.css.map" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Wizard/Wizard.jsx" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pages/Wizard/Wizard.scss" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/serverConnection/Actions/ItemActions.js" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Items/ItemActions.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/serverConnection/Reducers/ItemsReducer.js" afterPath="$PROJECT_DIR$/src/pagesNotInUse/Items/ItemsReducer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/HomePage/HomePageFactory.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/serverConnection/Actions/HomeViewActions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/serverConnection/Reducers/HomeViewReducer.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Settings/Settings.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/homePage/HomePageTool/HomePageTool.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config.js" afterPath="$PROJECT_DIR$/src/Config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.css" afterPath="$PROJECT_DIR$/src/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.css.map" afterPath="$PROJECT_DIR$/src/main.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.scss" afterPath="$PROJECT_DIR$/src/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/Styles.js" afterPath="$PROJECT_DIR$/src/assets/Styles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx" afterPath="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Home/Home.css" afterPath="$PROJECT_DIR$/src/components/HomePage/Home/Home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Home/Home.css.map" afterPath="$PROJECT_DIR$/src/components/HomePage/Home/Home.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.css" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.css.map" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.css.map" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.jsx" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.jsx" afterPath="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Login/LoginSignup.jsx" afterPath="$PROJECT_DIR$/src/components/Login/LoginSignup.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Settings/Settings.css.map" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Settings/Settings.scss" afterPath="$PROJECT_DIR$/src/components/Settings/Settings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.css" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.css.map" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.scss" afterPath="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.css" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.css.map" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.jsx" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.scss" afterPath="$PROJECT_DIR$/src/components/general/FilesUpload/FilesUpload.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/general/Menu/Menu.jsx" afterPath="$PROJECT_DIR$/src/components/general/Menu/Menu.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/homePage/Home/Home.scss" afterPath="$PROJECT_DIR$/src/components/homePage/Home/Home.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.jsx" afterPath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.scss" afterPath="$PROJECT_DIR$/src/components/wizard/AddItem/AddItem.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.css" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.jsx" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.scss" afterPath="$PROJECT_DIR$/src/components/wizard/BreadCrumbs/BreadCrumbs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/Checkout/Checkout.scss" afterPath="$PROJECT_DIR$/src/components/wizard/Checkout/Checkout.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.css" afterPath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.jsx" afterPath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.scss" afterPath="$PROJECT_DIR$/src/components/wizard/CreateWizardTool/CreateWizardTool.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/wizard/Item/Item.scss" afterPath="$PROJECT_DIR$/src/components/wizard/Item/Item.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/helpers.js" afterPath="$PROJECT_DIR$/src/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serverConnection/Actions/AppActions.js" afterPath="$PROJECT_DIR$/src/serverConnection/Actions/AppActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serverConnection/Actions/WizardActions.js" afterPath="$PROJECT_DIR$/src/serverConnection/Actions/WizardActions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serverConnection/AppStore.js" afterPath="$PROJECT_DIR$/src/serverConnection/AppStore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/serverConnection/S3UploadService.js" afterPath="$PROJECT_DIR$/src/serverConnection/S3UploadService.js" />
     </list>
     <ignored path="reactClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,21 +75,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CreateWizardTool.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx">
+      <file leaf-file-name="HomePageFactory.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/HomePage/HomePageFactory.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+            <state relative-caret-position="337">
+              <caret line="115" column="42" selection-start-line="115" selection-start-column="42" selection-end-line="115" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppStore.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/serverConnection/AppStore.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="45" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#83#153#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeViewActions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/HomeViewActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+              <folding>
+                <element signature="e#47#87#0" expanded="false" />
+                <element signature="e#88#114#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="S3UploadService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/serverConnection/S3UploadService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+              <folding>
+                <element signature="e#47#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Header.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/General/Header/Header.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="17" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="17" />
+              <folding>
+                <element signature="e#553#592#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Item.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Wizard/Item/Item.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="637">
+              <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppActions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/AppActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/HomePage/Home/Home.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="157">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -149,21 +169,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageNote.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.jsx">
+      <file leaf-file-name="NoteAnimations.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/NoteAnimations.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="345">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="ExpendableNote.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="90">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -175,8 +195,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="XSLT Stylesheet" />
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -186,56 +206,56 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/HomePage/ExpendableNote/ExpendableNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/ExpendableNote/ExpendableNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/HomePageTool/HomePageTool.scss" />
-        <option value="$PROJECT_DIR$/src/components/General/Menu/Menu.jsx" />
-        <option value="$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/AnimatedImageNote/EditableAnimatedImageNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/General/Icon/Icon.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/AnimatedTextNote/AnimatedTextNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.css" />
-        <option value="$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/TextImageNote/EditableTextImageNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/AnimatedTextNote/AnimatedTextNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/AnimatedImageNote/AnimatedImageNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/AnimatedTextNote/EditableAnimatedTextNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/TextImageNote/TextImageNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/AnimatedImageNote/AnimatedImageNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/ImageNote/ImageNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/Note.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/TextNote/AnimatedTextNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/General/Header/Header.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/TextImageNote/TextImageNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.css" />
-        <option value="$PROJECT_DIR$/src/components/General/EditableText/EditableText.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx" />
-        <option value="$PROJECT_DIR$/src/main.scss" />
         <option value="$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.jsx" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/General/EditableText/EditableText.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.scss" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Note/NoteAnimations.scss" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Home/Home.css" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Note/NoteFactory.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Home/Home.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Wizard/Item/Item.jsx" />
         <option value="$PROJECT_DIR$/src/components/HomePage/HomePageTool/HomePageTool.jsx" />
-        <option value="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx" />
-        <option value="$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Settings/Settings.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx" />
-        <option value="$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/HomePageFactory/HomePageFactory.jsx" />
+        <option value="$PROJECT_DIR$/src/helpers.js" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.jsx" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.scss" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx" />
+        <option value="$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.scss" />
+        <option value="$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.jsx" />
+        <option value="$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx" />
+        <option value="$PROJECT_DIR$/src/Config.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/General/Menu/Menu.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Login/LoginSignup.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/BreadCrumbs/BreadCrumbs.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/Checkout/Checkout.scss" />
+        <option value="$PROJECT_DIR$/src/assets/Styles.js" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/AddItem/AddItem.scss" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.scss" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/BreadCrumbs/BreadCrumbs.scss" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.jsx" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Home/Home.scss" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.scss" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/AddItem/AddItem.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/Item/Item.scss" />
+        <option value="$PROJECT_DIR$/src/components/Settings/Settings.scss" />
+        <option value="$PROJECT_DIR$/src/components/Settings/Settings.jsx" />
+        <option value="$PROJECT_DIR$/src/serverConnection/Reducers/HomeViewReducers.js" />
+        <option value="$PROJECT_DIR$/src/serverConnection/AppStore.js" />
+        <option value="$PROJECT_DIR$/src/serverConnection/Reducers/HomeViewReducer.js" />
+        <option value="$PROJECT_DIR$/src/serverConnection/Actions/WizardActions.js" />
+        <option value="$PROJECT_DIR$/src/serverConnection/Actions/HomeViewActions.js" />
+        <option value="$PROJECT_DIR$/src/serverConnection/Actions/AppActions.js" />
+        <option value="$PROJECT_DIR$/src/serverConnection/S3UploadService.js" />
+        <option value="$PROJECT_DIR$/src/components/HomePage/HomePageFactory.jsx" />
+        <option value="$PROJECT_DIR$/src/components/General/Header/Header.jsx" />
+        <option value="$PROJECT_DIR$/src/components/Wizard/Item/Item.jsx" />
         <option value="$PROJECT_DIR$/src/components/HomePage/Home/Home.jsx" />
       </list>
     </option>
@@ -276,8 +296,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -324,7 +342,139 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="serverConnection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverConnection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Reducers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="serverConnection" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wizard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wizard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wizard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HomePage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,7 +530,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ImageNote" />
+              <option name="myItemId" value="EditNote" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -405,6 +555,10 @@
               <option name="myItemId" value="HomePage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -420,41 +574,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="General" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reactClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="General" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressAutocomplete" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="SearchEverywhereHistoryKey" value="HO&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;home&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.scss&#10;cre&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx&#10;h&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;H&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.scss&#10;ima&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx&#10;file&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/FilesUpload/FilesUpload.jsx&#10;COL&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/ColorTool/ColorTool.jsx&#10;item&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Item/Item.scss&#10;hom&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.scss&#10;ite&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Item/Item.jsx&#10;tex&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/TextImageNote/TextImageNote.scss&#10;Ho&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/HomePageTool/HomePageTool.jsx&#10;sett&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Settings/Settings.jsx&#10;icon&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Icon/Icon.jsx&#10;ho&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/HomePageTool/HomePageTool.jsx&#10;fil&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/FilesUpload/FilesUpload.jsx&#10;men&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Menu/Menu.jsx&#10;se&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Settings/Settings.jsx&#10;che&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Checkout/Checkout.jsx&#10;add&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/AddItem/AddItem.jsx&#10;wiza&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Wizard/Wizard.jsx&#10;wi&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/serverConnection/Actions/WizardActions.js&#10;Hea&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/smart/Header/Header.jsx&#10;addI&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/AddItem/AddItem.jsx&#10;set&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Settings/Settings.jsx&#10;con&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/smart/ContactForm/ContactForm.jsx&#10;ch&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/Checkout/Checkout.jsx&#10;Auto&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/AddressAutocomplete/AddressAutocomplete.jsx&#10;wiz&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Wizard/Wizard.jsx&#10;App&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/App.js&#10;style&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/assets/Styles.js&#10;hel&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/helpers.js&#10;Ite&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/Item/Item.jsx&#10;Add&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/AddItem/AddItem.jsx&#10;order&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Orders/Orders.scss&#10;W&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Wizard/Wizard.jsx&#10;HEA&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Header/Header.scss&#10;he&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Header/Header.jsx" />
+    <property name="SearchEverywhereHistoryKey" value="note&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss&#10;anima&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/NoteAnimations.scss&#10;ho&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;ITE&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Item/Item.jsx&#10;he&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Header/Header.jsx&#10;hea&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Header/Header.jsx&#10;apps&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/serverConnection/AppStore.js&#10;home&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;hom&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;edit&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/EditNote/EditNote.jsx&#10;sett&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Settings/Settings.jsx&#10;add&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/AddItem/AddItem.jsx&#10;help&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/helpers.js&#10;edita&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/EditableImage/EditableImage.jsx&#10;ite&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Item/Item.jsx&#10;crea&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/CreateWizardTool/CreateWizardTool.scss&#10;noteF&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/NoteFactory.jsx&#10;editN&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/EditNote/EditNote.jsx&#10;bre&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/BreadCrumbs/BreadCrumbs.scss&#10;item&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/AddItem/AddItem.jsx&#10;itwm&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/node_modules/cssstyle/lib/properties/webkitWrapMargin.js&#10;wiza&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Wizard/Wizard.jsx&#10;menu&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Menu/Menu.jsx&#10;exp&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx&#10;menu.&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Menu/Menu.jsx&#10;file&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/FilesUpload/FilesUpload.scss&#10;Ho&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;TEXT&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/TextNote/TextNote.jsx&#10;HO&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;cre&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx&#10;h&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.jsx&#10;H&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Home/Home.scss&#10;ima&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx&#10;COL&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/ColorTool/ColorTool.jsx&#10;tex&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/HomePage/Note/TextImageNote/TextImageNote.scss&#10;icon&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Icon/Icon.jsx&#10;fil&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/FilesUpload/FilesUpload.jsx&#10;men&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/General/Menu/Menu.jsx&#10;se&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Settings/Settings.jsx&#10;che&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/Wizard/Checkout/Checkout.jsx&#10;wi&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/serverConnection/Actions/WizardActions.js&#10;Hea&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/smart/Header/Header.jsx&#10;addI&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/AddItem/AddItem.jsx&#10;set&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Settings/Settings.jsx&#10;con&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/smart/ContactForm/ContactForm.jsx&#10;ch&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/Checkout/Checkout.jsx&#10;Auto&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/components/dumb/AddressAutocomplete/AddressAutocomplete.jsx&#10;wiz&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/pages/Wizard/Wizard.jsx&#10;App&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/App.js&#10;style&#9;FILE&#9;file:///Users/haialaluf/Documents/workspace/reactClient/src/assets/Styles.js" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/HomePage" />
+      <recent name="$PROJECT_DIR$/src/components/HomePage/Note" />
+      <recent name="$PROJECT_DIR$/src/components/HomePage/Note/EditNote" />
+      <recent name="$PROJECT_DIR$/src/components/General" />
+      <recent name="$PROJECT_DIR$/src/pagesNotInUse" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/HomePage/Note" />
       <recent name="$PROJECT_DIR$/src/components/General/colorTool" />
       <recent name="$PROJECT_DIR$/src/components/HomePage/TextImageNote" />
       <recent name="$PROJECT_DIR$/src/components/HomePage/AnimatedImageNote" />
       <recent name="$PROJECT_DIR$/src/components/HomePage/AnimatedTextNote" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components/HomePage/Note" />
-      <recent name="$PROJECT_DIR$/src/components/HomePage/Note/EditNote" />
-      <recent name="$PROJECT_DIR$/src/components/HomePage" />
-      <recent name="$PROJECT_DIR$/src/components/General" />
-      <recent name="$PROJECT_DIR$/src/pagesNotInUse" />
     </key>
   </component>
   <component name="RunManager">
@@ -548,26 +734,37 @@
       <workItem from="1516487019263" duration="796000" />
       <workItem from="1516489499285" duration="14242000" />
       <workItem from="1517172444076" duration="46124000" />
-      <workItem from="1517483346703" duration="27238000" />
+      <workItem from="1517483346703" duration="31857000" />
+      <workItem from="1518343724645" duration="31025000" />
+      <workItem from="1518692483825" duration="3945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342954000" />
+    <option name="totallyTimeSpent" value="382543000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21686748" sideWeight="0.5081043" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21634616" sideWeight="0.4918957" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33012047" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21566264" sideWeight="0.4918957" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -591,233 +788,38 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Checkout/Checkout.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wizard/AddItem/AddItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/media.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/ImageNote/EditableAnimatedImageNote.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/TextNote/EditableAnimatedTextNote.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/TextNote/AnimatedTextNote.css.map">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/Header/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="72" column="51" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/EditableText/EditableText.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/EditableText/EditableText.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-360">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/Icon/Icon.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#107#148#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Item/Item.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/ColorTool/ColorTool.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        <state relative-caret-position="435">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="58" column="29" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="29" />
+        <state relative-caret-position="232">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.css">
+    <entry file="file://$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="475">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/EditableText/EditableText.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/serverConnection/S3UploadService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/AppActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/ContactActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/OrdersActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+        <state relative-caret-position="-380">
+          <caret line="72" column="14" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -825,210 +827,374 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/WizardActions.js">
+    <entry file="file://$PROJECT_DIR$/src/components/General/Menu/Menu.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shared.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Home/Home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextNote/TextNote.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/NoteAnimations.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/NoteFactory.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/HomePageTool/HomePageTool.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/General/FilesUpload/FilesUpload.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="1050">
+          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Login/LoginSignup.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="93" column="70" selection-start-line="93" selection-start-column="70" selection-end-line="93" selection-end-column="70" />
+        <state relative-caret-position="322">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shared.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Settings/Settings.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/BreadCrumbs/BreadCrumbs.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="50" column="61" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="61" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Checkout/Checkout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/cssstyle/lib/properties/webkitWrapMargin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/Styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Item/Item.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/BreadCrumbs/BreadCrumbs.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="150">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/AddItem/AddItem.css" />
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/AddItem/AddItem.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/BreadCrumbs/BreadCrumbs.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding>
-            <element signature="e#94#133#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomePage/Home/Home.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
+        <state relative-caret-position="532">
+          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="390">
+          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Item/Item.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Settings/Settings.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="73" column="56" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Settings/Settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/AddItem/AddItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1042">
+          <caret line="83" column="54" selection-start-line="83" selection-start-column="54" selection-end-line="83" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/General/EditableImage/EditableImage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="59" column="69" selection-start-line="59" selection-start-column="61" selection-end-line="59" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ImageNote/ImageNote.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/TextImageNote/TextImageNote.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/NoteFactory.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Wizard/CreateWizardTool/CreateWizardTool.jsx">
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/OrdersActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="65" column="24" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="24" />
+        <state relative-caret-position="277">
+          <caret line="28" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/ContactActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#41#67#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Reducers/OrdersReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Wizard/Wizard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/WizardActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="14" />
+          <folding>
+            <element signature="e#41#67#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Reducers/HomeViewReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/EditNote/EditNote.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/General/AddressAutocomplete/AddressAutocomplete.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+          <folding>
+            <element signature="e#44#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/AppActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Wizard/Item/Item.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="83" column="28" selection-start-line="83" selection-start-column="28" selection-end-line="83" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/HomePageFactory.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="115" column="42" selection-start-line="115" selection-start-column="42" selection-end-line="115" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/HomePage/Home/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="157">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/ExpendableNote/ExpendableNote.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/HomePage/Note/NoteAnimations.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/Actions/HomeViewActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding>
+            <element signature="e#47#87#0" expanded="false" />
+            <element signature="e#88#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/S3UploadService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+          <folding>
+            <element signature="e#47#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/General/Header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="17" />
+          <folding>
+            <element signature="e#553#592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/serverConnection/AppStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="45" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#83#153#0" expanded="true" />
           </folding>
         </state>
       </provider>

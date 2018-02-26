@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FilesUpload from '../../General/FilesUpload/FilesUpload';
 import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
 /*
  Props:
@@ -12,7 +13,7 @@ class AddItem extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            fileList: []
+            filesU: []
         };
         this.inputs = {};
         this.link = {};
@@ -89,13 +90,13 @@ class AddItem extends Component {
                             hintText="http://example.com/some_path/VideoURL"
                             onChange={ (e) => this.inputs.videoUrl = e.target.value }
                         />
-                        <FilesUpload link={ this.link }/>
+                        <FilesUpload link={ this.link } multiple={ true }/>
                     </div>
                     <div className="button-container">
-                        <button className="add-button" type="button" onClick={ this.addItem.bind(this) }>Add Item</button>
+                        <RaisedButton onClick={ this.addItem.bind(this) } label="Add Item" primary={true} style={ {margin: '4px'} }/>
                         {
                             this.props.cancelAction &&
-                            <button className="cancel-button" type="button" onClick={ this.props.cancelAction }>Cancel</button>
+                            <RaisedButton onClick={ this.props.cancelAction } label="Cancel" style={ {margin: '4px'} }/>
                         }
                     </div>
                 </form>

@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Scroll from 'react-scroll'; // Imports all Mixins
 import { Link } from 'react-router-dom'
+
 let InnerLink = Scroll.Link;
 let headerOffset = -12 - parseInt(Style.sizes.menuWidth.substring(0,2), 10);
 
@@ -20,10 +21,8 @@ class Header extends Component {
         this.props.actions.getAppSettings();
         let history = this.props.history;
         history.listen((location) => {
-            console.log(location);
             const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
             if (path) {
-                console.log(path);
                 history.replace(path);
             }
         });

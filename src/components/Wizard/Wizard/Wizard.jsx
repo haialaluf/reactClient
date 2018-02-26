@@ -7,7 +7,6 @@ import Item from "../../../components/Wizard/Item/Item";
 import Checkout from "../../../components/Wizard/Checkout/Checkout";
 import BreadCrumbs from "../../../components/Wizard/BreadCrumbs/BreadCrumbs";
 
-
 class Wizard extends Component {
 
     constructor(props) {

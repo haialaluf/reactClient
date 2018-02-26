@@ -18,7 +18,7 @@ class LoginSignup extends Component {
     }
 
     showErrorModal(err) {
-        alert(err);
+        console.log(err);
     }
 
     render() {
@@ -61,6 +61,6 @@ export default connect(
             register: bindActionCreators(emailRegister, dispatch),
             login: bindActionCreators(emailLogin, dispatch),
             facebookLogin: bindActionCreators(facebookLogin, dispatch),
-            googleLogin: bindActionCreators(googleLogin, dispatch),
+            googleLogin: bindActionCreators(googleLogin, dispatch)
         }
     }))(LoginSignup);

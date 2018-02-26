@@ -7,13 +7,14 @@
 import React, {Component} from 'react';
 import Icon from '../../General/Icon/Icon';
 import helpers from '../../../helpers';
+import { Carousel } from 'react-responsive-carousel';
 
 class Item extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            image: null,
+            images: null,
             expand: false
         };
         this.setImage.bind(this)()
@@ -24,20 +25,18 @@ class Item extends Component {
     }
 
     setImage() {
-        let self = this;
-        let item = this.props.item ;
-        if (! item) return;
-        if (item.filesUrl && item.filesUrl.length && item.filesUrl[0]) {
+        let item = this.props.item;
+        let files = item && (item.filesUrl || item.fileList);
+        if (files && files.length && files[0]) {
             //case Data from server
-            let coverUrl = item.filesUrl[0];
-            this.image = coverUrl ? {backgroundImage: `url(${coverUrl})`} : {};
-        } else if (item.fileList && this.props.item.fileList.length) {
-            //case file is type Blob (new item)
-            helpers.blobToDataURL(item.fileList[0]).then(
-                (coverDataUrl) => {
-                    self.setState({ image: coverDataUrl ? {backgroundImage: `url(${coverDataUrl})`} : {} });
-                }
-            );
+            if ( typeof files[0] === 'string') {
+                this.setState({images: files});
+            } else if (files[0] instanceof Blob) {
+                let imagesPromise = files.map(helpers.blobToDataURL);
+                Promise.all(imagesPromise).then((imagesDataUrl) => {
+                    this.setState({images: imagesDataUrl});
+                })
+            }
         }
     }
 
@@ -46,21 +45,50 @@ class Item extends Component {
     }
 
     render() {
+        const item = this.props.item;
         return (
-                <div style={ this.image || this.state.image }
-                     name={ this.props.item._id }
-                     className={`item ${this.props.selected ? ' selected' : ''} ${this.state.expand ? ' expand' : ''}`}>
-                    <div className="title">{ this.props.item.name }</div>
-                    <div className="description">{ this.props.item.shortDescription }</div>
+                <div name={ item._id }
+                     className={`item ${this.props.selected ? ' selected' : ''} ${this.state.expand ? ' expand' : 'collapse'}`}>
+                    {
+                        this.state.images && this.state.images.length && this.state.images[0] &&
+                        (
+                            this.state.expand ?
+                                <Carousel showArrows={ false }
+                                          showStatus={ false }
+                                          showThumbs={ this.state.expand }
+                                          autoPlay={ true }>
+                                    {
+                                        this.state.images.map( (imageUrl, index) =>
+                                            <div className="image-container" key={ index }>
+                                                <img src={ imageUrl }
+                                                     alt="note"/>
+                                            </div>
+                                        )
+                                    }
+                                </Carousel>
+                                :
+                                <div className="image-container">
+                                    <div className="gradient"></div>
+                                    <img src={ this.state.images[0] }
+                                         alt="note"/>
+                                </div>
+                        )
+                    }
+                    <div className="title">{ item.name }</div>
+                    <div className="description">{ item.shortDescription }</div>
+                    {
+                        this.state.expand &&
+                        <div className="description">{ item.description }</div>
+                    }
                     {
                         this.props.deleteCallback &&
                         <span className="left-icon small-icon" onClick={ this.deleteItem.bind(this) }>
                             <Icon image="delete"/>
                         </span>
                     }
-                <span className="right-icon small-icon" onClick={ () => this.setState((state) => { expand: !state.expand }) }>
-                     <Icon image={ this.state.expand? "close" : "expand" }/>
-                </span>
+                    <span className="right-icon small-icon" onClick={ () => this.setState((state) => ({ expand: !state.expand })) }>
+                         <Icon image={ this.state.expand? "close" : "expand" }/>
+                    </span>
                     {
                         this.props.addCallback &&
                         <span className="left-icon small-icon" onClick={ this.props.addCallback }>

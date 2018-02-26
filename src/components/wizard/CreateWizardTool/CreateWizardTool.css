@@ -1,82 +1,252 @@
-/*
-Error: Undefined variable: "$ofsset".
-        on line 3 of CreateWizardTool.scss
+.checkout form {
+  width: 288px;
+  margin: auto;
+  padding: 16px;
+  padding-top: 0; }
+  .checkout form .date-time-piker {
+    display: flex;
+    margin: 20px 0 28px 0; }
+    .checkout form .date-time-piker div:first-child {
+      margin-right: 16px; }
+  .checkout form input {
+    display: block;
+    height: 32px;
+    width: 256px;
+    margin-bottom: 20px; }
+  .checkout form textarea {
+    width: 256px;
+    height: 96px; }
+  .checkout form button {
+    background-color: #03C669;
+    width: 160px; }
+  .checkout form .button-container {
+    text-align: center;
+    margin-top: 40px; }
 
-1: .create-wizard-tool {
-2:   .items-container {
-3:     height: calc(100vh - #{$ofsset});
-4:     overflow: scroll;
-5:   }
-6: 
-7:   .bread-crumbs {
-8:     .pointer {
+.add-item-container {
+  padding: 24px;
+  width: 100%; }
+  .add-item-container .name-type {
+    display: flex; }
+  .create-wizard-tool .add-item-container .name-input {
+    width: 100% !important; }
+  .create-wizard-tool .add-item-container .type-input {
+    display: none !important; }
+  .add-item-container .textarea {
+    min-height: 64px; }
+  .add-item-container .button-container {
+    width: 100%;
+    max-width: 512px;
+    display: flex;
+    text-align: center; }
+  .add-item-container form {
+    width: 100%; }
+    .add-item-container form input {
+      width: 100%;
+      font-size: 18px;
+      margin-bottom: 12px; }
+    .add-item-container form textarea {
+      width: 100%;
+      height: 64px;
+      font-size: 16px;
+      margin-bottom: 12px; }
+      .add-item-container form textarea.long {
+        height: 128px; }
 
-Backtrace:
-CreateWizardTool.scss:3
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/interpolation.rb:170:in `_perform'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/base.rb:52:in `parse'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/exec/base.rb:19:in `parse!'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/bin/scss:13:in `<top (required)>'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/scss:23:in `load'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/scss:23:in `<main>'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `eval'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/bin/ruby_executable_hooks:15:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$ofsset\".\A         on line 3 of CreateWizardTool.scss\A \A 1: .create-wizard-tool {\A 2:   .items-container {\A 3:     height: calc(100vh - #{$ofsset});\A 4:     overflow: scroll;\A 5:   }\A 6: \A 7:   .bread-crumbs {\A 8:     .pointer {"; }
+.item {
+  overflow: hidden;
+  display: inline-block;
+  background-color: #ffff90;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  position: relative;
+  width: 23vw;
+  height: 23vw;
+  margin: .5vw;
+  background-position: center 40px;
+  background-size: auto 16vh;
+  background-repeat: no-repeat; }
+  .item.selected {
+    border-color: #11ff88; }
+  @media (max-width: 600px) {
+    .item {
+      width: 46vw;
+      margin: 1vw;
+      height: 46vw;
+      border-radius: 2px;
+      background-position: center 32px; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .item {
+      width: 30vw;
+      margin: .6vw;
+      height: 30vw; } }
+  .item.expand {
+    overflow-y: scroll;
+    transition: all 0.3s;
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    top: 48px;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    z-index: 2; }
+    .item.expand .image-container {
+      max-height: 256px; }
+    @media (max-width: 600px) {
+      .item.expand {
+        bottom: 8px;
+        right: 8px;
+        left: 8px; } }
+  .item .image-container img {
+    height: 100%; }
+  .item.collapse .image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 100%; }
+    .item.collapse .image-container img {
+      height: 100%; }
+    .item.collapse .image-container .gradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      box-shadow: inset -96px 64px 256px #ffffff; }
+  .item.collapse .title {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: 100%;
+    text-align: center; }
+  .item.collapse .description {
+    position: absolute;
+    left: 0;
+    top: 64px; }
+  .item .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 16px; }
+    @media (max-width: 600px) {
+      .item .title {
+        font-size: 24px; } }
+  .item .description {
+    padding: 8px; }
+
+.bread-crumbs {
+  height: 48px;
+  padding: 4px;
+  display: flex;
+  width: calc(100% - 160px); }
+  .bread-crumbs .pointer {
+    width: 16.6%;
+    cursor: pointer;
+    margin-right: 12px;
+    max-width: 30vw;
+    height: 32px;
+    font-weight: bold;
+    position: relative;
+    background: #444444;
+    transition-delay: 5s;
+    -webkit-transition: width .5s, height .5s, background-color 0s, -webkit-transform 2s;
+    transition: width .5s, height .5s, background-color 0s, transform 2s; }
+    .bread-crumbs .pointer.selected {
+      transition-delay: 0s;
+      width: 50%;
+      flex: 6;
+      background: #03C669; }
+      .bread-crumbs .pointer.selected:before {
+        border-left: 12px solid #03C669; }
+    .bread-crumbs .pointer:last-child {
+      width: 120px;
+      position: absolute;
+      right: 4px; }
+    .bread-crumbs .pointer:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent; }
+    .bread-crumbs .pointer:before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #444444;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent; }
+    .bread-crumbs .pointer > div {
+      padding: 5px 0 0 16px; }
+    .bread-crumbs .pointer div {
+      color: white;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+.create-wizard-tool .CircularProgressbar {
+  display: none; }
+.create-wizard-tool.progress:before {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: white;
+  opacity: .3; }
+.create-wizard-tool.progress .CircularProgressbar {
+  display: block;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  stroke: #03C669;
+  fill: #03C669;
+  width: 128px;
+  height: 128px;
+  z-index: 2; }
+  .create-wizard-tool.progress .CircularProgressbar .CircularProgressbar-text {
+    font-size: 32px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50% !important;
+    left: 50% !important; }
+.create-wizard-tool .items-container {
+  height: calc(100vh - 108px);
+  overflow: scroll; }
+  .create-wizard-tool .items-container .item.add-item {
+    position: relative;
+    padding: 0;
+    cursor: pointer; }
+    .create-wizard-tool .items-container .item.add-item div {
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      position: absolute;
+      transform: translateY(-50%);
+      width: 100%;
+      top: 40%; }
+.create-wizard-tool .bread-crumbs .pointer div {
+  padding: 5px 0 0 16px; }
+  .create-wizard-tool .bread-crumbs .pointer div div {
+    padding: 0; }
+.create-wizard-tool .bread-crumbs .pointer input {
+  background: transparent;
+  border: none;
+  border-bottom: solid 2px #444444;
+  font-size: 18px;
+  color: white; }
+
+/*# sourceMappingURL=CreateWizardTool.css.map */

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './ExpendableNote.css'
-import Scroll from 'react-scroll'; // Imports all Mixins
+import Helpers from '../../../../helpers'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-// var scroller = Scroll.scroller;
-// let headerOffset = - (parseInt(Style.sizes.menuWidth.substring(0,2), 10) + 32);
-
-class AnimatedTextNote extends Component {
+class ExpendableNote extends Component {
 
     constructor(props) {
         super(props);
@@ -14,29 +13,63 @@ class AnimatedTextNote extends Component {
         };
     }
 
-    // componentDidReceiveProps(props) {
-    //     if (props.show)
-    //     setTimeout(()=> scroller.scrollTo('large-note', {
-    //         duration: 400,
-    //         smooth: true,
-    //         offset: headerOffset
-    //     }), 144)
-    // }
+    componentWillMount () {
+        let colors = this.props.colors || {};
+        colors = Helpers.setDefaultColors(colors, ['title','text']);
+        this.colors = colors;
+    }
 
     render() {
         return (
-            <div className={`note expandable-note ${ this.props.className }`}
+            <div className={`note expandable-note ${ this.props.className } ${ this.state.expand? 'expand' : ''}`}
                  style={ {
-                    margin: this.state.expand ? '10vh 3vw' : '10vh 10vw',
-                    width: this.state.expand ? '94vw' : '80vw',
-                    height: this.state.expand ? '94vh' : '60vh'
+                    backgroundColor: this.colors.background,
+                    margin: this.state.expand ? '10vh 3vw' : '',
+                    width: this.state.expand ? '94vw' : '',
+                    height: this.state.expand ? '94vh' : ''
                     } }>
+
+                {
+                    this.props.imageUrl && this.props.imageUrl.length &&
+                    <Carousel showArrows={ false }
+                              showStatus={ false }
+                              showThumbs={ this.state.expand }
+                              autoPlay={ true }>
+                        {
+                            this.props.imageUrl.split(',').map( (imageUrl, index) =>
+                                <div className="image-container" key={ index }>
+                                    <img src={ imageUrl }
+                                         alt="note"/>
+                                </div>
+                            )
+                        }
+                    </Carousel>
+
+                }
+
+                <div className="text-container">
+                    <div className="title" style={ {color: this.colors.title} }>
+                        { this.props.title }
+                    </div>
+                    <div className="text" style={ {color: this.colors.text} }>
+                        { this.props.text }
+                    </div>
+                </div>
+                {
+                    this.state.expand &&
+                    <div className="text-container">
+                        <div className="text" style={ {color: this.colors.text} }>
+                            { this.props.longText }
+                        </div>
+                    </div>
+                }
+                { this.props.children }
                 <div onClick={ () => this.setState((state) => ({expand: !state.expand})) } className="expand-button">
-                    expand
+                    Read { this.state.expand ? 'less' : 'more' }
                 </div>
             </div>
         )
     }
 }
 
-export default AnimatedTextNote;
+export default ExpendableNote;

@@ -1,20 +1,24 @@
 /*
-Error: Undefined variable: "$bread-crumbs-hight".
-        on line 2 of BreadCrumbs.scss
+Error: Undefined mixin 'mobile'.
+        on line 20 of ../../components/Wizard/Item/Item.scss, in `mobile'
+        from line 20 of ../../components/Wizard/Item/Item.scss
+        from line 1 of Items.scss
 
-1: .bread-crumbs{
-2:   height: $bread-crumbs-hight;
-3:   padding: 4px;
-4:   display: flex;
-5: 
-6:   .pointer {
-7:     width: 160px;
+15:   @include mobile {
+16:     padding: 0 2vw;
+17:   }
+18: 
+19: }
 
 Backtrace:
-BreadCrumbs.scss:2
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/script/tree/node.rb:50:in `perform'
-/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
+../../components/Wizard/Item/Item.scss:20:in `mobile'
+../../components/Wizard/Item/Item.scss:20
+Items.scss:1
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:98:in `block in with_mixin'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:98:in `with_mixin'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -26,6 +30,19 @@ BreadCrumbs.scss:2
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `map'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:88:in `block in with_import'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:88:in `with_import'
+/Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /Users/haialaluf/.rvm/gems/ruby-2.4.1/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
@@ -65,4 +82,4 @@ BreadCrumbs.scss:2
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$bread-crumbs-hight\".\A         on line 2 of BreadCrumbs.scss\A \A 1: .bread-crumbs{\A 2:   height: $bread-crumbs-hight;\A 3:   padding: 4px;\A 4:   display: flex;\A 5: \A 6:   .pointer {\A 7:     width: 160px;"; }
+  content: "Error: Undefined mixin 'mobile'.\A         on line 20 of ../../components/Wizard/Item/Item.scss, in `mobile'\A         from line 20 of ../../components/Wizard/Item/Item.scss\A         from line 1 of Items.scss\A \A 15:   @include mobile {\A 16:     padding: 0 2vw;\A 17:   }\A 18: \A 19: }"; }

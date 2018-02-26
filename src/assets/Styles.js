@@ -14,7 +14,7 @@ let style = {
 
     sizes: {
         menuWidth: '192px',
-        headerHeight: '44px'
+        headerHeight: '32px'
     }
 
 };
