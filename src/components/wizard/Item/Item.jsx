@@ -17,10 +17,9 @@ class Item extends Component {
             images: null,
             expand: false
         };
-        this.setImage.bind(this)()
     }
 
-    componentWillReceiveProps() {
+    componentWillMount() {
         this.setImage.bind(this)()
     }
 

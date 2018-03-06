@@ -30,7 +30,7 @@ function getNoteType(props) {
 function NoteFactory (props) {
     let Note = getNoteType(props);
     const className = `${props.className || ''} ${props.animation || ''} ${props.focus ? 'enter' : 'leave'}`;
-        return  <Note {...props} className={ className } />
+        return  <Note {...props} className={ className } style={ {transition: 'all 400ms'} } />
 }
 
 export default NoteFactory

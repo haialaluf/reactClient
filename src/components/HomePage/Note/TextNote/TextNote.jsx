@@ -12,7 +12,8 @@ class TextNote extends Component {
 
     render() {
         return (
-            <div className={`text-note note ${ this.props.className }`} style={ {backgroundColor: this.colors.background} }>
+            <div className={`text-note note ${ this.props.className }`} 
+                 style={ {...this.props.style, backgroundColor: this.colors.background} }>
                 <div>
                     <div className="title" style={ {color: this.colors.title} }>
                         { this.props.title }

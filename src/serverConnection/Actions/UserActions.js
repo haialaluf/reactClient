@@ -3,6 +3,7 @@
  */
 import axios from 'axios';
 import config from '../../Config';
+import {getAppSettings} from './AppActions';
 
 const prefix = config.serverUrl + config.prefix + 'auth/';
 let connect = axios.create({
@@ -13,10 +14,11 @@ let connect = axios.create({
     withCredentials: true
 });
 
-export function emailLogin(userData) {
+export function emailLogin(userData, cb) {
     return (dispatch) => {
         connect.post(`${ prefix }login`, userData)
             .then((res) => {
+                getAppSettings(cb)(dispatch);
                 dispatch({
                     type: 'LOGIN',
                     res: res,
@@ -27,37 +29,38 @@ export function emailLogin(userData) {
     };
 }
 
-export function facebookLogin(userData) {
-    return (dispatch) => {
-        connect.get(`${ prefix }facebook?access_token=${ userData.accessToken }`)
-            .then((res) => {
-                dispatch({
-                    type: 'LOGIN',
-                    res: res,
-                });
-            }).catch((error) => {
-            console.error('Error during service worker registration:', error);
-        })
-    };
-}
+// export function facebookLogin(userData) {
+//     return (dispatch) => {
+//         connect.get(`${ prefix }facebook?access_token=${ userData.accessToken }`)
+//             .then((res) => {
+//                 dispatch({
+//                     type: 'LOGIN',
+//                     res: res,
+//                 });
+//             }).catch((error) => {
+//             console.error('Error during service worker registration:', error);
+//         })
+//     };
+// }
 
-export function googleLogin(userData) {
-    return (dispatch) => {
-        connect.get(`${ prefix }google?access_token=${ userData.accessToken }`)
-            .then((res) => {
-                dispatch({
-                    type: 'LOGIN',
-                    res: res,
-                });
-            }).catch((error) => {
-            console.error('Error during service worker registration:', error);
-        })
-    };
-}
+// export function googleLogin(userData) {
+//     return (dispatch) => {
+//         connect.get(`${ prefix }google?access_token=${ userData.accessToken }`)
+//             .then((res) => {
+//                 dispatch({
+//                     type: 'LOGIN',
+//                     res: res,
+//                 });
+//             }).catch((error) => {
+//             console.error('Error during service worker registration:', error);
+//         })
+//     };
+// }
 
-export function emailRegister(userData) {
+export function emailRegister(userData, cb) {
     return (dispatch) => {
         connect.post(`${ prefix }register`, userData).then((res) => {
+                getAppSettings(cb)(dispatch);
                 dispatch({
                     type: 'LOGIN',
                     res: res,
@@ -68,9 +71,10 @@ export function emailRegister(userData) {
     };
 }
 
-export function logout(userData) {
+export function logout(userData, cb) {
     return (dispatch) => {
         connect.post(`${ prefix }logout`, userData).then((res) => {
+                getAppSettings(cb)(dispatch);
                 dispatch({
                     type: 'LOGOUT',
                     res: res,

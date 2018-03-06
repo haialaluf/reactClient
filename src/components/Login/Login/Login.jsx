@@ -41,7 +41,7 @@ class Login extends Component {
                 <form>
                     <input style={ Object.assign({}, style.input, this.state.errors.email ? style.error : {}) } type="text" placeholder="Email" ref="email"/>
                     <input style={ Object.assign({}, style.input, this.state.errors.password ? style.error : {}) } type="password" placeholder="Password" ref="password"/>
-                    <button style={ style.input } type="button" onClick={ this.login.bind(this) }>Login</button>
+                    <button style={ { ...style.button } } type="button" onClick={ this.login.bind(this) }>Login</button>
                 </form>
             </div>
         )
@@ -55,6 +55,12 @@ let style = {
     },
     component: {
 
+    },
+    button: {
+        border: '1px solid #000',
+        cursor: 'pointer',
+        color: '#000',
+        padding: '8px'
     },
     input: {
         margin: '8px',

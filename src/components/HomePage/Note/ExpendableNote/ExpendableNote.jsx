@@ -19,6 +19,26 @@ class ExpendableNote extends Component {
         this.colors = colors;
     }
 
+    renderImageCarousel(imageList) {
+        if (imageList && imageList.length) {
+            return (
+                <Carousel showArrows={ false }
+                              showStatus={ false }
+                              showThumbs={ this.state.expand }
+                              autoPlay={ true }>
+                        {
+                            imageList.split(',').map( (imageUrl, index) =>
+                                <div className="image-container" key={ index }>
+                                    <img src={ imageUrl }
+                                         alt="note"/>
+                                </div>
+                            )
+                        }
+                </Carousel>
+            )
+        }
+    }
+
     render() {
         return (
             <div className={`note expandable-note ${ this.props.className } ${ this.state.expand? 'expand' : ''}`}
@@ -26,26 +46,12 @@ class ExpendableNote extends Component {
                     backgroundColor: this.colors.background,
                     margin: this.state.expand ? '10vh 3vw' : '',
                     width: this.state.expand ? '94vw' : '',
-                    height: this.state.expand ? '94vh' : ''
+                    height: this.state.expand ? 'initial' : ''
                     } }>
 
-                {
-                    this.props.imageUrl && this.props.imageUrl.length &&
-                    <Carousel showArrows={ false }
-                              showStatus={ false }
-                              showThumbs={ this.state.expand }
-                              autoPlay={ true }>
-                        {
-                            this.props.imageUrl.split(',').map( (imageUrl, index) =>
-                                <div className="image-container" key={ index }>
-                                    <img src={ imageUrl }
-                                         alt="note"/>
-                                </div>
-                            )
-                        }
-                    </Carousel>
-
-                }
+                { this.renderImageCarousel(this.props.imageUrl) }
+                
+                { this.props.children }
 
                 <div className="text-container">
                     <div className="title" style={ {color: this.colors.title} }>
@@ -55,6 +61,7 @@ class ExpendableNote extends Component {
                         { this.props.text }
                     </div>
                 </div>
+
                 {
                     this.state.expand &&
                     <div className="text-container">
@@ -63,7 +70,7 @@ class ExpendableNote extends Component {
                         </div>
                     </div>
                 }
-                { this.props.children }
+
                 <div onClick={ () => this.setState((state) => ({expand: !state.expand})) } className="expand-button">
                     Read { this.state.expand ? 'less' : 'more' }
                 </div>

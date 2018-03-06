@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Style from '../../../../assets/Styles'
-class Hamburger extends Component {
 
-    render() {
-        return (
-            <div style={ style.hamburger } onClick={ this.props.onClick }>
-                <span style={ this.props.open? Object.assign({}, style.hamburgerLines, style.line1, style.lineOpen1) : Object.assign({}, style.hamburgerLines, style.line1)}></span>
-                <span style={ this.props.open? Object.assign({}, style.hamburgerLines, style.line2, style.lineOpen2) : Object.assign({}, style.hamburgerLines, style.line2)}></span>
-                <span style={ this.props.open? Object.assign({}, style.hamburgerLines, style.line3, style.lineOpen3) : Object.assign({}, style.hamburgerLines, style.line3)}></span>
-            </div>
-        )
-    }
+function Hamburger(props) {
+    return (
+        <div style={ style.hamburger } onClick={ props.onClick }>
+            <span style={ props.open? Object.assign({}, style.hamburgerLines, style.line1, style.lineOpen1) : Object.assign({}, style.hamburgerLines, style.line1)}></span>
+            <span style={ props.open? Object.assign({}, style.hamburgerLines, style.line2, style.lineOpen2) : Object.assign({}, style.hamburgerLines, style.line2)}></span>
+            <span style={ props.open? Object.assign({}, style.hamburgerLines, style.line3, style.lineOpen3) : Object.assign({}, style.hamburgerLines, style.line3)}></span>
+        </div>
+    )
 }
 
 

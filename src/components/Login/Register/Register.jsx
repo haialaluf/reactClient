@@ -61,7 +61,7 @@ class Register extends Component {
                     <input style={ Object.assign({}, style.input, this.state.errors.email ? style.error : {}) } type="text" placeholder="Email" ref="email"/>
                     <input style={ Object.assign({}, style.input, this.state.errors.password ? style.error : {}) } type="password" placeholder="Password" ref="password"/>
                     <input style={ Object.assign({}, style.input, this.state.errors.password2 ? style.error : {}) } type="password" placeholder="Password" ref="confirmPassword"/>
-                    <button style={ style.input } type="button" onClick={ this.register.bind(this) }>Register</button>
+                    <button style={ { ...style.button } } type="button" onClick={ this.register.bind(this) }>Register</button>
                 </form>
             </div>
         )
@@ -75,6 +75,12 @@ let style = {
     },
     component: {
 
+    },
+    button: {
+        border: '1px solid #000',
+        cursor: 'pointer',
+        color: '#000',
+        padding: '8px'
     },
     input: {
         margin: '8px',

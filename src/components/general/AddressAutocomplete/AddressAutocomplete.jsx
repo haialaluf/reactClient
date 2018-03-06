@@ -3,11 +3,11 @@ Props:
  onAddressSelected: function
  */
 
-import React from 'react'
-import Config from '../../../Config'
-import scriptLoader from 'react-async-script-loader'
-import Autocomplete from 'react-google-autocomplete'
-
+import React from 'react';
+import Config from '../../../Config';
+import scriptLoader from 'react-async-script-loader';
+import Autocomplete from 'react-google-autocomplete';
+import './AddressAutocomplete.scss';
 
 class AddressAutocompleteComponent extends React.Component {
     constructor(props) {

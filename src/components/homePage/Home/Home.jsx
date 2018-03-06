@@ -47,64 +47,80 @@ class Home extends Component {
     }
 
 
+
+    renderFourNotes(data, focus, Note) {
+        if (data && data.length === 4) {
+            return (
+                <div className="four-notes" name="four-notes">
+                    <div className="all-notes-container">
+                        <div className="two-notes-container">
+                            <Note focus={ focus >= 1  && focus < 3 }
+                                { ...data[0] }/>
+                            <Note focus={ focus >= 3  && focus < 5 }
+                                { ...data[1] }/>
+                        </div>
+                        <div className="two-notes-container">
+                            <Note focus={ focus >= 5  && focus < 7  }
+                                { ...data[2] }/>
+                            <Note focus={ focus >= 7  && focus < 9  }
+                                { ...data[3] }/>
+                        </div>
+                    </div>
+                </div>
+            )    
+        }
+    }
+
+
+    renderTwoNotes(data, focus, Note) {
+        if (data && data.length === 2) {
+            return (
+                <div className="two-notes" name="two-notes">
+                    <Note focus={ focus > 9 }
+                        animation="enter-left"
+                        { ...data[0] } />
+                    <Note { ...data[1] }
+                        className="hide-in-mobile hide-in-tablet"
+                        focus={ focus > 9 }
+                        position={ focus - 10 }/>
+                </div>
+            )
+        }
+    }
+    
+
+    renderExpendableNode(data, focus, Note) {
+        if (data && data.length === 1) {
+            return (
+                <div className="large-note" name="large-note">
+                    <Note focus={ focus > 18 } { ...data[0] }/>
+                </div>
+            )
+        }
+    }
+
+
     render() {
         const Note = this.props.note;
-        const data = this.props.data;
+        const data = this.props.data || [];
+        
         return (
             <div className="container">
                 <div className="cover">
                     <video src={ Config.storage + 'SampleVideo.mp4'} type="video/mp4" autoPlay loop muted/>
                 </div>
-                {
-                    data && data[0] &&
-                    <div className="four-notes" name="four-notes">
-                        <div className="all-notes-container">
-                            <div className="two-notes-container">
-                                <Note focus={ this.state.focus >= 1  && this.state.focus < 3 }
-                                    { ...data[0].data[0] }/>
-                                <Note focus={ this.state.focus >= 3  && this.state.focus < 5 }
-                                    { ...data[0].data[1] }/>
-                            </div>
-                            <div className="two-notes-container">
-                                <Note focus={ this.state.focus >= 5  && this.state.focus < 7  }
-                                    { ...data[0].data[2] }/>
-                                <Note focus={ this.state.focus >= 7  && this.state.focus < 9  }
-                                    { ...data[0].data[3] }/>
-                            </div>
-                        </div>
-                    </div>
-                }
-                {
-                    data && data[1] &&
-                    <div className="two-notes" name="two-notes">
-                        <Note focus={ this.state.focus > 9 }
-                              animation="enter-left"
-                            { ...data[1].data[0] } />
-                        <Note { ...data[1].data[1] }
-                            className="hide-in-mobile hide-in-tablet"
-                            focus={ this.state.focus > 9 }
-                            position={ this.state.focus - 10 }/>
 
-                    </div>
-                }
-                {
-                    data && data[2] &&
-                    <div className="large-note" name="large-note">
-                        <Note focus={ this.state.focus > 18 } { ...data[2].data[0] }/>
-                    </div>
-                }
-                {
-                    data &&
-                    <div name="contact-form">
-                        <ContactForm></ContactForm>
-                    </div>
-                }
-                {
-                    data &&
-                    <div className="footer">
-                        Copyright © 2018 EasyClient
-                    </div>
-                }
+                { data[0] ? this.renderFourNotes( data[0].data, this.state.focus, Note) : <div/> }
+                { data[1] ? this.renderTwoNotes( data[1].data, this.state.focus, Note) : <div/> }
+                { data[2] ? this.renderExpendableNode( data[2].data, this.state.focus, Note) : <div/> }
+
+                <div name="contact-form">
+                    <ContactForm></ContactForm>
+                </div>
+
+                <div className="footer">
+                    Copyright © 2018 EasyClient
+                </div>
             </div>
         )
     }

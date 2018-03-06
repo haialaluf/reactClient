@@ -12,7 +12,8 @@ class TextImageNote extends Component {
 
     render() {
         return (
-            <div className={ `text-image-note note ${ this.props.className }` } style={ {backgroundColor: this.colors.background} }>
+            <div className={ `text-image-note note ${ this.props.className }` } 
+                 style={ { ...this.props.style, backgroundColor: this.colors.background} }>
                 {
                     this.props.imageUrl &&
                     <div className="image-container">

@@ -1,26 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Style from '../../../assets/Styles'
-class CloseExpand extends Component {
 
-    render() {
-        return (
-            <div style={ this.props.open? style.icon : Object.assign({}, style.icon, {transform: 'rotate(0)'})} onClick={ this.props.onClick }>
-                <span style={ !this.props.open? Object.assign({}, style.lineExpand, style.top, style.line)
-                                             : Object.assign({}, style.lineExpand, style.top)}>
-                    <span style={ this.props.open? Object.assign({}, style.arrow, style.arrowTop)
-                                                 : Object.assign({}, style.arrow, style.arrowTop, style.arrowTopExpand) }>
-                    </span>
+function CloseExpand(props) {
+    return (
+        <div style={ props.open? style.icon : Object.assign({}, style.icon, {transform: 'rotate(0)'})} onClick={ props.onClick }>
+            <span style={ !props.open? Object.assign({}, style.lineExpand, style.top, style.line)
+                                            : Object.assign({}, style.lineExpand, style.top)}>
+                <span style={ props.open? Object.assign({}, style.arrow, style.arrowTop)
+                                                : Object.assign({}, style.arrow, style.arrowTop, style.arrowTopExpand) }>
                 </span>
-                <span style={ !this.props.open? Object.assign({},style.lineExpand, style.bottom, style.line) :
-                                               Object.assign({}, style.lineExpand, style.bottom)}>
-                    <span style={ this.props.open? Object.assign({}, style.arrow, style.arrowBottom)
-                                                 : Object.assign({}, style.arrow, style.arrowBottom, style.arrowBottomExpand) }>
-                    </span>
+            </span>
+            <span style={ !props.open? Object.assign({},style.lineExpand, style.bottom, style.line) :
+                                            Object.assign({}, style.lineExpand, style.bottom)}>
+                <span style={ props.open? Object.assign({}, style.arrow, style.arrowBottom)
+                                                : Object.assign({}, style.arrow, style.arrowBottom, style.arrowBottomExpand) }>
                 </span>
-            </div>
-        )
-    }
+            </span>
+        </div>
+    )
 }
+
 
 
 let style = {

@@ -5,7 +5,7 @@ class ImageNote extends Component {
 
     render() {
         return (
-            <div className={`image-note note ${ this.props.className }`}>
+            <div className={`image-note note ${ this.props.className }`} style={ this.props.style } >
                 {
                     this.props.imageUrl &&
                     <div>
