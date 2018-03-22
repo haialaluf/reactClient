@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,UAAU,EAAE,SAAS;EAErB,eAAI;IACF,QAAQ,EAAE,QAAQ;IAClB,UAAU,EAAE,QAAQ;IACpB,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,CAAC;IACT,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,IAAI",
+"sources": ["ImageNote.scss"],
+"names": [],
+"file": "ImageNote.css"
+}

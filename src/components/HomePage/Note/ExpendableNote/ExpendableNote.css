@@ -1,0 +1,28 @@
+.expandable-note.note {
+  background-color: #FFFFFF;
+  transition: all 400ms; }
+  .expandable-note.note .image-container {
+    height: 192px; }
+    .expandable-note.note .image-container img {
+      width: initial;
+      max-height: 100%; }
+  .expandable-note.note .slide {
+    background: transparent; }
+  .expandable-note.note .text {
+    text-align: left;
+    padding: 0 12px 12px;
+    line-height: 133%; }
+    @media (min-width: 1024px) {
+      .expandable-note.note .text {
+        padding: 0 32px 32px; } }
+  .expandable-note.note.expand {
+    overflow-y: scroll; }
+    .expandable-note.note.expand .image-container {
+      height: 256px; }
+  .expandable-note.note .expand-button {
+    cursor: pointer;
+    float: right;
+    padding: 0 8px;
+    text-decoration: underline; }
+
+/*# sourceMappingURL=ExpendableNote.css.map */

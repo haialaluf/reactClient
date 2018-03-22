@@ -1,0 +1,66 @@
+@import "../../../shared";
+
+.editable-image {
+  height: 100%;
+
+  .content {
+    position: relative;
+    height: 100%;
+
+    .files-upload-container {
+      width: calc(100% - 48px);
+      height: calc(100% - 48px);
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      .file-drop-container{
+        height: 100%;
+        .file-drop {
+          height: 100%;
+        }
+      }
+      .instructions {
+        font-size: 18px;
+        z-index: 28;
+      }
+    }
+
+    .cropper-container {
+      width: 100% !important;
+      height: 100% !important;
+      position: absolute;
+      z-index: 4;
+      left: 0;
+      top: 0;
+
+      .cropper-crop-box {
+        width: calc(100% - 48px);
+        height: calc(100% - 48px);
+      }
+    }
+    .button {
+      position: absolute;
+      z-index: 8;
+      transform: translateX(-50%);
+      bottom: 8px;
+      left: 50%;
+    }
+  }
+
+  .small-buttons {
+    font-size: 16px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: flex;
+    color: #646464;
+    z-index: 9;
+    div {
+      margin-left: 8px;
+      cursor: pointer;
+      background: rgba(256, 256,256, 0.7);
+    }
+  }
+}
+

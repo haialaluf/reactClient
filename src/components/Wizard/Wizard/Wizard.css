@@ -1,0 +1,170 @@
+.bread-crumbs {
+  height: 48px;
+  padding: 4px;
+  display: flex;
+  width: calc(100% - 160px); }
+  .bread-crumbs .pointer {
+    width: 16.6%;
+    cursor: pointer;
+    margin-right: 12px;
+    max-width: 30vw;
+    height: 32px;
+    font-weight: bold;
+    position: relative;
+    background: #444444;
+    transition-delay: 5s;
+    -webkit-transition: width .5s, height .5s, background-color 0s, -webkit-transform 2s;
+    transition: width .5s, height .5s, background-color 0s, transform 2s; }
+    .bread-crumbs .pointer.selected {
+      transition-delay: 0s;
+      width: 50%;
+      flex: 6;
+      background: #03C669; }
+      .bread-crumbs .pointer.selected:before {
+        border-left: 12px solid #03C669; }
+    .bread-crumbs .pointer:last-child {
+      width: 120px;
+      position: absolute;
+      right: 4px; }
+    .bread-crumbs .pointer:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 10px solid white;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent; }
+    .bread-crumbs .pointer:before {
+      content: "";
+      position: absolute;
+      right: -12px;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-left: 12px solid #444444;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent; }
+    .bread-crumbs .pointer > div {
+      padding: 5px 0 0 16px; }
+    .bread-crumbs .pointer div {
+      color: white;
+      font-size: 18px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+
+.checkout form {
+  width: 288px;
+  margin: auto;
+  padding: 16px;
+  padding-top: 0; }
+  .checkout form .date-time-piker {
+    display: flex;
+    margin: 20px 0 28px 0; }
+    .checkout form .date-time-piker div:first-child {
+      margin-right: 16px; }
+  .checkout form input {
+    display: block;
+    height: 32px;
+    width: 256px;
+    margin-bottom: 20px; }
+  .checkout form textarea {
+    width: 256px;
+    height: 96px; }
+  .checkout form button {
+    background-color: #03C669;
+    width: 160px; }
+  .checkout form .button-container {
+    text-align: center;
+    margin-top: 40px; }
+
+.item {
+  overflow: hidden;
+  display: inline-block;
+  background-color: #ffff90;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  position: relative;
+  width: 23vw;
+  height: 23vw;
+  margin: .5vw;
+  background-position: center 40px;
+  background-size: auto 16vh;
+  background-repeat: no-repeat; }
+  .item.selected {
+    border-color: #11ff88; }
+  @media (max-width: 600px) {
+    .item {
+      width: 46vw;
+      margin: 1vw;
+      height: 46vw;
+      border-radius: 2px;
+      background-position: center 32px; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .item {
+      width: 30vw;
+      margin: .6vw;
+      height: 30vw; } }
+  .item.expand {
+    overflow-y: scroll;
+    transition: all 0.3s;
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    top: 48px;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    z-index: 2; }
+    .item.expand .image-container {
+      max-height: 256px; }
+    @media (max-width: 600px) {
+      .item.expand {
+        bottom: 8px;
+        right: 8px;
+        left: 8px; } }
+  .item .image-container img {
+    height: 100%; }
+  .item.collapse .image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 100%; }
+    .item.collapse .image-container img {
+      height: 100%; }
+    .item.collapse .image-container .gradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      box-shadow: inset -96px 64px 256px #ffffff; }
+  .item.collapse .title {
+    position: absolute;
+    left: 0;
+    top: 24px;
+    width: 100%;
+    text-align: center; }
+  .item.collapse .description {
+    position: absolute;
+    left: 0;
+    top: 64px; }
+  .item .title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 16px; }
+    @media (max-width: 600px) {
+      .item .title {
+        font-size: 24px; } }
+  .item .description {
+    padding: 8px; }
+
+.items-container {
+  height: calc(100vh - 108px);
+  overflow: scroll; }
+
+/*# sourceMappingURL=Wizard.css.map */

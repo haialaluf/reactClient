@@ -1,0 +1,22 @@
+.settings {
+  padding: 32px; }
+  .settings .title {
+    text-align: left;
+    font-size: 20px;
+    padding: 0;
+    margin-bottom: 16px; }
+  .settings .options {
+    margin-bottom: 20px; }
+  .settings .detail-line {
+    display: flex; }
+    .settings .detail-line .text {
+      height: 58px;
+      line-height: 58px;
+      margin-right: 16px; }
+  .settings .items-container {
+    max-height: 288px; }
+    .settings .items-container .item {
+      height: 256px;
+      width: 256px; }
+
+/*# sourceMappingURL=Settings.css.map */

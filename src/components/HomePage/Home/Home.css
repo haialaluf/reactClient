@@ -1,0 +1,72 @@
+.container {
+  overflow: hidden; }
+  .container .title {
+    padding: 12px;
+    font-size: 32px;
+    text-align: center; }
+    @media (min-width: 1024px) {
+      .container .title {
+        font-size: 2vw; } }
+    .container .title.big {
+      font-size: 3vw; }
+  .container .cover {
+    height: 256px; }
+    .container .cover * {
+      z-index: -1;
+      position: fixed;
+      transform: translateX(-50%);
+      left: 50%;
+      height: 100%; }
+  .container .four-notes {
+    min-height: 80vh; }
+    .container .four-notes .all-notes-container {
+      display: flex; }
+      @media (min-width: 600px) and (max-width: 1023px) {
+        .container .four-notes .all-notes-container {
+          display: block; } }
+      @media (max-width: 600px) {
+        .container .four-notes .all-notes-container {
+          display: block; } }
+    .container .four-notes .two-notes-container {
+      display: flex;
+      width: 50%;
+      margin: 24px 0; }
+      @media (min-width: 600px) and (max-width: 1023px) {
+        .container .four-notes .two-notes-container {
+          display: flex;
+          margin-bottom: 40px;
+          width: 100%; } }
+      @media (max-width: 600px) {
+        .container .four-notes .two-notes-container {
+          display: block;
+          width: 100%;
+          margin: 4px 0; } }
+  .container .note {
+    margin: 5%;
+    width: 90%; }
+    @media (min-width: 1024px) {
+      .container .note {
+        width: 50%; } }
+  @media (min-width: 1024px) {
+    .container .two-notes {
+      display: flex; }
+      .container .two-notes .note {
+        margin: 5% 2% 5% 5%; } }
+  .container .large-note {
+    padding-top: 24px;
+    min-height: 70vh; }
+    @media (min-width: 1024px) {
+      .container .large-note .note {
+        margin: 10vh 10vw;
+        width: 80vw;
+        height: 60vh; } }
+    .container .large-note .note.edit {
+      height: initial; }
+
+.footer {
+  font-size: 18px;
+  padding: 24px 32px;
+  color: white;
+  background-color: #444444; }
+
+/*# sourceMappingURL=Home.css.map */

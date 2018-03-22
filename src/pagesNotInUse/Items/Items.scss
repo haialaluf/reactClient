@@ -1,0 +1,19 @@
+@import "../../components/Wizard/Item/Item";
+@import "../../components/Wizard/AddItem/AddItem";
+
+.items-container {
+  position: relative;
+
+  @include desktop {
+    padding: 0 2vw;
+  }
+
+  @include  tablet {
+    padding: 0 3vw;
+  }
+
+  @include mobile {
+    padding: 0 2vw;
+  }
+
+}

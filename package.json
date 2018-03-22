@@ -29,6 +29,7 @@
     "react-show": "^2.0.0",
     "react-svg": "^2.2.5",
     "react-table": "^6.7.6",
+    "react-youtube": "^7.5.0",
     "redux": "^3.7.1",
     "redux-thunk": "^2.2.0"
   },

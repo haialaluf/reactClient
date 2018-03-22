@@ -1,0 +1,134 @@
+.star {
+    width: 100%;
+    height: 100%;
+}
+
+svg{
+    overflow: visible;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  #Mask,#star,#smallStar1,#smallStar2,#smallStar3{
+    transform-origin: center center;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  #star{
+    -webkit-animation-duration: .4s;
+    animation-duration: .4s;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+  }
+  #smallStar1{
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+  }
+  #smallStar2{
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+  }
+  #smallStar3{
+    animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+  }
+  @-webkit-keyframes scale {
+  
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes scale {
+  
+    from {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  .scale {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: scale;
+    animation-name: scale;
+  }
+  
+  @-webkit-keyframes scaleStar {
+    from, 60%, 80%, to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    from {
+      -webkit-transform: scale(0) translate(31px);
+      transform: scale(0) translate(31px);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    60% {
+      -webkit-transform: scale(1.1) translate(31px);
+      transform: scale(1.1) translate(31px);
+      
+    }
+    80% {
+      -webkit-transform: scale(0.9) translate(31px);
+      transform: scale(0.9) translate(31px);
+      
+    }
+    to {
+      -webkit-transform: scale(1) translate(31px);
+      transform: scale(1) translate(31px);
+    }
+  }
+  @keyframes scaleStar {
+    from, 60%, 80%, to {
+      -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    from {
+      -webkit-transform: scale(0) translate(31px);
+      transform: scale(0) translate(31px);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    60% {
+      -webkit-transform: scale(1.1) translate(31px);
+      transform: scale(1.1) translate(31px);
+      
+    }
+    80% {
+      -webkit-transform: scale(0.9) translate(31px);
+      transform: scale(0.9) translate(31px);
+      
+    }
+    to {
+      -webkit-transform: scale(1) translate(31px);
+      transform: scale(1) translate(31px);
+    }
+  }
+  .scaleStar {
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    -webkit-animation-name: scaleStar;
+    animation-name: scaleStar;
+  }

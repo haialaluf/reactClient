@@ -1,0 +1,52 @@
+.checkout {
+  form {
+    width: 288px;
+    margin: auto;
+    padding: 16px;
+    padding-top: 0;
+
+    .date-time-piker {
+      display: flex;
+      margin: 20px 0 28px 0;
+
+      >div {
+
+        &:first-child {
+          margin: 0 8px 0 0;
+
+          .rtl & {
+            margin: 0 0 0 8px;
+          }
+        }
+
+        &:last-child {
+          margin: 0 0 0 8px;
+
+          .rtl & {
+            margin: 0 8px 0 0;
+          }
+        }
+
+      }
+    }
+    input {
+      display: block;
+      height: 32px;
+      width: 256px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 256px;
+      height: 96px;
+    }
+    button {
+      background-color: $green;
+      width: 160px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

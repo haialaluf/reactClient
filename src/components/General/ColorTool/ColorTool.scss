@@ -1,0 +1,33 @@
+@import "../../../shared";
+
+.color-tool {
+  position: fixed;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  left: 50%;
+  top: 50%;
+  padding: 12px;
+  border-radius: 4px;
+
+  >div {
+    display: flex;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .block-picker {
+    margin: 12px 4px;
+  }
+
+  .buttons-container {
+    display: block;
+    margin: auto;
+    padding: 12px;
+
+    >div {
+      margin-right: 8px;
+    }
+  }
+
+}

@@ -1,0 +1,50 @@
+@import "../../../shared";
+
+.editable-text {
+  .content {
+    position: relative;
+  }
+
+  .small-buttons {
+    font-size: 14px;
+    position: absolute;
+    top: -16px;
+    right: 0;
+    display: flex;
+    color: #646464;
+    z-index: 9;
+
+    div {
+      margin-left: 8px;
+      cursor: pointer;
+      padding: 1px;
+      -moz-box-shadow:    inset 0 0 20px #ffffff;
+      -webkit-box-shadow: inset 0 0 20px #ffffff;
+      box-shadow:         inset 0 0 20px #ffffff;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    margin-top: 2px;
+  }
+
+  input {
+    border: none;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    line-height: 32px;
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: rgba(0, 0, 0, 0.3);
+
+    }
+  }
+
+  textarea {
+    height: 128px;
+  }
+}
