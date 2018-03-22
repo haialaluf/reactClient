@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,UAAW;EACT,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,SAAS;EAGnB,qBAAM;IACJ,UAAU,EAAE,IAAI;IAChB,OAAO,EAAE,WAAW;IACpB,WAAW,EAAE,IAAI;ICWrB,0BAAsC;MDdpC,qBAAM;QAMF,OAAO,EAAE,WAAW",
-"sources": ["TextNote.scss","../../../../shared.scss"],
-"names": [],
-"file": "TextNote.css"
-}

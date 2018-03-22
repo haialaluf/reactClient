@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,iBAAkB;EAChB,QAAQ,EAAE,QAAQ;EAElB,kCAAiB;IACb,MAAM,EAAE,OAAO",
-"sources": ["Orders.scss"],
-"names": [],
-"file": "Orders.css"
-}

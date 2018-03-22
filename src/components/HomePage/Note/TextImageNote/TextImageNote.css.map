@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,gBAAiB;EACf,UAAU,EAAE,mBAAmB;EAC/B,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,MAAM;EAElB,iCAAiB;IACf,SAAS,EAAE,IAAI;IACf,OAAO,EAAE,KAAK;IACd,qCAAI;MACF,KAAK,EAAE,GAAG;EAId,sBAAM;IACJ,OAAO,EAAE,GAAG;IACZ,aAAa,EAAE,GAAG;IAElB,+BAAS;MACP,KAAK,EAAE,gBAAgB",
-"sources": ["TextImageNote.scss"],
-"names": [],
-"file": "TextImageNote.css"
-}
